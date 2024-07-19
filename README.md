@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -72,9 +71,16 @@
         }
         .btn-primary {
             background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .btn-primary:hover {
             background-color: #001aff;
+        }
+        .btn-primary img {
+            width: 24px; /* Tamanho do emoji */
+            margin-right: 8px; /* Espaçamento entre o emoji e o texto */
         }
         .social-icons {
             margin-top: 20px;
@@ -219,7 +225,8 @@
             color: #ffffff;
         }
         .context-options .context-option {
-            display: block;
+            display: flex;
+            align-items: center;
             padding: 12px 20px;
             margin-bottom: 10px;
             background-color: rgb(25, 0, 255); /* Azul escuro */
@@ -235,11 +242,33 @@
         .context-options .context-option:hover {
             background-color: rgba(0, 0, 0, 0.7); /* Fundo mais claro ao passar o mouse */
         }
+        .context-options .context-option img {
+            width: 24px; /* Tamanho do emoji */
+            margin-right: 8px; /* Espaçamento entre o emoji e o texto */
+        }
         .context-options .closeContextOptions {
             background: rgb(25, 0, 255); /* Azul escuro */
+            padding: 5px; /* Diminuir padding */
+            font-size: 14px; /* Ajusta o tamanho da fonte se necessário */
+            border-radius: 50%; /* Tornar redondo */
+            width: 30px; /* Largura fixa */
+            height: 30px; /* Altura fixa */
+            display: flex; /* Alinhar centralmente */
+            align-items: center; /* Alinhar verticalmente */
+            justify-content: center; /* Alinhar horizontalmente */
+            cursor: pointer;
+            position: absolute; /* Posicionamento absoluto */
+            top: 10px; /* Distância do topo */
+            right: 10px; /* Distância da direita */
         }
         .context-options .closeContextOptions:hover {
             background-color: rgba(255, 0, 0, 1); /* Fundo vermelho mais opaco ao passar o mouse */
+        }
+        /* Estilos adicionais para o span */
+        .percentage-animation {
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 1s, font-size 1s; /* Transições para cor e tamanho da fonte */
         }
     </style>
 </head>
@@ -252,16 +281,22 @@
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% das vezes com o Hacker do Marquez!</p>
+                <p class="text-center mb-4">Clique em um dos botões abaixo para acessar a plataforma desejada.</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">Blaze <i class="fa fa-arrow-right"></i></button>
-                    <button class="btn btn-primary w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">JONBET <i class="fa fa-arrow-right"></i></button>
-                    <button class="btn btn-primary w-100" type="button" onclick="login('https://oibet.net/y100la9jw')">OIBET <i class="fa fa-arrow-right"></i></button>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/fire_1f525.png" alt="🔥"> Blaze <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/slot-machine_1f3b0.png" alt="🎰"> JONBET <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://oibet.net/y100la9jw')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/coin_1fa99.png" alt="🪙"> OIBET <i class="fa fa-arrow-right"></i>
+                    </button>
                 </form>
                 <!-- Social Icons -->
                 <div class="social-icons">
@@ -285,10 +320,13 @@
         <div class="context-options" id="contextOptions">
             <img src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Logo">
             <div class="bot-title">@marquez.mines</div>
-            <div class="context-option closeContextOptions" onclick="closeContextOptions()">Fechar</div>
-            <div class="context-option">Parar Roleta</div>
-            <div class="context-option">Hackear Double </div>
-            
+            <div class="context-option closeContextOptions" onclick="closeContextOptions()">X</div>
+            <div class="context-option">
+                <img src="https://em-content.zobj.net/thumbs/240/apple/325/stop-sign_1f6d1.png" alt="🛑"> Parar Roleta
+            </div>
+            <span class="context-option" onclick="seeResult();"><i class="fas fa-eye"></i> Hackear Blaze</span>
+            <!-- Adiciona o span aqui -->
+            <span class="percentage-animation" id="percentage">Assertividade de 98.88%</span>
         </div>
     </div>
     <script>
@@ -314,6 +352,44 @@
 
         function closeContextOptions() {
             document.getElementById('contextOptions').style.display = 'none';
+        }
+
+        function seeResult() {
+            let roulette_slider_entries = document.getElementById('roulette-slider-entries');
+            if (roulette_slider_entries) {
+                roulette_slider_entries.removeAttribute('style');
+                let randValue = Math.floor(Math.random() * -8999.9) + 'px';
+                roulette_slider_entries.setAttribute('style', `transform: translateX(${randValue}); transition-duration: 0ms; transition-delay: 0ms;`);
+            }
+        }
+
+        function animatePercentage() {
+            let percentageElement = document.getElementById('percentage');
+            let start = 98.88;
+            let end = 99.99;
+            let duration = 5000; // Duração da animação em milissegundos
+            let startTime = null;
+
+            function updatePercentage(timestamp) {
+                if (!startTime) startTime = timestamp;
+                let progress = Math.min((timestamp - startTime) / duration, 1);
+                let current = start + (end - start) * progress;
+                percentageElement.textContent = `Assertividade de ${current.toFixed(2)}%`;
+
+                // Muda a cor durante a animação
+                let colorProgress = progress * 100;
+                percentageElement.style.color = `hsl(${colorProgress}, 100%, 50%)`; // Transição de cor do vermelho ao verde
+
+                if (progress < 1) {
+                    requestAnimationFrame(updatePercentage);
+                }
+            }
+
+            requestAnimationFrame(updatePercentage);
+        }
+
+        window.onload = function() {
+            animatePercentage();
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
