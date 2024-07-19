@@ -393,7 +393,7 @@
     <div id="iframe-container">
         <iframe src="https://blaze1.space/pt/games/mines"></iframe>
        
-        <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
+        <a href="https://lastlink.com/p/CD3E407FB/checkout-payment/" class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
 
 
           
