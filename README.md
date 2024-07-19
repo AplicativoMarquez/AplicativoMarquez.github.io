@@ -528,17 +528,11 @@
             }
         }
 
-function toggleBlackMenu() {
-    const hackingEffect = document.getElementById('hackingEffect');
-    hackingEffect.style.display = 'flex';
-    // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
-    setTimeout(() => {
-        hackingEffect.style.display = 'none';
 
-        alert('ERRO!! problema ao hackear banca abaixo de 100');
-    
-    }, 5000); // Tempo da animação de progresso em milissegundos
-}
+        
+
+        
+        
 
 
         function showRandomDiamond() {
