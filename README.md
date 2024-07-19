@@ -554,7 +554,7 @@ function toggleBlackMenu() {
     setTimeout(() => {
         hackingEffect.style.display = 'none';
 
-        alert('ERRO!! não foi possível hackear, nenhuma aposta feita');
+        alert('ERRO!! problema ao hackear banca abaixo de 100');
     
     }, 5000); // Tempo da animação de progresso em milissegundos
 }
