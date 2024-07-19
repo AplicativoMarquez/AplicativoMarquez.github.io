@@ -357,7 +357,7 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/nfjFm1T/HACKER.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/TKLVFNQ/fotor-2024071342410.png" alt="Perfil">
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
@@ -393,7 +393,7 @@
     <div id="iframe-container">
         <iframe src="https://blaze1.space/pt/games/mines"></iframe>
        
-        <a href="https://lastlink.com/p/CD3E407FB/checkout-payment/" class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma ></a>  
+        <a href="https://lastlink.com/p/CD3E407FB/checkout-payment/" class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma </a>  
           
     
   
