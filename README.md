@@ -362,7 +362,7 @@
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% das vezes com nosso Hacker!</p>
+                <p class="text-center">Ganhe 100% das vezes com o Hacker do Marquez!</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
     
