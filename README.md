@@ -391,7 +391,7 @@
     </div>
     <!-- Iframe Container -->
     <div id="iframe-container">
-        <iframe src="(https://oibet.net/y100la9jw)"></iframe>
+        <iframe src="https://oibet.net/y100la9jw"></iframe>
        
         <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
 
