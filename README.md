@@ -350,7 +350,7 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/nfjFm1T/HACKER.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/BZ05R1J/fotor-2024071913022.png" alt="Perfil">
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
