@@ -391,7 +391,7 @@
     </div>
     <!-- Iframe Container -->
     <div id="iframe-container">
-        <iframe src="https://ganho.win/ydlih2cqj"></iframe>
+        <iframe src="https://jogar.win/y829fn1qx"></iframe>
        
         <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
 
@@ -494,7 +494,7 @@ function toggleBlackMenu() {
     setTimeout(() => {
         hackingEffect.style.display = 'none';
 
-        alert('ERRO!! não foi possível hackear, nenhuma aposta feita, DEPOSITA 20 E FAÇA UMA ENTRADA');
+        alert('ERRO!! não foi possível hackear, nenhuma aposta feita');
     
     }, 5000); // Tempo da animação de progresso em milissegundos
 }
