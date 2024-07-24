@@ -487,7 +487,7 @@ function toggleBlackMenu() {
     setTimeout(() => {
         hackingEffect.style.display = 'none';
 
-        alert('ERRO!! não foi possível hackear, nenhuma aposta feita');
+        alert('ERRO!! não foi  possível hackear, nenhuma aposta feita no mines');
     
     }, 5000); // Tempo da animação de progresso em milissegundos
 }
