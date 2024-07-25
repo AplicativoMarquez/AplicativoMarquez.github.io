@@ -1,15 +1,11 @@
-<html lang="en">
+<html lang="en<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacker Mines</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@600&display=swap">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
     <style>
-
-    
-
 
 .ander-button {
     position: absolute;
@@ -94,32 +90,19 @@
         .form-group input::placeholder {
             color: rgba(255, 255, 255, 0.7);
         }
-        .btn-primary1 {
+        .btn-primary {
             background-color: #000000;
             display: flex;
-            border-color: #ffffff;
             align-items: center;
             justify-content: center;
         }
-        .btn-primary2 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-primary1:hover {
-            background-color: #ff0000;
-        }
-        .btn-primary2:hover {
-            background-color: #15ff00;
+        .btn-primary:hover {
+            background-color: #001aff;
         }
         .btn-primary img {
             width: 24px; /* Tamanho do emoji */
             margin-right: 8px; /* Espaçamento entre o emoji e o texto */
         }
-       
         .social-icons {
             margin-top: 20px;
         }
@@ -244,9 +227,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.95); /* Preto transparente */
-            padding: 26px;
-            border-radius: 10px;
-            font-family: 'SofiaPro-SemiBold';
+            padding: 17px;
+            border-radius: 3px;
+            font-family: 'M PLUS 1 Code', sans-serif;
             color: #ffffff;
             z-index: 9999;
             display: none; /* Inicialmente escondido */
@@ -266,9 +249,9 @@
             display: flex;
             align-items: center;
             padding: 1px 20px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             background-color: rgb(25, 0, 255); /* Azul escuro */
-            border-radius: 0px;
+            border-radius: 10px;
             color: #ffffff;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.1s;
@@ -279,20 +262,8 @@
             display: flex;
             align-items: center;
             padding: 1px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(255, 0, 0); /* Azul escuro */
-            border-radius: 0px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
-        .context-options .context-option3 {
-            display: flex;
-            align-items: center;
-            padding: 1px 20px;
             margin-bottom: 6px;
-            background-color: rgb(25, 0, 255); /* Azul escuro */
+            background-color: rgb(255, 0, 0); /* Azul escuro */
             border-radius: 10px;
             color: #ffffff;
             cursor: pointer;
@@ -381,20 +352,6 @@
     max-width: 100%; /* Imagem dentro do quadrado ocupando todo o espaço disponível */
     max-height: 100%; /* Imagem dentro do quadrado ocupando todo o espaço disponível */
 }
-.percentage-animation {
-    color: #00ff00; /* Cor verde */
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px; /* Espaço entre a imagem e o texto */
-}
-
-.img.svg {
-    width: 100px
-
-
-}
-
-
 
     </style>
 </head>
@@ -414,11 +371,14 @@
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
-                        <img src="https://i.ibb.co/xM8T2fd/logo-blaze-apostas-online-QQmdxz-removebg-preview.png" > <i class="fa fa-arrow-right"></i>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/fire_1f525.png" alt="🔥"> Blaze <i class="fa fa-arrow-right"></i>
                     </button>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
-                        <img src="https://i.ibb.co/Tct020B/jonbet-logo-removebg-preview.png" >  <i class="fa fa-arrow-right"></i>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/slot-machine_1f3b0.png" alt="🎰"> JONBET <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-primary w-100" type="button" onclick="login('https://oibet.net/y100la9jw')">
+                        <img src="https://em-content.zobj.net/thumbs/240/apple/325/coin_1fa99.png" alt="🪙"> OIBET <i class="fa fa-arrow-right"></i>
                     </button>
                 </form>
                 <!-- Social Icons -->
@@ -445,11 +405,10 @@
             <div class="bot-title">@Marquez.Mines</div>
             <div class="context-option1" onclick="closeContextOptions()">💎Hackear Mines💎</div>
         
-            <div class="context-option2">🔥Hackear Double🔥</div>
-            
-           
+            <div class="context-option2">🔥Hackear Double🔥
+            </div>
             <!-- Adiciona o span aqui -->
-            
+            <span class="percentage-animation" id="percentage">Assertividade de 98.88%</span>
         </div>
         <!-- Quadrado preto -->
         <div class="black-square" id="blackSquare">
@@ -481,39 +440,29 @@
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-        
 
         function closeContextOptions() {
-    var loadingElement = document.createElement('div');
-    loadingElement.className = 'loading-animation';
+            var loadingElement = document.createElement('div');
+            loadingElement.className = 'loading-animation';
 
-    var contextOptions = document.getElementById('contextOptions');
-    contextOptions.appendChild(loadingElement);
+            var contextOptions = document.getElementById('contextOptions');
+            contextOptions.appendChild(loadingElement);
 
-    setTimeout(function() {
-        contextOptions.removeChild(loadingElement);
+            setTimeout(function() {
+                contextOptions.removeChild(loadingElement);
 
-        var newImage = document.createElement('img');
-        var randomImageIndex = Math.random() < 0.5 ? 1 : 2;
-        newImage.src = randomImageIndex === 1 ? image1Url : image2Url;
-        newImage.alt = 'Nova Imagem';
-        newImage.style.width = '50px';
-        newImage.style.margin = '0 auto 20px';
-        newImage.style.display = 'block';
+                var newImage = document.createElement('img');
+                var randomImageIndex = Math.random() < 0.5 ? 1 : 2;
+                newImage.src = randomImageIndex === 1 ? image1Url : image2Url;
+                newImage.alt = 'Nova Imagem';
+                newImage.style.width = '50px';
+                newImage.style.margin = '0 auto 20px';
+                newImage.style.display = 'block';
 
-        contextOptions.appendChild(newImage);
-
-        // Criar o elemento span para a Assertividade
-        var percentageSpan = document.createElement('span');
-        percentageSpan.className = 'percentage-animation';
-        var randomPercentage = (Math.random() * (99.99 - 98.88) + 98.88).toFixed(2);
-        percentageSpan.textContent = 'Assertividade de ' + randomPercentage + '%';
-        contextOptions.appendChild(percentageSpan);
-    }, 2000);
-}
-
-
-
+                contextOptions.appendChild(newImage);
+            }, 2000);
+        }
+            
 
         // Função para mostrar o quadrado preto
         function showBlackSquare() {
