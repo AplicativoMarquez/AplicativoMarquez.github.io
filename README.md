@@ -104,33 +104,7 @@
         .form-group input::placeholder {
             color: rgba(255, 255, 255, 0.7);
         }
-        .btn-primary1 {
-    background-color: #000;
-    display: flex;
-    border-color: #fff;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px; /* Ajuste o padding conforme necessário */
-}
-
-.btn-primary1:hover {
-    background-color: #f00;
-}
-
-@media (max-width: 576px) {
-    .btn-primary1 {
-        font-size: 14px; /* Ajuste o tamanho da fonte para telas pequenas */
-        padding: 10px 5px; /* Ajuste o padding para caber melhor na tela */
-    }
-}
-
-        .btn-primary2 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
+       
 
         .btn-primary1:hover {
             background-color: #ff0000;
@@ -515,7 +489,10 @@
     transform: translateX(-50%) scale(0.98); /* Efeito de clique */
 }
 
-
+.image-size {
+        width: 200px;
+        height: 200px;
+    }
 
 
 
@@ -539,12 +516,15 @@
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
-                        <img src="https://i.ibb.co/xM8T2fd/logo-blaze-apostas-online-QQmdxz-removebg-preview.png" > <i class="fa fa-arrow-right"></i>
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
+                        <img src="https://i.ibb.co/xM8T2fd/logo-blaze-apostas-online-QQmdxz-removebg-preview.png" style="width: 200px; height: 200px;">
+                        <i class="fa fa-arrow-right"></i>
                     </button>
                     <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
-                        <img src="https://i.ibb.co/Tct020B/jonbet-logo-removebg-preview.png" >  <i class="fa fa-arrow-right"></i>
+                        <img src="https://i.ibb.co/Tct020B/jonbet-logo-removebg-preview.png" style="width: 200px; height: 200px;">
+                        <i class="fa fa-arrow-right"></i>
                     </button>
+                    
                 </form>
                 <!-- Social Icons -->
                 <div class="social-icons">
