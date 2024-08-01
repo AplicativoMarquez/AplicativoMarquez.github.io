@@ -78,9 +78,9 @@
         }
         .custom-container {
             text-align: center;
-            max-width: 400px;
+            max-width: 235px;
             width: 100%;
-            padding: 20px;
+            padding: 0px;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
