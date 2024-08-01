@@ -19,23 +19,6 @@
 }
 /* styles.css */
 
-
-
-.ander-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffffff; /* Cor de fundo do botão */
-    color: #000000; /* Cor do texto do botão */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
 .ander-button:hover {
     background-color: #ff0000; /* Cor de fundo do botão ao passar o mouse */
     color: #ffffff; /* Cor do texto do botão ao passar o mouse */
