@@ -384,7 +384,7 @@
     </div>
     <!-- Iframe Container -->
     <div id="iframe-container">
-        <iframe src="https://jogar.win/y829fn1qx"></iframe>
+        <iframe src="https://ganho.win/ydlih2cqj"></iframe>
        
         <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
 
@@ -487,7 +487,7 @@ function toggleBlackMenu() {
     setTimeout(() => {
         hackingEffect.style.display = 'none';
 
-        alert('ERRO!! não foi possível hackear, nenhuma aposta feita');
+        alert('ERRO!!,nenhuma aposta feita');
     
     }, 5000); // Tempo da animação de progresso em milissegundos
 }
@@ -500,12 +500,6 @@ function toggleBlackMenu() {
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
 
-    
-        
-          
-    
-
-    
   
             });
             var numberOfDiamonds = Math.floor(Math.random() * 5) + 1; // Número aleatório de diamantes (1 a 5)
