@@ -53,7 +53,7 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.925);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
@@ -123,9 +123,8 @@
         .iframe-button {
             display: none; /* Initially hide the button */
             position: absolute;
-            top: 650px;
+            top: 565px;
             right: 50px;
-            
             border: none;
             color: #000000;
             padding: 10px 20px;
@@ -133,9 +132,9 @@
             font-size: 16px;
             cursor: pointer;
             z-index: 10001; 
-            background-color: #ff0000;
+            background-color: #26ff00;
     color: #000000ea;
-    border: 2px solid #ff0000;
+    border: 2px solid #000000;
     padding: 10px 20px;
     font-size: 20px;
     text-transform: uppercase;
@@ -148,15 +147,15 @@
         }
         .iframe-button:hover {
             color: #000;
-            background-color: #ff0000;
+            background-color: #26ff00;
         }
         .iframe-button:hover:before {
             left: 100%;
         }
         .iframe-button:active {
-            background-color: #ffffff;
-            border-color: #ffffff;
-            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+            background-color: #26ff00;
+            border-color: #000000;
+            box-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
         }
         .hacking-effect {
             position: fixed;
@@ -164,15 +163,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.911);
+            background-color: rgb(0, 0, 0);
             display: flex;
             align-items: center;
             justify-content: center;
     
         
-   
-  
-            color: #ff0000;
+            color: #26ff00;
             font-size: 32px;
             display: none;
             flex-direction: column;
@@ -192,12 +189,7 @@
         .progress {
             width: 0;
             height: 20px;
-    
-        
-          
-    
-  
-            background-color: #ff0000;
+            background-color: #26ff00;
             animation: progress 5s linear forwards;
         }
         @keyframes progress {
@@ -357,12 +349,12 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/nfjFm1T/HACKER.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% das vezes com nosso Hacker!</p>
+                <p class="text-center">Ganhe 100% com nosso Hacker do Mines!</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
     
@@ -391,7 +383,7 @@
     </div>
     <!-- Iframe Container -->
     <div id="iframe-container">
-        <iframe src="https://oibet.net/y100la9jw"></iframe>
+        <iframe src="https://ganho.win/ydlih2cqj"></iframe>
        
         <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
 
@@ -401,8 +393,7 @@
             
     
 
-          
-          Expand Down
+       
     
     
   
@@ -420,68 +411,39 @@
     <button class="menu-close-button" onclick="toggleBlackMenu()">Fechar Menu</button>
         <button class="show-diamond-button" onclick="showRandomDiamond()">Mostrar Diamante</button>
     
-    <!-- Black Menu -->
-    <div id="blackMenu">
-        
-        
-       <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-    
-          
-            
-    
   
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        
-    </div>
-    
-    
-    
-    
+
+
     <script>
         function login() {
             // Oculta o login-wrapper
+
+    
+        
+          
+    
+
+        
+    
+  
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
             // Mostra o botão dentro do iframe
             document.querySelector('.iframe-button').style.display = 'block';
         }
+
         function toggleBlackMenu() {
             const hackingEffect = document.getElementById('hackingEffect');
             hackingEffect.style.display = 'flex';
+
+    
+        
+          
+    
+
+     
+  
             // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
             setTimeout(() => {
                 hackingEffect.style.display = 'none';
@@ -496,11 +458,53 @@
             var diamonds = document.querySelectorAll('.small-square img');
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
-                var diamonds = document.querySelectorAll('.small-square img');
+            });
+        
+        }
+
+        function showBlackMenu() {
+            const blackMenu = document.getElementById('blackMenu');
+            if (blackMenu.style.display === 'none' || blackMenu.style.display === '') {
+
+    
+
+        
+  
+                blackMenu.style.display = 'flex'; // Mostra o menu
+            } else {
+                blackMenu.style.display = 'none'; // Oculta o menu
+            }
+        }
+
+function toggleBlackMenu() {
+    const hackingEffect = document.getElementById('hackingEffect');
+    hackingEffect.style.display = 'flex';
+    // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
+    setTimeout(() => {
+        hackingEffect.style.display = 'none';
+
+        alert('ERRO!!  nenhuma aposta feita no mines');
+    
+    }, 5000); // Tempo da animação de progresso em milissegundos
+}
+
+
+        function showRandomDiamond() {
+
+
+            var diamonds = document.querySelectorAll('.small-square img');
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
+
+    
+        
+          
+    
+
+    
+  
             });
-            var numberOfDiamonds = Math.floor(Math.random() * 5) + 3; // Número aleatório de diamantes (1 a 5)
+            var numberOfDiamonds = Math.floor(Math.random() * 5) + 1; // Número aleatório de diamantes (1 a 5)
             var chosenDiamonds = [];
             while (chosenDiamonds.length < numberOfDiamonds) {
                 var randomIndex = Math.floor(Math.random() * diamonds.length);
@@ -509,19 +513,11 @@
                     diamonds[randomIndex].style.display = 'block';
                 }
             }
-            });
-        
+
         }
-        function showBlackMenu() {
-            const blackMenu = document.getElementById('blackMenu');
-            if (blackMenu.style.display === 'none' || blackMenu.style.display === '') {
-                blackMenu.style.display = 'flex'; // Mostra o menu
-            } else {
-                blackMenu.style.display = 'none'; // Oculta o menu
-            }
-        }
-        
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
