@@ -208,11 +208,11 @@
         
         #blackMenu {
             position: fixed;
-    top: 33%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 939px;
-    height: 531px;
+    width: 552px;
+    height: 524px;
     display: none;
     align-items: center;
     justify-content: space-around;
@@ -224,20 +224,20 @@
     
         }
         .small-square {
-            width: 130px;
-    height: 85px;
+            width: 58px;
+    height: 67px;
     background: linear-gradient(145deg, #00000000, #00000000);
     margin: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 3px solid hsl(0, 100%, 50%);
-            box-shadow: 0 1px 11px rgb(255, 0, 0);
+    border: 3px solid hsla(0, 100%, 50%, 0);
+            box-shadow: 0 1px 11px rgba(255, 0, 0, 0);
             position: relative;
             pointer-events: none;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 10px hsl(0, 100%, 50%);
+            box-shadow: 0 0 10px hsla(0, 100%, 50%, 0);
         }
         .small-square img {
             max-width: 100%;
