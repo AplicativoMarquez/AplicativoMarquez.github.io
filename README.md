@@ -123,7 +123,7 @@
         .iframe-button {
             display: none; /* Initially hide the button */
             position: absolute;
-            top: 650px;
+            top: 576px;
             right: 50px;
             
             border: none;
@@ -218,7 +218,7 @@
     justify-content: space-around;
     z-index: 10000;
     flex-wrap: wrap;
-    padding: 66px;
+    padding: 80px;
     border-radius: 10px solid hsl(0, 100%, 50%);
     pointer-events: none;
     
