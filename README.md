@@ -232,12 +232,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 3px solid hsla(0, 100%, 50%, 0);
-            box-shadow: 0 1px 11px rgba(255, 0, 0, 0);
+    border: 3px solid hsl(0, 100%, 50%);
+            box-shadow: 0 1px 11px rgb(255, 0, 0);
             position: relative;
             pointer-events: none;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 10px hsla(0, 100%, 50%, 0);
+            box-shadow: 0 0 10px hsl(0, 100%, 50%);
         }
         .small-square img {
             max-width: 100%;
@@ -289,12 +289,6 @@
                 flex-direction: column;
     
           
-            
-  
-            
-    
-       
-  
                 padding: 20px;
             }
             .custom-container {
@@ -357,12 +351,12 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/nfjFm1T/HACKER.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% das vezes com nosso Hacker!</p>
+                <p class="text-center">Ganhe 100% com nosso Hacker do Mines!</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
     
@@ -401,8 +395,7 @@
             
     
 
-          
-          Expand Down
+       
     
     
   
@@ -420,68 +413,39 @@
     <button class="menu-close-button" onclick="toggleBlackMenu()">Fechar Menu</button>
         <button class="show-diamond-button" onclick="showRandomDiamond()">Mostrar Diamante</button>
     
-    <!-- Black Menu -->
-    <div id="blackMenu">
-        
-        
-       <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-    
-          
-            
-    
   
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        
-    </div>
-    
-    
-    
-    
+
+
     <script>
         function login() {
             // Oculta o login-wrapper
+
+    
+        
+          
+    
+
+        
+    
+  
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
             // Mostra o botão dentro do iframe
             document.querySelector('.iframe-button').style.display = 'block';
         }
+
         function toggleBlackMenu() {
             const hackingEffect = document.getElementById('hackingEffect');
             hackingEffect.style.display = 'flex';
+
+    
+        
+          
+    
+
+     
+  
             // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
             setTimeout(() => {
                 hackingEffect.style.display = 'none';
@@ -496,11 +460,53 @@
             var diamonds = document.querySelectorAll('.small-square img');
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
-                var diamonds = document.querySelectorAll('.small-square img');
+            });
+        
+        }
+
+        function showBlackMenu() {
+            const blackMenu = document.getElementById('blackMenu');
+            if (blackMenu.style.display === 'none' || blackMenu.style.display === '') {
+
+    
+
+        
+  
+                blackMenu.style.display = 'flex'; // Mostra o menu
+            } else {
+                blackMenu.style.display = 'none'; // Oculta o menu
+            }
+        }
+
+function toggleBlackMenu() {
+    const hackingEffect = document.getElementById('hackingEffect');
+    hackingEffect.style.display = 'flex';
+    // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
+    setTimeout(() => {
+        hackingEffect.style.display = 'none';
+
+        alert('ERRO!! faça uma aposta no mines para hackear a plataforma');
+    
+    }, 5000); // Tempo da animação de progresso em milissegundos
+}
+
+
+        function showRandomDiamond() {
+
+
+            var diamonds = document.querySelectorAll('.small-square img');
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
+
+    
+        
+          
+    
+
+    
+  
             });
-            var numberOfDiamonds = Math.floor(Math.random() * 5) + 3; // Número aleatório de diamantes (1 a 5)
+            var numberOfDiamonds = Math.floor(Math.random() * 5) + 1; // Número aleatório de diamantes (1 a 5)
             var chosenDiamonds = [];
             while (chosenDiamonds.length < numberOfDiamonds) {
                 var randomIndex = Math.floor(Math.random() * diamonds.length);
@@ -509,19 +515,11 @@
                     diamonds[randomIndex].style.display = 'block';
                 }
             }
-            });
-        
+
         }
-        function showBlackMenu() {
-            const blackMenu = document.getElementById('blackMenu');
-            if (blackMenu.style.display === 'none' || blackMenu.style.display === '') {
-                blackMenu.style.display = 'flex'; // Mostra o menu
-            } else {
-                blackMenu.style.display = 'none'; // Oculta o menu
-            }
-        }
-        
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
