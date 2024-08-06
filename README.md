@@ -123,7 +123,7 @@
         .iframe-button {
             display: none; /* Initially hide the button */
             position: absolute;
-            top: 576px;
+            top: 650px;
             right: 50px;
             
             border: none;
@@ -208,24 +208,24 @@
         
         #blackMenu {
             position: fixed;
-    top: 35%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 552px;
-    height: 524px;
+    width: 939px;
+    height: 531px;
     display: none;
     align-items: center;
     justify-content: space-around;
     z-index: 10000;
     flex-wrap: wrap;
-    padding: 80px;
+    padding: 66px;
     border-radius: 10px solid hsl(0, 100%, 50%);
     pointer-events: none;
     
         }
         .small-square {
-            width: 58px;
-    height: 67px;
+            width: 130px;
+    height: 85px;
     background: linear-gradient(145deg, #00000000, #00000000);
     margin: 13px;
     display: flex;
@@ -500,7 +500,7 @@
             diamonds.forEach(function(diamond) {
                 diamond.style.display = 'none';
             });
-            var numberOfDiamonds = Math.floor(Math.random() * 1) + 1; // Número aleatório de diamantes (1 a 5)
+            var numberOfDiamonds = Math.floor(Math.random() * 5) + 3; // Número aleatório de diamantes (1 a 5)
             var chosenDiamonds = [];
             while (chosenDiamonds.length < numberOfDiamonds) {
                 var randomIndex = Math.floor(Math.random() * diamonds.length);
