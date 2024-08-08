@@ -155,8 +155,8 @@
         .iframe-button {
             display: none; /* Initially hide the button */
             position: absolute;
-            top: 10px; /* Adjusted position */
-            right: 10px; /* Adjusted position */
+            top: 90px; /* Adjusted position */
+            right: 48px; /* Adjusted position */
             border: none;
             color: #000000;
             padding: 10px 20px;
