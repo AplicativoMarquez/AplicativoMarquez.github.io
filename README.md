@@ -566,8 +566,8 @@
             
             
         </div>
-        <!-- Quadrado preto -->
-        <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Parar Roleta</span>
+        
+        
        
         <div class="black-square" id="blackSquare">
             <button class="another-button" onclick="toggleSquare();">Revelar Diamantes</button>
