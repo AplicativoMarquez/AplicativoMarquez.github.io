@@ -519,7 +519,7 @@
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center mb-4">Clique na plataforma que deseja Hackear.</p>
+                <p class="text-center mb-4">Clique na plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -529,9 +529,7 @@
                     <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
                         <img src="file:///C:/Users/Ander/Downloads/logo.cf45d2ad.svg" > <i class="fa fa-arrow-right"></i>
                     </button>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.ceo/r/mLXAy')">
-                        <img src="https://i.ibb.co/Tct020B/jonbet-logo-removebg-preview.png" >  <i class="fa fa-arrow-right"></i>
-                    </button>
+                 
                 </form>
                 <!-- Social Icons -->
                 <div class="social-icons">
