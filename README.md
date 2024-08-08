@@ -527,7 +527,7 @@
                     <div id="response"></div>
                     <div class="form-group"></div>
                     <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze-codigo.com/r/lA7Q8')">
-                        <img src="https://i.ibb.co/0Zdtvhz/blaze-logo-0.png" > <i class="fa fa-arrow-right"></i>
+                        <img src="https://i.ibb.co/bWWXZZ3/logo-blaze-apostas-online-QQmdxz-removebg-preview.png > <i class="fa fa-arrow-right"></i>
                     </button>
                  
                 </form>
