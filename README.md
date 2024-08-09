@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,6 +39,9 @@
             height: auto;
             margin-bottom: 20px;
         }
+         h1 {
+    display: none;
+}
         .register-form h6 {
             color: #fff;
         }
