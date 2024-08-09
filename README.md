@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,33 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
     <style>
-.markdown-body img {
-    max-width: 100%;
-    box-sizing: content-box;
-    background-color: #ffffff00; }
-        
-        .px-3 {
-    padding-right: 0rem !important;
-    padding-left: 0rem !important;
-}
-        .my-5 {
-    margin-top: -1rem !important;
-    margin-bottom: 4rem !important;
-}
-        h1 {
-    display: none;
-}
-.column {
-    float: left;
-    padding-right: 0px;
-    padding-left: 0px;  }
-    .markdown-body img {
-    max-width: 100%;     
-    box-sizing: content-box;
-    }
         body {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
@@ -53,7 +30,7 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.925);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
@@ -63,57 +40,41 @@
             margin-bottom: 20px;
         }
         .register-form h6 {
-            color: #ffffff;
+            color: #fff;
         }
         .register-form p {
             color: rgba(255, 255, 255, 0.5);
         }
         .form-group input {
-            background-color: #222222;
-    
-        
-          
-    
-      
-  
-            border: 1px solid #444444;
-            color: #ffffff;
+            background-color: #222;
+            border: 1px solid #444;
+            color: #fff;
         }
         .form-group input::placeholder {
             color: rgba(255, 255, 255, 0.7);
         }
         .btn-primary {
-            background-color: #000000
+            background-color: #000;
         }
         .btn-primary:hover {
-            background-color: #001aff
+            background-color: #001aff;
         }
         .social-icons {
             margin-top: 20px;
         }
         .social-icons a {
-    
-        
-          
-    
-  
-            color: #ffffff;
+            color: #fff;
             font-size: 1.5rem;
             margin: 0 10px;
         }
         .social-icons a:hover {
-            color: #ff0000
+            color: #ff0000;
         }
         #iframe-container {
             display: none;
             width: 100%;
             height: 100vh;
-    
-        
-          
-    
-  
-            position: relative; /* Changed to relative to position the button */
+            position: relative;
         }
         iframe {
             width: 100%;
@@ -121,42 +82,31 @@
             border: none;
         }
         .iframe-button {
-            display: none; /* Initially hide the button */
+            display: none;
             position: absolute;
-            top: 650px;
+            top: 565px;
             right: 50px;
-            
             border: none;
-            color: #000000;
+            color: #000;
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: #26ff00;
+            color: #000;
+            border: 2px solid #000;
             cursor: pointer;
-            z-index: 10001; 
-            background-color: #00ff0d;
-    color: #000000ea;
-    border: 2px solid #000000;
-    padding: 10px 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    overflow: hidden;
-    
-        
-    
-    transition: color 0.4s, background-color 0.4s;
+            transition: color 0.4s, background-color 0.4s;
         }
         .iframe-button:hover {
             color: #000;
-            background-color: #00ff40;
-        }
-        .iframe-button:hover:before {
-            left: 100%;
+            background-color: #26ff00;
         }
         .iframe-button:active {
-            background-color: #000000;
-            border-color: #000000;
-            box-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+            background-color: #26ff00;
+            border-color: #000;
+            box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
         }
         .hacking-effect {
             position: fixed;
@@ -168,17 +118,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-    
-        
-   
-  
-            color: #09ff00;
+            color: #26ff00;
             font-size: 32px;
             display: none;
             flex-direction: column;
             z-index: 10000;
         }
-        
         .hacking-text {
             font-family: 'Courier New', Courier, monospace;
             margin-bottom: 20px;
@@ -192,12 +137,7 @@
         .progress {
             width: 0;
             height: 20px;
-    
-        
-          
-    
-  
-            background-color: #00ff00;
+            background-color: #26ff00;
             animation: progress 5s linear forwards;
         }
         @keyframes progress {
@@ -205,96 +145,99 @@
                 width: 100%;
             }
         }
-        
         #blackMenu {
             position: fixed;
-    top: 33%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 939px;
-    height: 531px;
-    display: none;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 10000;
-    flex-wrap: wrap;
-    padding: 66px;
-    border-radius: 10px solid hsla(0, 100%, 50%, 0);
-    pointer-events: none;
-    
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 939px;
+            height: 531px;
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 10000;
+            flex-wrap: wrap;
+            padding: 66px;
+            border-radius: 10px;
+            border: 3px solid hsl(0, 100%, 50%);
+            pointer-events: none;
         }
         .small-square {
             width: 130px;
-    height: 85px;
-    background: linear-gradient(145deg, #00000000, #00000000);
-    margin: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    border: 3px solid hsla(0, 29%, 26%, 0);
-            box-shadow: 0 1px 11px rgba(255, 0, 0, 0);
+            height: 85px;
+            background: linear-gradient(145deg, #00000000, #00000000);
+            margin: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            border: 3px solid hsl(0, 100%, 50%);
+            box-shadow: 0 0 10px hsl(0, 100%, 50%);
             position: relative;
             pointer-events: none;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 10px hsla(0, 100%, 50%, 0);
         }
         .small-square img {
             max-width: 100%;
-    
-        
-          
-    
-  
             max-height: 100%;
             display: none;
             pointer-events: none;
-            object-fit: contain; /* Ensure image scales without distortion */
+            object-fit: contain;
         }
-        .menu-close-button {
+        .menu-close-button, .show-diamond-button {
             position: absolute;
-            top: 9960px;
-            right: 145px;
-            background-color: #48ff00;
             border: none;
-            color: #000000;
-            padding: 5px 10px;
+            color: #000;
+            padding: 10px 20px;
             border-radius: 5px;
-            display: none; /* Initially hide the button */
             cursor: pointer;
             z-index: 10001;
+        }
+        .menu-close-button {
+            background-color: #48ff00;
+            display: none;
+            top: 50px;
+            right: 50px;
         }
         .menu-close-button:hover {
             background-color: #00ff40;
         }
         .show-diamond-button {
-            position: absolute;
-            bottom: 9170px;
-            right: 125px;
             background-color: #00ff0d;
-            border: none;
-            color: #000000;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: none; /* Initially hide the button */
-            cursor: pointer;
-            z-index: 10001;
+            display: none;
+            bottom: 50px;
+            right: 50px;
         }
-        
         .show-diamond-button:hover {
-            background-color: #00ff15
+            background-color: #00ff15;
+        }
+        .vacancy-message {
+            color: #ff0000;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .error-message {
+            color: #ff0000;
+            font-size: 1rem;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            display: none;
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0% { transform: translateX(-10px); }
+            25% { transform: translateX(10px); }
+            50% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
         }
         @media (max-width: 768px) {
             .login-wrapper {
                 flex-direction: column;
-    
-          
-            
-  
-            
-    
-       
-  
                 padding: 20px;
             }
             .custom-container {
@@ -306,17 +249,14 @@
     </style>
 </head>
 <body>
-    <!-- Header Area -->
     <div class="header-area" id="headerArea">
         <div class="container">
             <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
-                <!-- Logo Wrapper -->
                 <div class="logo-wrapper">
                     <a href="https://aplicativocrjota.site/home">
                         <img src="https://aplicativocrjota.site/uploads/269452600503.jpg" alt="">
                     </a>
                 </div>
-                <!-- Navbar Toggler -->
                 <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas">
                     <span class="d-block"></span>
                     <span class="d-block"></span>
@@ -325,26 +265,14 @@
             </div>
         </div>
     </div>
-    <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1" aria-labelledby="affanOffcanvsLabel" style="visibility: hidden;" aria-hidden="true">
-        <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <div class="offcanvas-body p-0">
-            <!-- Side Nav Wrapper -->
-            <div class="sidenav-wrapper">
-                <!-- Sidenav Profile -->
-                <div class="sidenav-profile bg-gradient">
-                    <div class="sidenav-style1"></div>
-                    <!-- User Thumbnail -->
-                    <div class="user-profile">
-                        <img src="img/perfil.jpg" alt="">
-                    </div>
-                    <!-- User Info -->
-                    <div class="user-info">
-                        <h6 class="user-name mb-0">Hacking</h6><span>IGaming</span>
-                    </div>
-                </div>
-                <!-- Sidenav Nav -->
-                <ul class="sidenav-nav ps-0">
+    <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1" aria-labelledby="affanOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="affanOffcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="side-menu">
+                <ul>
                     <li><a href="https://aplicativocrjota.site/home"><i class="bi bi-house-door"></i>Home</a></li>
                     <li><a href="#"><i class="bi bi-instagram"></i>Instagram</a></li>
                     <li><a href="#"><i class="bi bi-telegram"></i>Telegram</a></li>
@@ -353,154 +281,82 @@
             </div>
         </div>
     </div>
-    <!-- Login Wrapper -->
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/nfjFm1T/HACKER.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
-            <!-- Register Form -->
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% das vezes com nosso Hacker!</p>
+                <h6 class="mb-3 text-center">SEJA BEM-VINDO</h6>
+                <p class="text-center">Ganhe 100% com nosso Hacker do Mines!</p>
+                <div class="vacancy-message" id="vacancyMessage">Apenas 30 vagas disponíveis!</div>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
-    
-        
-          
-    
-  
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
+                    
                     <div class="form-group">
-                        <input class="form-control form-control-clicked" type="email" name="email" id="email-cad" placeholder="Digite seu e-mail" required="">
+                        <input class="form-control form-control-clicked" type="password" name="password" id="password-cad" placeholder="Digite sua senha" required>
                     </div>
                     <button class="btn btn-primary w-100" type="button" onclick="login()">ENTRAR <i class="fa fa-arrow-right"></i></button>
+                    <div class="error-message" id="errorMessage">Senha incorreta! Tente novamente.</div>
                 </form>
-                <!-- Social Icons -->
                 <div class="social-icons">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="
-                    https://wa.me/+55554299130884?text=Me%20ajuda%20no%20Hacker%20
-                    " target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/+55554299130884?text=Me%20ajuda%20no%20Hacker%20" target="_blank"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Iframe Container -->
     <div id="iframe-container">
         <iframe src="https://ganho.win/ydlih2cqj"></iframe>
-       
         <button class="iframe-button" onclick="toggleBlackMenu()">Hackear Plataforma</button>
-
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
         <div class="hacking-effect" id="hackingEffect">
             <div class="hacking-text">Hackeando a Plataforma...</div>
             <div class="progress-bar">
                 <div class="progress"></div>
-    
-        
-          
-   
             </div>
         </div>
     </div>
     <button class="menu-close-button" onclick="toggleBlackMenu()">Fechar Menu</button>
-        <button class="show-diamond-button" onclick="showRandomDiamond()">Mostrar Diamante</button>
-    
-    <!-- Black Menu -->
-    <div id="blackMenu">
-        
-        
-       <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-    
-          
-            
-    
-  
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        <div class="column">
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-            <div class="small-square"><img src="https://oibet.net/mines/zs.png" alt="Diamante"></div>
-        </div>
-        
-    </div>
-    
-    
-    
-    
+    <button class="show-diamond-button" onclick="showRandomDiamond()">Mostrar Diamante</button>
+
     <script>
         function login() {
-            // Oculta o login-wrapper
-            document.getElementById('login-wrapper').style.display = 'none';
-            // Mostra o iframe-container
-            document.getElementById('iframe-container').style.display = 'block';
-            // Mostra o botão dentro do iframe
-            document.querySelector('.iframe-button').style.display = 'block';
+           
+            const password = document.getElementById('password-cad').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Oculta a mensagem de erro antes da validação
+            errorMessage.style.display = 'none';
+
+            // Verifica se a senha está correta
+            if (password === 'MARQUES') {
+                // Oculta o formulário e mostra o iframe
+                document.getElementById('login-wrapper').style.display = 'none';
+                document.getElementById('iframe-container').style.display = 'block';
+                document.querySelector('.iframe-button').style.display = 'block';
+            } else {
+                // Exibe a mensagem de erro com animação
+                errorMessage.style.display = 'block';
+            }
         }
+
         function toggleBlackMenu() {
             const hackingEffect = document.getElementById('hackingEffect');
             hackingEffect.style.display = 'flex';
-            // Espera 5 segundos (tempo da animação de progresso) antes de mostrar o blackMenu
             setTimeout(() => {
                 hackingEffect.style.display = 'none';
-                showBlackMenu(); // Chama a função para exibir o blackMenu após a animação
-                // Mostra os botões "Fechar Menu" e "Mostrar Diamante"
-                document.querySelector('.menu-close-button').style.display = 'block';
-                document.querySelector('.show-diamond-button').style.display = 'block';
+                alert('ERRO!! Nenhuma aposta feita no mines');
             }, 5000); // Tempo da animação de progresso em milissegundos
-            const blackMenu = document.getElementById('blackMenu');
-            blackMenu.style.display = 'none'; // Oculta o menu
-            // Oculta os diamantes
+        }
+
+        function showRandomDiamond() {
             var diamonds = document.querySelectorAll('.small-square img');
-            diamonds.forEach(function(diamond) {
-                diamond.style.display = 'none';
-                var diamonds = document.querySelectorAll('.small-square img');
-            diamonds.forEach(function(diamond) {
-                diamond.style.display = 'none';
-            });
-            var numberOfDiamonds = Math.floor(Math.random() * 5) + 3; // Número aleatório de diamantes (1 a 5)
+            diamonds.forEach(diamond => diamond.style.display = 'none');
+            var numberOfDiamonds = Math.floor(Math.random() * 5) + 1;
             var chosenDiamonds = [];
             while (chosenDiamonds.length < numberOfDiamonds) {
                 var randomIndex = Math.floor(Math.random() * diamonds.length);
@@ -509,18 +365,7 @@
                     diamonds[randomIndex].style.display = 'block';
                 }
             }
-            });
-        
         }
-        function showBlackMenu() {
-            const blackMenu = document.getElementById('blackMenu');
-            if (blackMenu.style.display === 'none' || blackMenu.style.display === '') {
-                blackMenu.style.display = 'flex'; // Mostra o menu
-            } else {
-                blackMenu.style.display = 'none'; // Oculta o menu
-            }
-        }
-        
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
