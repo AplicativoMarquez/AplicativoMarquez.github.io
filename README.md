@@ -15,8 +15,11 @@
             height: 100vh;
             overflow: hidden; /* Prevent scrolling */
         }
-        .markdown-body img {
-    opacity: 0; /* Totalmente transparente */
+         .markdown-body img {
+     max-width: 100%; 
+   box-sizing: content-box; 
+   background-color:#00000000
+
 }
 
         .login-wrapper {
