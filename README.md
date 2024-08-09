@@ -319,8 +319,8 @@
                 </form>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="https://wa.me/+55554299130884?text=Me%20ajuda%20no%20Hacker%20" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://t.me/hackermarquesz" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=554299326740&text=Opa,%20como%20fa%C3%A7o%20pra%20usar%20o%20sistema?" target="_blank"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
