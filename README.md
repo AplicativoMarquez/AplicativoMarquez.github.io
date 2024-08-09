@@ -15,6 +15,10 @@
             height: 100vh;
             overflow: hidden; /* Prevent scrolling */
         }
+        .markdown-body img {
+    opacity: 0; /* Totalmente transparente */
+}
+
         .login-wrapper {
             display: flex;
             align-items: center;
