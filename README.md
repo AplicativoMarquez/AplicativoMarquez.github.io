@@ -25,10 +25,10 @@
             top: 0;
             left: 0;
         }
-        markdown-body img {
-    max-width: 100%;
-    box-sizing: content-box;
-    }
+      .login-intro-img {
+    background-color: transparent; /* ou qualquer cor de fundo que combine com o seu design */
+}
+
             
         .custom-container {
             text-align: center;
