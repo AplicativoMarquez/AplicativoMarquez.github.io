@@ -25,6 +25,11 @@
             top: 0;
             left: 0;
         }
+        markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    
+            
         .custom-container {
             text-align: center;
             max-width: 400px;
