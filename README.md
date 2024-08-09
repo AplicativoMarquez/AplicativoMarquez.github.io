@@ -28,7 +28,7 @@
         markdown-body img {
     max-width: 100%;
     box-sizing: content-box;
-    
+    }
             
         .custom-container {
             text-align: center;
