@@ -304,7 +304,7 @@
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center">SEJA BEM-VINDO</h6>
                 <p class="text-center">Ganhe 100% com nosso Hacker do Mines!</p>
-                <div class="vacancy-message" id="vacancyMessage">Apenas 30 vagas disponíveis!</div>
+                <div class="vacancy-message" id="vacancyMessage">Apenas 18 vagas disponíveis!</div>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
