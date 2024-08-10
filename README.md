@@ -79,10 +79,13 @@
             color: #ff0000;
         }
         #iframe-container {
-            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100vh;
-            position: relative;
+            height: 100%;
+            overflow: hidden;
+            display: none;
         }
         iframe {
             width: 100%;
