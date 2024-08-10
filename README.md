@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
     <style>
+        .markdown-body img {
+     max-width: 100%; 
+   box-sizing: content-box; 
+   background-color:#00000000
+
+}
         body {
             background-color: #000;
             color: #fff;
@@ -250,10 +255,7 @@
     <div class="header-area" id="headerArea">
         <div class="container">
             <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
-                <div class="logo-wrapper">
-                    <a href="https://aplicativocrjota.site/home">
-                        <img src="https://aplicativocrjota.site/uploads/269452600503.jpg" alt="Logo">
-                    </a>
+                <div class="logo-wrapper">      
                 </div>
                 <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas">
                     <span class="d-block"></span>
