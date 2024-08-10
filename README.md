@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,15 +13,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
         }
-         .markdown-body img {
-     max-width: 100%; 
-   box-sizing: content-box; 
-   background-color:#00000000
-
-}
-
         .login-wrapper {
             display: flex;
             align-items: center;
@@ -32,11 +25,6 @@
             top: 0;
             left: 0;
         }
-      .login-intro-img {
-    background-color: transparent; /* ou qualquer cor de fundo que combine com o seu design */
-}
-
-            
         .custom-container {
             text-align: center;
             max-width: 400px;
@@ -51,9 +39,9 @@
             height: auto;
             margin-bottom: 20px;
         }
-         h1 {
-    display: none;
-}
+        h1 {
+            display: none;
+        }
         .register-form h6 {
             color: #fff;
         }
@@ -102,7 +90,6 @@
             top: 565px;
             right: 50px;
             border: none;
-            color: #000;
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 20px;
@@ -175,7 +162,6 @@
             padding: 66px;
             border-radius: 10px;
             border: 3px solid hsl(0, 100%, 50%);
-            pointer-events: none;
         }
         .small-square {
             width: 130px;
@@ -189,20 +175,17 @@
             border: 3px solid hsl(0, 100%, 50%);
             box-shadow: 0 0 10px hsl(0, 100%, 50%);
             position: relative;
-            pointer-events: none;
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .small-square img {
             max-width: 100%;
             max-height: 100%;
             display: none;
-            pointer-events: none;
             object-fit: contain;
         }
         .menu-close-button, .show-diamond-button {
             position: absolute;
             border: none;
-            color: #000;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
@@ -269,7 +252,7 @@
             <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
                 <div class="logo-wrapper">
                     <a href="https://aplicativocrjota.site/home">
-                        <img src="https://aplicativocrjota.site/uploads/269452600503.jpg" alt="">
+                        <img src="https://aplicativocrjota.site/uploads/269452600503.jpg" alt="Logo">
                     </a>
                 </div>
                 <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas">
@@ -288,31 +271,30 @@
         <div class="offcanvas-body">
             <div class="side-menu">
                 <ul>
-                    <li><a href="https://aplicativocrjota.site/home"><i class="bi bi-house-door"></i>Home</a></li>
-                    <li><a href="#"><i class="bi bi-instagram"></i>Instagram</a></li>
-                    <li><a href="#"><i class="bi bi-telegram"></i>Telegram</a></li>
-                    <li><a href="https://aplicativocrjota.site/sair"><i class="bi bi-box-arrow-right"></i>Sair</a></li>
+                    <li><a href="https://aplicativocrjota.site/home"><i class="bi bi-house-door"></i> Home</a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="bi bi-telegram"></i> Telegram</a></li>
+                    <li><a href="https://aplicativocrjota.site/sair"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
+    <div class="login-wrapper" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
                 <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center">SEJA BEM-VINDO</h6>
-                <p class="text-center">Ganhe 100% com nosso Hacker do Mines!</p>
+                <h6 class="mb-3">SEJA BEM-VINDO</h6>
+                <p>Ganhe 100% com nosso Hacker do Mines!</p>
                 <div class="vacancy-message" id="vacancyMessage">Apenas 18 vagas disponíveis!</div>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
-                    
                     <div class="form-group">
-                        <input class="form-control form-control-clicked" type="password" name="password" id="password-cad" placeholder="Digite sua senha" required>
+                        <input class="form-control" type="password" name="password" id="password-cad" placeholder="Digite sua senha" required>
                     </div>
                     <button class="btn btn-primary w-100" type="button" onclick="login()">ENTRAR <i class="fa fa-arrow-right"></i></button>
                     <div class="error-message" id="errorMessage">Senha incorreta! Tente novamente.</div>
@@ -340,21 +322,16 @@
 
     <script>
         function login() {
-           
             const password = document.getElementById('password-cad').value;
             const errorMessage = document.getElementById('errorMessage');
 
-            // Oculta a mensagem de erro antes da validação
             errorMessage.style.display = 'none';
 
-            // Verifica se a senha está correta
             if (password === 'MARQUES') {
-                // Oculta o formulário e mostra o iframe
                 document.getElementById('login-wrapper').style.display = 'none';
                 document.getElementById('iframe-container').style.display = 'block';
                 document.querySelector('.iframe-button').style.display = 'block';
             } else {
-                // Exibe a mensagem de erro com animação
                 errorMessage.style.display = 'block';
             }
         }
@@ -365,16 +342,16 @@
             setTimeout(() => {
                 hackingEffect.style.display = 'none';
                 alert('ERRO!! Nenhuma aposta feita no mines');
-            }, 5000); // Tempo da animação de progresso em milissegundos
+            }, 5000);
         }
 
         function showRandomDiamond() {
-            var diamonds = document.querySelectorAll('.small-square img');
+            const diamonds = document.querySelectorAll('.small-square img');
             diamonds.forEach(diamond => diamond.style.display = 'none');
-            var numberOfDiamonds = Math.floor(Math.random() * 5) + 1;
-            var chosenDiamonds = [];
+            const numberOfDiamonds = Math.floor(Math.random() * 5) + 1;
+            const chosenDiamonds = [];
             while (chosenDiamonds.length < numberOfDiamonds) {
-                var randomIndex = Math.floor(Math.random() * diamonds.length);
+                const randomIndex = Math.floor(Math.random() * diamonds.length);
                 if (!chosenDiamonds.includes(randomIndex)) {
                     chosenDiamonds.push(randomIndex);
                     diamonds[randomIndex].style.display = 'block';
