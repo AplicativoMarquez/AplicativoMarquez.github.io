@@ -13,6 +13,53 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        #login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        #iframe-container {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .login-intro-img {
+            max-width: 100%;
+            height: auto;
+        }
         .context-options {
             position: fixed;
             top: 50%;
@@ -298,19 +345,7 @@
             color: #ff0000;
         }
 
-        #iframe-container {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            /* Changed to relative to position the button */
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+        
 
         
 
