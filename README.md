@@ -58,7 +58,7 @@
 
 
         .context-options {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -638,14 +638,13 @@
         .white-square {
     width: 595px; /* Ajustado para incluir espaço */
     height: 657px; /* Ajustado para incluir espaço */
-    background-color: #ffffff00; /* Branco com transparência */
-    border: 1px solid #00000000; /* Borda preta */
+    background-color: #ffffff33; /* Branco com transparência */
+    border: 1px solid #000000; /* Borda preta */
     position: absolute;
     top: 146px;
     left: 865px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
-    pointer-events: none;
 }
 
 .grid-container {
@@ -800,8 +799,8 @@
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-            <span class="context-option" onclick="closeContextOptions()"><i class="fas fa-pause"></i> Hackear Double</span>
-               
+            <button onclick="closeContextOptions()">Fechar Opções</button>
+            <div id="assertividade"></div>
     
             <!-- Animação de carregamento -->
             <div id="loading-animation" class="loading-hidden">
@@ -866,14 +865,44 @@
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
-      
 
         
         function stopScroll() {
-     }
+            // Mostrar animação de carregamento
+            const loadingAnimation = document.getElementById('loading-animation');
+            loadingAnimation.classList.add('loading-visible');
+            
+            // Adicionar um atraso para mostrar a animação de carregamento
+            setTimeout(() => {
+                // URL da imagem SVG
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                
+                // Selecione todos os itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                
+                // Limpe o conteúdo de todos os itens do grid
+                gridItems.forEach(item => item.innerHTML = '');
+                
+                // Embaralhe os itens do grid
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                
+                // Selecione os primeiros 5 itens da lista embaralhada
+                const itemsToChange = shuffledItems.slice(0, 5);
+                
+                // Adicione a imagem aos itens selecionados
+                itemsToChange.forEach(item => {
+                    item.innerHTML = `<img src="${imageUrl}" alt="Random Image">`;
+                });
+                
+                // Ocultar animação de carregamento
+                loadingAnimation.classList.remove('loading-visible');
+            }, 2000); // Tempo em milissegundos para a animação de carregamento
+        }
 
 
-        function toggleContextOptions() {      
+
+        function toggleContextOptions() {
+            
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
                 menu.style.display = 'block';
@@ -886,12 +915,26 @@
        // script.js
 
        function closeContextOptions() {
-          
-            
-        }
+    // Mostrar animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    loadingAnimation.classList.remove('loading-hidden');
+    loadingAnimation.classList.add('loading-visible');
+    
+    // Simular um atraso para a animação de carregamento
+    setTimeout(() => {
+        // Ocultar a animação de carregamento
+        loadingAnimation.classList.remove('loading-visible');
+        loadingAnimation.classList.add('loading-hidden');
+        
+        // Mostrar uma imagem aleatória
+        showRandomImage();
+    }, 2000); // 2 segundos
+   
+}
 
 
-
+// Chama a função quando o conteúdo for carregado ou em outro momento adequado
+document.addEventListener('DOMContentLoaded', hideImageContainer);
 
 
 function showRandomImage() {
@@ -954,35 +997,35 @@ function showImageInRandomSquares() {
     });
 }
 
-// Event listener para o botão "Outro"
-document.querySelector('.another-button').addEventListener('click', function() {
-    showImageInRandomSquares();
-});
-// Função para tornar o elemento arrastável
-function makeDraggable(element) {
-    let offsetX, offsetY, isDragging = false;
+function startDrag(event) {
+            event.preventDefault();
 
-    element.addEventListener('mousedown', function (e) {
-        isDragging = true;
-        offsetX = e.clientX - element.getBoundingClientRect().left;
-        offsetY = e.clientY - element.getBoundingClientRect().top;
-    });
+            let element = event.target.closest('.context-options');
+            let offsetX = (event.clientX || event.touches[0].clientX) - element.getBoundingClientRect().left;
+            let offsetY = (event.clientY || event.touches[0].clientY) - element.getBoundingClientRect().top;
 
-    document.addEventListener('mousemove', function (e) {
-        if (isDragging) {
-            element.style.left = e.clientX - offsetX + 'px';
-            element.style.top = e.clientY - offsetY + 'px';
+            function onMove(e) {
+                let clientX = e.clientX || e.touches[0].clientX;
+                let clientY = e.clientY || e.touches[0].clientY;
+                element.style.left = (clientX - offsetX) + 'px';
+                element.style.top = (clientY - offsetY) + 'px';
+            }
+
+            function onEnd() {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', onEnd);
+                document.removeEventListener('touchmove', onMove);
+                document.removeEventListener('touchend', onEnd);
+            }
+
+            document.addEventListener('mousemove', onMove);
+            document.addEventListener('mouseup', onEnd);
+            document.addEventListener('touchmove', onMove);
+            document.addEventListener('touchend', onEnd);
         }
-    });
 
-    document.addEventListener('mouseup', function () {
-        isDragging = false;
-    });
-}
-
-// Inicializar a funcionalidade arrastável
-makeDraggable(document.getElementById('draggable-image'));
-
+        document.querySelector('.context-options').addEventListener('mousedown', startDrag);
+        document.querySelector('.context-options').addEventListener('touchstart', startDrag);
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
