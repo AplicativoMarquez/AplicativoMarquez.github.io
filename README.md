@@ -748,6 +748,22 @@
     .button-text {
         font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
     }
+    /* Supondo que você conheça os seletores dos elementos que deseja ocultar */
+.login-form {
+    display: none; /* Esconde o formulário de login */
+}
+
+.black-background {
+    display: none; /* Esconde qualquer fundo preto */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita barras de rolagem */
+}
+
 
 
 
