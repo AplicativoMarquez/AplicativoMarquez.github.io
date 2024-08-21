@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacker Mines</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
@@ -665,6 +666,19 @@
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
     border: 6px solid #00000000; /* Borda preta */
 }
+.btn-primary1 {
+    background-color: #000000;
+    display: flex;
+    border-color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-primary1:hover {
+    background-color: #74ff00;
+}
+
 
 
 
@@ -763,6 +777,19 @@ html, body {
     width: 100%;
     overflow: hidden; /* Evita barras de rolagem */
 }
+.bi-telegram::before {
+
+color: #00ccff;
+}
+.bi-instagram::before {
+
+color: #ff00f2;
+}
+.bi-whatsapp::before {
+
+color: #00ff00;
+}
+
 
 
 
@@ -786,7 +813,7 @@ html, body {
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/')">
+                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
                         <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
