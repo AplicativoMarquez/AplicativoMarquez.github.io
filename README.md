@@ -724,7 +724,7 @@ color: #00ff00;
         
         <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
         <div class="hacking-effect" id="hackingEffect">
-            <div class="hacking-text">Hackeando a Plataforma...</div>
+            
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
@@ -732,7 +732,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz [v5.0]</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -885,4 +885,3 @@ function stopScroll() {
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
  
-</html>
