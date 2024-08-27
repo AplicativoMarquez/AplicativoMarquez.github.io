@@ -597,7 +597,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 72px); /* 5 colunas de 100px */
+    grid-template-columns: repeat(5, 73px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 77px); /* 5 linhas de 100px */
     gap: 5px; /* Espaçamento entre os quadrados */
     height: 29%;
@@ -740,10 +740,7 @@ color: #00ff00;
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hacker Double
-            </span>
-            
+           
             
     
             <!-- Animação de carregamento -->
