@@ -823,45 +823,9 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-            // Gera um valor percentual aleatório entre 0 e 100
-            const assertividade = (Math.random() * 100).toFixed(2) + '%';
-
-            // Seleciona o menu contextOptions
-            const contextOptions = document.getElementById('contextOptions');
-
-            if (contextOptions) {
-                // Remove qualquer assertividade anterior
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                // Cria um elemento para exibir a assertividade
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-
-                // Define a cor com base no valor da assertividade
-                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
-
-                // Adiciona a assertividade ao menu contextOptions
-                contextOptions.appendChild(assertividadeElement);
-
-                // Adiciona a imagem aos 5 primeiros itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 5);
-                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-           
-        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
-    }
+            alert('Erro: BANCA ABAIXO DE 30, NENHUMA ENTRADA FEITA.');
+            }, 1000);
+        }
 
 
         function toggleContextOptions() {      
