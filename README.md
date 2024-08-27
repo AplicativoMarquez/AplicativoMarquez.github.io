@@ -588,8 +588,8 @@
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 140px;
-    left: 205px;
+    top: 81px;
+    left: 15px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -597,10 +597,10 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    grid-template-columns: repeat(5, 53px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 67px); /* 5 linhas de 100px */
     gap: 5px; /* Espaçamento entre os quadrados */
-    height: 100%;
+    height: 29%;
     width: 100%;
 }
 
