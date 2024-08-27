@@ -15,13 +15,7 @@
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
        
 
-        .assertivity-hidden {
-    display: none;
-}
-
-.assertivity-visible {
-    display: block;
-}
+  
 
 /* Estilo da animação de carregamento */
 .loading-hidden {
@@ -198,33 +192,8 @@
             /* Cor da borda do botão */
         }
 
-        /* styles.css */
+       
 
-
-
-        .ander-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #ffffff;
-            /* Cor de fundo do botão */
-            color: #000000;
-            /* Cor do texto do botão */
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .ander-button:hover {
-            background-color: #ff0000;
-            /* Cor de fundo do botão ao passar o mouse */
-            color: #ffffff;
-            /* Cor do texto do botão ao passar o mouse */
-        }
 
         /* Seu CSS existente */
         .markdown-body img {
@@ -402,27 +371,7 @@
             box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
         }
 
-        .hacking-effect {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.911);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ff0000;
-            font-size: 32px;
-            display: none;
-            flex-direction: column;
-            z-index: 10000;
-        }
-
-        .hacking-text {
-            font-family: 'Courier New', Courier, monospace;
-            margin-bottom: 20px;
-        }
+        
 
         .progress-bar {
             width: 80%;
@@ -608,14 +557,7 @@
             }
         }
 
-        .percentage-animation {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: .15em solid white;
-            animation:
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
+        
 
 
 
@@ -646,8 +588,8 @@
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 146px;
-    left: 865px;
+    top: 140px;
+    left: 205px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -655,9 +597,9 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 105px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 126px); /* 5 linhas de 100px */
-    gap: 10px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    gap: 5px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -679,67 +621,6 @@
     background-color: #74ff00;
 }
 
-
-
-
-
-
-        .percentage-animation {
-            color: #00ff00;
-            /* Cor verde */
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 10px;
-            /* Espaço entre a imagem e o texto */
-        }
-
-        .img.svg {
-            width: 100px
-        }
-
-        .closeMenu-button {
-            position: absolute;
-            top: -6px;
-            /* Ajuste a distância do topo */
-            left: -5px;
-            /* Ajuste a distância da esquerda */
-            width: 50px;
-            /* Tamanho do botão */
-            height: 50px;
-            /* Tamanho do botão */
-            border-radius: 50%;
-            /* Torna o botão redondo */
-            background-color: rgb(25, 0, 255);
-            /* Cor de fundo do botão */
-            color: #ffffff;
-            /* Cor do texto do botão */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            z-index: 10003;
-            /* Garante que o botão esteja acima dos outros elementos */
-            font-size: 24px;
-            /* Tamanho do "X" */
-            font-weight: bold;
-            border: 2px solid #ffffff;
-            /* Borda branca */
-            text-align: center;
-            /* Alinha o "X" no centro */
-        }
-
-        .closeMenu-button:hover {
-            background-color: rgba(255, 0, 0, 1);
-            /* Cor de fundo quando o mouse está sobre o botão */
-        }
-
-        .closeMenu-button::before {
-            content: '×';
-            /* Caracter "X" */
-            font-size: 24px;
-            /* Tamanho do "X" */
-        }
 
         
         #draggable-image {
@@ -813,7 +694,7 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
                         <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
@@ -928,52 +809,65 @@ color: #00ff00;
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
+      
 
-        
-        function stopScroll() {
-    // Mostra a animação de carregamento
-    const loadingElement = document.getElementById('loading-animation');
-    loadingElement.classList.remove('loading-hidden');
-    loadingElement.classList.add('loading-visible');
+       // Variável global para rastrear o valor da assertividade
+let currentAssertividade = 44.23; // Valor inicial
 
-    
-}
+// Função para exibir e ocultar elementos com assertividade e imagem
+function stopScroll() {
+        // Exibe a animação de carregamento
+        document.getElementById('loading-animation').classList.remove('loading-hidden');
+        document.getElementById('loading-animation').classList.add('loading-visible');
+
+        // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+        setTimeout(function() {
+            // Oculta a animação de carregamento
+            document.getElementById('loading-animation').classList.remove('loading-visible');
+            document.getElementById('loading-animation').classList.add('loading-hidden');
+
+            // Gera um valor percentual aleatório entre 0 e 100
+            const assertividade = (Math.random() * 100).toFixed(2) + '%';
+
+            // Seleciona o menu contextOptions
+            const contextOptions = document.getElementById('contextOptions');
+
+            if (contextOptions) {
+                // Remove qualquer assertividade anterior
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                // Cria um elemento para exibir a assertividade
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+
+                // Define a cor com base no valor da assertividade
+                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+
+                // Adiciona a assertividade ao menu contextOptions
+                contextOptions.appendChild(assertividadeElement);
+
+                // Adiciona a imagem aos 5 primeiros itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 5);
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+           
+        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+    }
 
 
-function otherFunction1() {
-    // Lógica para a outra função 1
-    console.log('Executing otherFunction1');
-}
-
-function otherFunction2() {
-    // Lógica para a outra função 2
-    console.log('Executing otherFunction2');
-}
-
-
-// Função para gerar uma assertividade aleatória
-function getRandomAssertivity() {
-    const min = 86.68;
-    const max = 99.99;
-    return (Math.random() * (max - min) + min).toFixed(2) + '%';
-}
-
-// Configura a assertividade no elemento HTML
-function displayAssertivity() {
-    const assertivityElement = document.getElementById('assertivity');
-    assertivityElement.textContent = `Assertividade: ${getRandomAssertivity()}`;
-}
-
-// Exemplo de inicialização
-document.addEventListener('DOMContentLoaded', () => {
-    displayAssertivity();
-});
-
-
-
-
-        function toggleContextOptions() {
-            
+        function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
                 menu.style.display = 'block';
@@ -986,81 +880,48 @@ document.addEventListener('DOMContentLoaded', () => {
        // script.js
 
        function closeContextOptions() {
-    // Mostrar animação de carregamento
-    const loadingAnimation = document.getElementById('loading-animation');
+    // Exibe a animação de carregamento
+    var loadingAnimation = document.getElementById('loading-animation');
     loadingAnimation.classList.remove('loading-hidden');
     loadingAnimation.classList.add('loading-visible');
-    
-    
-    
-}
 
+    // Aguarda 5 segundos e então executa a função principal
+    setTimeout(function() {
+        // Oculta a animação de carregamento
+        loadingAnimation.classList.remove('loading-visible');
+        loadingAnimation.classList.add('loading-hidden');
+        
+        // Aqui você coloca o código da função real que deseja executar
+        // Adicione o código que você deseja executar após a animação de carregamento aqui
+        // Por exemplo, chamar a função que você deseja executar
+        performCloseContextOptions();
+    }, 2000); // Tempo de espera para a animação de carregamento (5 segundos)
 
-function showRandomImage() {
-    const images = [
-        'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png',
-        'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png',
-        'image3.jpg'
-    ];
-    
-    // Escolher uma imagem aleatória
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const selectedImage = images[randomIndex];
-    
-    // Exibir a imagem
-    const imageContainer = document.getElementById('image-container');
-    imageContainer.innerHTML = `<img src="${selectedImage}" alt="Imagem Aleatória">`;
-}
+            const imageElement = document.getElementById('myImage');
+            const originalImageUrl = 'https://i.ibb.co/0jPZbc1/fotor-2024071913022.png';
+            const images = [
+                'https://source.unsplash.com/random/300x200?sig=1',
+                'https://source.unsplash.com/random/300x200?sig=2',
+                'https://source.unsplash.com/random/300x200?sig=3'
+            ];
 
+            // Escolher uma imagem aleatória das três opções
+            const randomImageUrl = images[Math.floor(Math.random() * images.length)];
 
+            // Mudar a imagem para a aleatória
+            imageElement.src = randomImageUrl;
 
-    
+            // Reverter para a imagem original após 5 segundos
+            setTimeout(() => {
+                imageElement.src = originalImageUrl;
+            }, 7000);
 
-
-
-
-
-        // Evento ao clicar no botão Hackear Double
-        document.querySelector('.context-option:nth-child(4)').addEventListener('click', function() {
-            showBlackSquare();
-        });
-// Função para exibir a imagem em 5 quadrados aleatórios
-function showImageInRandomSquares() {
-    // Seleciona os quadrados pequenos
-    var smallSquares = document.querySelectorAll('.small-square');
-    
-    // Limpa imagens existentes
-    smallSquares.forEach(square => {
-        square.innerHTML = '';
-    });
-    
-    // Cria um array com índices aleatórios para escolher os quadrados
-    var randomIndexes = [];
-    while (randomIndexes.length < 5) {
-        var randomIndex = Math.floor(Math.random() * smallSquares.length);
-        if (!randomIndexes.includes(randomIndex)) {
-            randomIndexes.push(randomIndex);
+        
+       
         }
-    }
-    
-    // Cria a imagem
-    var image = document.createElement('img');
-    image.src = 'https://i.ibb.co/xM8T2fd/logo-blaze-apostas-online-QQmdxz-removebg-preview.png';
-    image.alt = 'Logo Blaze Apostas Online';
-    image.style.width = '100%';
-    image.style.height = '100%';
-    
-    // Adiciona a imagem aos quadrados selecionados
-    randomIndexes.forEach(index => {
-        smallSquares[index].appendChild(image.cloneNode(true));
-    });
-}
-
-
-
-
 
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
  
+</html>
