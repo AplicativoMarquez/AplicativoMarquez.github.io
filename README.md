@@ -597,8 +597,8 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 53px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 67px); /* 5 linhas de 100px */
+    grid-template-columns: repeat(5, 72px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 77px); /* 5 linhas de 100px */
     gap: 5px; /* Espaçamento entre os quadrados */
     height: 29%;
     width: 100%;
