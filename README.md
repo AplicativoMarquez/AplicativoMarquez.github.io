@@ -589,7 +589,7 @@
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 140px;
-    left: 90px;
+    left: 75px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
