@@ -724,7 +724,7 @@ color: #00ff00;
         
         <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
         <div class="hacking-effect" id="hackingEffect">
-            <div class="hacking-text">Hackeando a Plataforma...</div>
+           
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
