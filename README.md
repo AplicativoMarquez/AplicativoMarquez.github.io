@@ -599,7 +599,7 @@
     display: grid;
     grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 5px; /* Espaçamento entre os quadrados */
+    gap: 10px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -795,7 +795,7 @@ color: #00ff00;
 
    
     <script>
-        function login(url) {
+       function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
@@ -822,9 +822,56 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-            
+            // Gera um valor percentual aleatório entre 0 e 100
+            const assertividade = (Math.random() * 100).toFixed(2) + '%';
 
-          
+            // Seleciona o menu contextOptions
+            const contextOptions = document.getElementById('contextOptions');
+
+            if (contextOptions) {
+                // Remove qualquer assertividade anterior
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                // Cria um elemento para exibir a assertividade
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+
+                // Define a cor com base no valor da assertividade
+                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+
+                // Adiciona a assertividade ao menu contextOptions
+                contextOptions.appendChild(assertividadeElement);
+
+                // Adiciona a imagem aos 5 primeiros itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 5);
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            // Aguarda 5 segundos e então reverte as mudanças
+            setTimeout(function() {
+                if (contextOptions) {
+                    // Remove assertividade
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    // Remove as imagens dos itens do grid
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
     }
 
@@ -859,11 +906,29 @@ function stopScroll() {
         performCloseContextOptions();
     }, 2000); // Tempo de espera para a animação de carregamento (5 segundos)
 
-          
+            const imageElement = document.getElementById('myImage');
+            const originalImageUrl = 'https://i.ibb.co/0jPZbc1/fotor-2024071913022.png';
+            const images = [
+                'https://source.unsplash.com/random/300x200?sig=1',
+                'https://source.unsplash.com/random/300x200?sig=2',
+                'https://source.unsplash.com/random/300x200?sig=3'
+            ];
+
+            // Escolher uma imagem aleatória das três opções
+            const randomImageUrl = images[Math.floor(Math.random() * images.length)];
+
+            // Mudar a imagem para a aleatória
+            imageElement.src = randomImageUrl;
+
+            // Reverter para a imagem original após 5 segundos
+            setTimeout(() => {
+                imageElement.src = originalImageUrl;
+            }, 7000);
+
+        
        
         }
 
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
- 
