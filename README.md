@@ -54,21 +54,21 @@
     max-width: 100%;
     height: auto;
 }
-.context-options {
-    display: none; /* Inicialmente escondido */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    color: #ffffff;
-    z-index: 10000; /* Garante que fique sobre outros elementos */
-}
 
 
+        .context-options {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.95);
+            /* Preto transparente */
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            color: #ffffff;
+            z-index: 9999;
+        }
 
         .context-options img {
             width: 100px;
@@ -100,9 +100,15 @@
             margin-bottom: 0;
         }
 
-        .context-options .closeContextOptions:hover {
-    background-color: rgba(255, 0, 0, 1);
-}
+        .context-options .context-option:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fundo mais claro ao passar o mouse */
+        }
+
+        .context-options .closeContextOptions {
+            background: rgb(25 0 255);
+            /* Fundo vermelho */
+        }
 
         .context-options .closeContextOptions:hover {
             background-color: rgba(255, 0, 0, 1);
@@ -210,25 +216,26 @@
             display: none;
         }
 
-        html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; /* Evita barras de rolagem */
-}
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            /* Prevent scrolling */
+        }
 
-.login-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Garante que fique abaixo do iframe */
-}
+        .login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         .custom-container {
             text-align: center;
@@ -310,35 +317,44 @@
         }
 
         #iframe-container {
-    display: none; /* Inicialmente escondido */
-    width: 100%;
-    height: 100vh; /* Usa 100% da altura da viewport */
-    position: absolute; /* Para que ocupe toda a tela */
-    top: 0;
-    left: 0;
-    z-index: 9999; /* Garante que fique sobre outros elementos */
-}
+            display: none;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            /* Changed to relative to position the button */
+        }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove a borda */
-}
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-.iframe-button {
-    display: block; /* Ajuste conforme necessário */
-    position: absolute;
-    top: 10px; /* Ajuste conforme necessário */
-    right: 10px; /* Ajuste conforme necessário */
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 10001; /* Garante que fique sobre o iframe */
-}
+        .iframe-button {
+            display: none;
+            /* Initially hide the button */
+            position: absolute;
+            top: 9990px;
+            /* Adjusted position */
+            right: 48px;
+            /* Adjusted position */
+            border: none;
+            color: #000000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 10001;
+            background-color: #ff0000;
+            color: #000000ea;
+            border: 2px solid #ff0000;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            overflow: hidden;
+            transition: color 0.4s, background-color 0.4s;
+        }
 
         .iframe-button:hover {
             color: #000;
@@ -404,7 +420,23 @@ iframe {
             z-index: 10002;
         }
 
-        
+        /* Adiciona o CSS para .context-options */
+        .context-options {
+            display: none;
+            /* Começa escondido */
+            position: fixed;
+            top: 50%;
+
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.95);
+            /* Preto transparente */
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            color: #ffffff;
+            z-index: 9999;
+        }
 
         .context-options img {
             width: 100px;
@@ -557,7 +589,7 @@ iframe {
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 140px;
-    left: 75px;
+    left: 90px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -567,7 +599,7 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 15px; /* Espaçamento entre os quadrados */
+    gap: 5px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -763,7 +795,7 @@ color: #00ff00;
 
    
     <script>
-       function login(url) {
+        function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
@@ -790,56 +822,9 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-            // Gera um valor percentual aleatório entre 0 e 100
-            const assertividade = (Math.random() * 100).toFixed(2) + '%';
+            
 
-            // Seleciona o menu contextOptions
-            const contextOptions = document.getElementById('contextOptions');
-
-            if (contextOptions) {
-                // Remove qualquer assertividade anterior
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                // Cria um elemento para exibir a assertividade
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-
-                // Define a cor com base no valor da assertividade
-                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
-
-                // Adiciona a assertividade ao menu contextOptions
-                contextOptions.appendChild(assertividadeElement);
-
-                // Adiciona a imagem aos 5 primeiros itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 5);
-                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-            // Aguarda 5 segundos e então reverte as mudanças
-            setTimeout(function() {
-                if (contextOptions) {
-                    // Remove assertividade
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    // Remove as imagens dos itens do grid
-                    const gridItems = document.querySelectorAll('.grid-item');
-                    gridItems.forEach(item => item.innerHTML = '');
-                }
-            }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
+          
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
     }
 
@@ -874,29 +859,11 @@ function stopScroll() {
         performCloseContextOptions();
     }, 2000); // Tempo de espera para a animação de carregamento (5 segundos)
 
-            const imageElement = document.getElementById('myImage');
-            const originalImageUrl = 'https://i.ibb.co/0jPZbc1/fotor-2024071913022.png';
-            const images = [
-                'https://source.unsplash.com/random/300x200?sig=1',
-                'https://source.unsplash.com/random/300x200?sig=2',
-                'https://source.unsplash.com/random/300x200?sig=3'
-            ];
-
-            // Escolher uma imagem aleatória das três opções
-            const randomImageUrl = images[Math.floor(Math.random() * images.length)];
-
-            // Mudar a imagem para a aleatória
-            imageElement.src = randomImageUrl;
-
-            // Reverter para a imagem original após 5 segundos
-            setTimeout(() => {
-                imageElement.src = originalImageUrl;
-            }, 7000);
-
-        
+          
        
         }
 
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+ 
