@@ -588,8 +588,8 @@
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 81px;
-    left: 15px;
+    top: 140px;
+    left: 90px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -597,10 +597,10 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 73px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 77px); /* 5 linhas de 100px */
+    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
     gap: 5px; /* Espaçamento entre os quadrados */
-    height: 29%;
+    height: 100%;
     width: 100%;
 }
 
@@ -694,7 +694,7 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
+                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
                         <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
@@ -724,7 +724,7 @@ color: #00ff00;
         
         <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
         <div class="hacking-effect" id="hackingEffect">
-            
+            <div class="hacking-text">Hackeando a Plataforma...</div>
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
@@ -732,7 +732,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz [v5.0]</span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -740,7 +740,10 @@ color: #00ff00;
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-           
+            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
+               Hacker Double
+            </span>
+            
             
     
             <!-- Animação de carregamento -->
@@ -823,9 +826,45 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-            alert('Erro: BANCA ABAIXO DE 30, NENHUMA ENTRADA FEITA.');
-            }, 1000);
-        }
+            // Gera um valor percentual aleatório entre 0 e 100
+            const assertividade = (Math.random() * 100).toFixed(2) + '%';
+
+            // Seleciona o menu contextOptions
+            const contextOptions = document.getElementById('contextOptions');
+
+            if (contextOptions) {
+                // Remove qualquer assertividade anterior
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                // Cria um elemento para exibir a assertividade
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+
+                // Define a cor com base no valor da assertividade
+                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+
+                // Adiciona a assertividade ao menu contextOptions
+                contextOptions.appendChild(assertividadeElement);
+
+                // Adiciona a imagem aos 5 primeiros itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 5);
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+          
+        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+    }
 
 
         function toggleContextOptions() {      
@@ -885,3 +924,4 @@ function stopScroll() {
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
  
+</html>
