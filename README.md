@@ -826,7 +826,7 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-        
+            
 
           
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
@@ -834,8 +834,36 @@ function stopScroll() {
 
 
         function toggleContextOptions() {      
-    
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+       // script.js
+
+       function closeContextOptions() {
+    // Exibe a animação de carregamento
+    var loadingAnimation = document.getElementById('loading-animation');
+    loadingAnimation.classList.remove('loading-hidden');
+    loadingAnimation.classList.add('loading-visible');
+
+    // Aguarda 5 segundos e então executa a função principal
+    setTimeout(function() {
+        // Oculta a animação de carregamento
+        loadingAnimation.classList.remove('loading-visible');
+        loadingAnimation.classList.add('loading-hidden');
         
+        // Aqui você coloca o código da função real que deseja executar
+        // Adicione o código que você deseja executar após a animação de carregamento aqui
+        // Por exemplo, chamar a função que você deseja executar
+        performCloseContextOptions();
+    }, 2000); // Tempo de espera para a animação de carregamento (5 segundos)
+
+          
        
         }
 
@@ -843,3 +871,4 @@ function stopScroll() {
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
  
+</html>
