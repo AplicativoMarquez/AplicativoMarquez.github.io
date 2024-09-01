@@ -54,21 +54,21 @@
     max-width: 100%;
     height: auto;
 }
+.context-options {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #ffffff;
+    z-index: 10000; /* Garante que fique sobre outros elementos */
+}
 
 
-        .context-options {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.95);
-            /* Preto transparente */
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'M PLUS 1 Code', sans-serif;
-            color: #ffffff;
-            z-index: 9999;
-        }
 
         .context-options img {
             width: 100px;
@@ -87,7 +87,7 @@
             display: block;
             padding: 12px 20px;
             margin-bottom: 10px;
-            background-color: rgb(25 0 255);
+            background-color: rgb(255, 0, 0);
             /* Preto transparente */
             border-radius: 5px;
             color: #ffffff;
@@ -100,15 +100,9 @@
             margin-bottom: 0;
         }
 
-        .context-options .context-option:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fundo mais claro ao passar o mouse */
-        }
-
-        .context-options .closeContextOptions {
-            background: rgb(25 0 255);
-            /* Fundo vermelho */
-        }
+        .context-options .closeContextOptions:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
 
         .context-options .closeContextOptions:hover {
             background-color: rgba(255, 0, 0, 1);
@@ -216,26 +210,26 @@
             display: none;
         }
 
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-            /* Prevent scrolling */
-        }
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita barras de rolagem */
+}
 
-        .login-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Garante que fique abaixo do iframe */
+    background-color: #000000; /* Adiciona o fundo preto */
+}
 
         .custom-container {
             text-align: center;
@@ -271,14 +265,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        .btn-primary1 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
-
         .btn-primary2 {
             background-color: #000000;
             display: flex;
@@ -287,11 +273,19 @@
             justify-content: center;
         }
 
-        .btn-primary1:hover {
-            background-color: #ff0000;
+        .btn-primary3 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-primary2:hover {
+            background-color: #ff0000;
+        }
+
+        .btn-primary3:hover {
             background-color: #15ff00;
         }
 
@@ -317,44 +311,35 @@
         }
 
         #iframe-container {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            /* Changed to relative to position the button */
-        }
+    display: none; /* Inicialmente escondido */
+    width: 100%;
+    height: 100vh; /* Usa 100% da altura da viewport */
+    position: absolute; /* Para que ocupe toda a tela */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Garante que fique sobre outros elementos */
+}
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove a borda */
+}
 
-        .iframe-button {
-            display: none;
-            /* Initially hide the button */
-            position: absolute;
-            top: 9990px;
-            /* Adjusted position */
-            right: 48px;
-            /* Adjusted position */
-            border: none;
-            color: #000000;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            z-index: 10001;
-            background-color: #ff0000;
-            color: #000000ea;
-            border: 2px solid #ff0000;
-            padding: 10px 20px;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            overflow: hidden;
-            transition: color 0.4s, background-color 0.4s;
-        }
+.iframe-button {
+    display: block; /* Ajuste conforme necessário */
+    position: absolute;
+    top: 1990px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10001; /* Garante que fique sobre o iframe */
+}
 
         .iframe-button:hover {
             color: #000;
@@ -420,23 +405,7 @@
             z-index: 10002;
         }
 
-        /* Adiciona o CSS para .context-options */
-        .context-options {
-            display: none;
-            /* Começa escondido */
-            position: fixed;
-            top: 50%;
-
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.95);
-            /* Preto transparente */
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'M PLUS 1 Code', sans-serif;
-            color: #ffffff;
-            z-index: 9999;
-        }
+        
 
         .context-options img {
             width: 100px;
@@ -583,13 +552,13 @@
         }
 
         .white-square {
-    width: 595px; /* Ajustado para incluir espaço */
+    width: 370px; /* Ajustado para incluir espaço */
     height: 657px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 140px;
-    left: 90px;
+    top: 104px;
+    left: 32px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -599,7 +568,7 @@
     display: grid;
     grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 5px; /* Espaçamento entre os quadrados */
+    gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -607,18 +576,6 @@
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
     border: 6px solid #00000000; /* Borda preta */
-}
-.btn-primary1 {
-    background-color: #000000;
-    display: flex;
-    border-color: #000000;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.btn-primary1:hover {
-    background-color: #74ff00;
 }
 
 
@@ -694,8 +651,10 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
-                        <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                            <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
@@ -728,7 +687,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz [v5.0]</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -737,7 +696,7 @@ color: #00ff00;
             
 
             <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hacker Double
+               Hackear Double
             </span>
             
             
@@ -795,7 +754,7 @@ color: #00ff00;
 
    
     <script>
-        function login(url) {
+       function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
@@ -822,9 +781,56 @@ function stopScroll() {
             document.getElementById('loading-animation').classList.remove('loading-visible');
             document.getElementById('loading-animation').classList.add('loading-hidden');
 
-            
+            // Gera um valor percentual aleatório entre 0 e 100
+            const assertividade = (Math.random() * 100).toFixed(2) + '%';
 
-          
+            // Seleciona o menu contextOptions
+            const contextOptions = document.getElementById('contextOptions');
+
+            if (contextOptions) {
+                // Remove qualquer assertividade anterior
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                // Cria um elemento para exibir a assertividade
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+
+                // Define a cor com base no valor da assertividade
+                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+
+                // Adiciona a assertividade ao menu contextOptions
+                contextOptions.appendChild(assertividadeElement);
+
+                // Adiciona a imagem aos 5 primeiros itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 5);
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            // Aguarda 5 segundos e então reverte as mudanças
+            setTimeout(function() {
+                if (contextOptions) {
+                    // Remove assertividade
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    // Remove as imagens dos itens do grid
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
     }
 
@@ -844,26 +850,88 @@ function stopScroll() {
        function closeContextOptions() {
     // Exibe a animação de carregamento
     var loadingAnimation = document.getElementById('loading-animation');
-    loadingAnimation.classList.remove('loading-hidden');
-    loadingAnimation.classList.add('loading-visible');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
 
     // Aguarda 5 segundos e então executa a função principal
     setTimeout(function() {
-        // Oculta a animação de carregamento
-        loadingAnimation.classList.remove('loading-visible');
-        loadingAnimation.classList.add('loading-hidden');
-        
-        // Aqui você coloca o código da função real que deseja executar
-        // Adicione o código que você deseja executar após a animação de carregamento aqui
-        // Por exemplo, chamar a função que você deseja executar
-        performCloseContextOptions();
-    }, 2000); // Tempo de espera para a animação de carregamento (5 segundos)
-
-          
-       
+        if (loadingAnimation) {
+            // Oculta a animação de carregamento
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
         }
+
+        // Exibe a assertividade e a imagem aleatória
+        var contextOptions = document.getElementById('contextOptions');
+        if (contextOptions) {
+            // Remove qualquer assertividade ou imagem anterior
+            var existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+            var existingImage = contextOptions.querySelector('.random-image');
+            if (existingImage) {
+                contextOptions.removeChild(existingImage);
+            }
+
+            // Cria um elemento para exibir a assertividade
+            const assertividade = (Math.random() * 100).toFixed(2) + '%';
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+
+            // Adiciona a assertividade ao menu contextOptions
+            contextOptions.appendChild(assertividadeElement);
+
+            // Lista de URLs das imagens
+            const imageUrls = [
+                'https://i.ibb.co/R7XCt2q/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/7Q4mSbv/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/wJ3WdJK/Captura-de-tela-2024-08-29-210805.png'
+            ];
+
+            // Escolhe uma imagem aleatória da lista
+            const randomIndex = Math.floor(Math.random() * imageUrls.length);
+            const imageUrl = imageUrls[randomIndex];
+
+            // Cria e adiciona a imagem aleatória ao menu contextOptions
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.alt = 'Random Image';
+            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
+            imageElement.style.height = 'auto';
+            imageElement.className = 'random-image';
+
+            contextOptions.appendChild(imageElement);
+
+            // Reverte para o estado inicial após mais 5 segundos
+            setTimeout(function() {
+                if (contextOptions) {
+                    // Remove a assertividade e a imagem
+                    var assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    var randomImageElement = contextOptions.querySelector('.random-image');
+                    if (randomImageElement) {
+                        contextOptions.removeChild(randomImageElement);
+                    }
+                }
+            }, 5000); // Tempo para reverter as mudanças (5 segundos)
+        }
+    }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
+}
+
+
+
 
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
- 
