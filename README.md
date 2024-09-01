@@ -87,7 +87,7 @@
             display: block;
             padding: 12px 20px;
             margin-bottom: 10px;
-            background-color: rgb(25 0 255);
+            background-color: rgb(255, 0, 0);
             /* Preto transparente */
             border-radius: 5px;
             color: #ffffff;
@@ -265,14 +265,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        .btn-primary1 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
-
         .btn-primary2 {
             background-color: #000000;
             display: flex;
@@ -281,11 +273,19 @@
             justify-content: center;
         }
 
-        .btn-primary1:hover {
-            background-color: #ff0000;
+        .btn-primary3 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-primary2:hover {
+            background-color: #ff0000;
+        }
+
+        .btn-primary3:hover {
             background-color: #15ff00;
         }
 
@@ -329,7 +329,7 @@ iframe {
 .iframe-button {
     display: block; /* Ajuste conforme necessário */
     position: absolute;
-    top: 10px; /* Ajuste conforme necessário */
+    top: 1990px; /* Ajuste conforme necessário */
     right: 10px; /* Ajuste conforme necessário */
     background-color: #ff0000;
     color: #ffffff;
@@ -552,13 +552,13 @@ iframe {
         }
 
         .white-square {
-    width: 595px; /* Ajustado para incluir espaço */
+    width: 370px; /* Ajustado para incluir espaço */
     height: 657px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 140px;
-    left: 75px;
+    top: 104px;
+    left: 32px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -568,7 +568,7 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 15px; /* Espaçamento entre os quadrados */
+    gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -576,18 +576,6 @@ iframe {
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
     border: 6px solid #00000000; /* Borda preta */
-}
-.btn-primary1 {
-    background-color: #000000;
-    display: flex;
-    border-color: #000000;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.btn-primary1:hover {
-    background-color: #74ff00;
 }
 
 
@@ -663,15 +651,17 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
-                        <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
+                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                            <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
                    
 
 
-                </form>
+              
                 <!-- Social Icons -->
                 <div class="social-icons">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
@@ -679,9 +669,7 @@ color: #00ff00;
                     <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
                             class="bi bi-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
+                
     </div>
     <!-- Iframe Container -->
 
@@ -697,7 +685,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz [v5.0]</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -706,7 +694,7 @@ color: #00ff00;
             
 
             <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hacker Double
+               Hackear Double
             </span>
             
             
@@ -779,10 +767,17 @@ color: #00ff00;
        // Variável global para rastrear o valor da assertividade
 let currentAssertividade = 44.23; // Valor inicial
 
-// Função para exibir e ocultar elementos com assertividade e imagem
 function stopScroll() {
-        
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
     }
+
+    
+}
+
 
 
         function toggleContextOptions() {      
@@ -798,9 +793,19 @@ function stopScroll() {
        // script.js
 
        function closeContextOptions() {
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
     
-   
+
+    
 }
+
+
 
 
         
