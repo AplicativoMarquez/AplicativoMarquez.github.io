@@ -847,14 +847,14 @@ function stopScroll() {
 
        function closeContextOptions() {
     // Exibe a animação de carregamento
-    var loadingAnimation = document.getElementById('loading-animation');
+    const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
     // Aguarda 5 segundos e então executa a função principal
-    setTimeout(function() {
+    setTimeout(() => {
         if (loadingAnimation) {
             // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
@@ -862,27 +862,27 @@ function stopScroll() {
         }
 
         // Exibe a assertividade e a imagem aleatória
-        var contextOptions = document.getElementById('contextOptions');
+        const contextOptions = document.getElementById('contextOptions');
         if (contextOptions) {
             // Remove qualquer assertividade ou imagem anterior
-            var existingAssertividade = contextOptions.querySelector('.assertividade');
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
             if (existingAssertividade) {
                 contextOptions.removeChild(existingAssertividade);
             }
 
-            var existingImage = contextOptions.querySelector('.random-image');
+            const existingImage = contextOptions.querySelector('.random-image');
             if (existingImage) {
                 contextOptions.removeChild(existingImage);
             }
 
-            // Cria um elemento para exibir a assertividade
-            const assertividade = (Math.random() * 100).toFixed(2) + '%';
+            // Garante que a assertividade seja sempre acima de 90%
+            const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Gera assertividade entre 90% e 100%
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
 
             // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
@@ -909,15 +909,15 @@ function stopScroll() {
             contextOptions.appendChild(imageElement);
 
             // Reverte para o estado inicial após mais 5 segundos
-            setTimeout(function() {
+            setTimeout(() => {
                 if (contextOptions) {
                     // Remove a assertividade e a imagem
-                    var assertividadeElement = contextOptions.querySelector('.assertividade');
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
                     if (assertividadeElement) {
                         contextOptions.removeChild(assertividadeElement);
                     }
 
-                    var randomImageElement = contextOptions.querySelector('.random-image');
+                    const randomImageElement = contextOptions.querySelector('.random-image');
                     if (randomImageElement) {
                         contextOptions.removeChild(randomImageElement);
                     }
