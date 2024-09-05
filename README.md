@@ -579,7 +579,6 @@ iframe {
 }
 
 
-        
 #draggable-image {
     position: absolute; /* Permite o posicionamento com top e left */
     top: 550px; /* Ajusta a posição vertical */
@@ -588,6 +587,16 @@ iframe {
     border: 5px solid green; /* Borda verde */
     border-radius: 10px; /* Cantos arredondados (opcional) */
     animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
+    width: 100px; /* Largura menor da div */
+    height: 100px; /* Altura menor da div */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+}
+
+/* Ajusta a imagem dentro da div */
+#draggable-image img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
+    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
 }
 
 /* Define a animação do batimento cardíaco */
