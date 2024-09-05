@@ -677,8 +677,7 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
-        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
-
+     
             
         </div>
         <div class="context-options" id="contextOptions">
@@ -752,8 +751,7 @@ color: #00ff00;
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-            // Mostra o botão dentro do iframe
-            document.querySelector('.iframe-button').style.display = 'block';
+            
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
