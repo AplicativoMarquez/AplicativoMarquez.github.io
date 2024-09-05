@@ -583,7 +583,6 @@ iframe {
     top: 550px; /* Ajusta a posição vertical */
     left: 46px; /* Ajusta a posição horizontal */
     display: inline-block;
-    border: 5px solid green; /* Borda verde */
     border-radius: 10px; /* Cantos arredondados (opcional) */
     animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
     width: 100px; /* Largura menor da div */
