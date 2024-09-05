@@ -583,7 +583,19 @@ iframe {
     top: 550px; /* Ajusta a posição vertical */
     left: 46px; /* Ajusta a posição horizontal */
     display: inline-block;
+    border: 5px solid green; /* Borda verde */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
     animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
+    width: 100px; /* Largura menor da div */
+    height: 100px; /* Altura menor da div */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+}
+
+/* Ajusta a imagem dentro da div */
+#draggable-image img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
+    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
 }
 
 /* Define a animação do batimento cardíaco */
@@ -819,32 +831,40 @@ function stopScroll() {
 
        
 
-       document.addEventListener('DOMContentLoaded', (event) => {
+       document.addEventListener('DOMContentLoaded', () => {
     const draggableElement = document.getElementById('draggable-image');
 
     let offsetX, offsetY, isDragging = false;
 
-    draggableElement.addEventListener('mousedown', (e) => {
-        // Quando o botão do mouse é pressionado, inicia o arrasto
+    function startDragging(e) {
         isDragging = true;
-        offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
-        offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
-    });
+        // Evita o comportamento padrão (como seleção de texto) e calcula o offset
+        e.preventDefault();
+        offsetX = e.clientX ? e.clientX - draggableElement.getBoundingClientRect().left : e.touches[0].clientX - draggableElement.getBoundingClientRect().left;
+        offsetY = e.clientY ? e.clientY - draggableElement.getBoundingClientRect().top : e.touches[0].clientY - draggableElement.getBoundingClientRect().top;
+    }
 
-    document.addEventListener('mousemove', (e) => {
+    function drag(e) {
         if (isDragging) {
-            // Atualiza a posição do elemento enquanto está sendo arrastado
-            draggableElement.style.left = `${e.clientX - offsetX}px`;
-            draggableElement.style.top = `${e.clientY - offsetY}px`;
+            const clientX = e.clientX || e.touches[0].clientX;
+            const clientY = e.clientY || e.touches[0].clientY;
+            draggableElement.style.left = `${clientX - offsetX}px`;
+            draggableElement.style.top = `${clientY - offsetY}px`;
         }
-    });
+    }
 
-    document.addEventListener('mouseup', () => {
-        // Quando o botão do mouse é liberado, para o arrasto
+    function stopDragging() {
         isDragging = false;
-    });
-});
+    }
 
+    draggableElement.addEventListener('mousedown', startDragging);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', stopDragging);
+
+    draggableElement.addEventListener('touchstart', startDragging);
+    document.addEventListener('touchmove', drag);
+    document.addEventListener('touchend', stopDragging);
+});
 
         
     </script>
