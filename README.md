@@ -578,19 +578,31 @@ iframe {
     border: 30px solid #00000000; /* Borda preta */
 }
 
-
-        
-        #draggable-image {
-    position: absolute;
-    top: 550px; /* Ajuste a posição conforme necessário */
-    left: 46px; /* Ajuste a posição conforme necessário */
-    z-index: 10002; /* Deve estar acima do iframe */
-    cursor: move; /* Indica que a imagem pode ser movida */
+#draggable-image {
+    position: absolute; /* Permite o posicionamento com top e left */
+    top: 550px; /* Ajusta a posição vertical */
+    left: 46px; /* Ajusta a posição horizontal */
+    display: inline-block;
+    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
 }
 
-#draggable-image img {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
+/* Define a animação do batimento cardíaco */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
 }
 .icon-small {
         width: 230px;
@@ -676,7 +688,6 @@ color: #00ff00;
         <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
-        
      
             
         </div>
@@ -808,6 +819,31 @@ function stopScroll() {
 
        
 
+       document.addEventListener('DOMContentLoaded', (event) => {
+    const draggableElement = document.getElementById('draggable-image');
+
+    let offsetX, offsetY, isDragging = false;
+
+    draggableElement.addEventListener('mousedown', (e) => {
+        // Quando o botão do mouse é pressionado, inicia o arrasto
+        isDragging = true;
+        offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+        offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            // Atualiza a posição do elemento enquanto está sendo arrastado
+            draggableElement.style.left = `${e.clientX - offsetX}px`;
+            draggableElement.style.top = `${e.clientY - offsetY}px`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        // Quando o botão do mouse é liberado, para o arrasto
+        isDragging = false;
+    });
+});
 
 
         
