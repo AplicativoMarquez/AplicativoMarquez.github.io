@@ -329,7 +329,7 @@ iframe {
 .iframe-button {
     display: block; /* Ajuste conforme necessário */
     position: absolute;
-    top: 1990px; /* Ajuste conforme necessário */
+    top: 199px; /* Ajuste conforme necessário */
     right: 10px; /* Ajuste conforme necessário */
     background-color: #ff0000;
     color: #ffffff;
@@ -676,7 +676,8 @@ color: #00ff00;
         <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
-      
+        
+        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
 
             
         </div>
