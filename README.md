@@ -581,7 +581,7 @@ iframe {
 
 #draggable-image {
     position: absolute; /* Permite o posicionamento com top e left */
-    top: 550px; /* Ajusta a posição vertical */
+    top: 535px; /* Ajusta a posição vertical */
     left: 46px; /* Ajusta a posição horizontal */
     display: inline-block;
     border: 5px solid green; /* Borda verde */
