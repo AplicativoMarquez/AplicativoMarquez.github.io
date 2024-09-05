@@ -676,8 +676,7 @@ color: #00ff00;
         <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
-        
-        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
+      
 
             
         </div>
