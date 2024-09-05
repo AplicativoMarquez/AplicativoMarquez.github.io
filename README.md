@@ -580,17 +580,33 @@ iframe {
 
 
         
-        #draggable-image {
-    position: absolute;
-    top: 550px; /* Ajuste a posição conforme necessário */
-    left: 46px; /* Ajuste a posição conforme necessário */
-    z-index: 10002; /* Deve estar acima do iframe */
-    cursor: move; /* Indica que a imagem pode ser movida */
+#draggable-image {
+    position: absolute; /* Permite o posicionamento com top e left */
+    top: 550px; /* Ajusta a posição vertical */
+    left: 46px; /* Ajusta a posição horizontal */
+    display: inline-block;
+    border: 5px solid green; /* Borda verde */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
 }
 
-#draggable-image img {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
+/* Define a animação do batimento cardíaco */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
 }
 .icon-small {
         width: 230px;
@@ -807,42 +823,7 @@ function stopScroll() {
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
     
-       document.addEventListener('DOMContentLoaded', () => {
-    const draggableElement = document.getElementById('draggable-image');
-
-    let offsetX, offsetY, isDragging = false;
-
-    function startDragging(e) {
-        isDragging = true;
-        // Evita o comportamento padrão (como seleção de texto) e calcula o offset
-        e.preventDefault();
-        offsetX = e.clientX ? e.clientX - draggableElement.getBoundingClientRect().left : e.touches[0].clientX - draggableElement.getBoundingClientRect().left;
-        offsetY = e.clientY ? e.clientY - draggableElement.getBoundingClientRect().top : e.touches[0].clientY - draggableElement.getBoundingClientRect().top;
-    }
-
-    function drag(e) {
-        if (isDragging) {
-            const clientX = e.clientX || e.touches[0].clientX;
-            const clientY = e.clientY || e.touches[0].clientY;
-            draggableElement.style.left = `${clientX - offsetX}px`;
-            draggableElement.style.top = `${clientY - offsetY}px`;
-        }
-    }
-
-    function stopDragging() {
-        isDragging = false;
-    }
-
-    draggableElement.addEventListener('mousedown', startDragging);
-    document.addEventListener('mousemove', drag);
-    document.addEventListener('mouseup', stopDragging);
-
-    draggableElement.addEventListener('touchstart', startDragging);
-    document.addEventListener('touchmove', drag);
-    document.addEventListener('touchend', stopDragging);
-});
-
-       
+     
 
 
 
