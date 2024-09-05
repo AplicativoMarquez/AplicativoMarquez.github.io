@@ -552,7 +552,7 @@ iframe {
         }
 
         .white-square {
-    width: 93px; /* Ajustado para incluir espaço */
+    width: 9px; /* Ajustado para incluir espaço */
     height: 6px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
@@ -677,7 +677,7 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
-     
+ 
 
             
         </div>
@@ -752,7 +752,7 @@ color: #00ff00;
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-         
+    
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
@@ -809,40 +809,7 @@ function stopScroll() {
 
        
 
-       document.addEventListener('DOMContentLoaded', () => {
-    const draggableElement = document.getElementById('draggable-image');
 
-    let offsetX, offsetY, isDragging = false;
-
-    function startDragging(e) {
-        isDragging = true;
-        // Evita o comportamento padrão (como seleção de texto) e calcula o offset
-        e.preventDefault();
-        offsetX = e.clientX ? e.clientX - draggableElement.getBoundingClientRect().left : e.touches[0].clientX - draggableElement.getBoundingClientRect().left;
-        offsetY = e.clientY ? e.clientY - draggableElement.getBoundingClientRect().top : e.touches[0].clientY - draggableElement.getBoundingClientRect().top;
-    }
-
-    function drag(e) {
-        if (isDragging) {
-            const clientX = e.clientX || e.touches[0].clientX;
-            const clientY = e.clientY || e.touches[0].clientY;
-            draggableElement.style.left = `${clientX - offsetX}px`;
-            draggableElement.style.top = `${clientY - offsetY}px`;
-        }
-    }
-
-    function stopDragging() {
-        isDragging = false;
-    }
-
-    draggableElement.addEventListener('mousedown', startDragging);
-    document.addEventListener('mousemove', drag);
-    document.addEventListener('mouseup', stopDragging);
-
-    draggableElement.addEventListener('touchstart', startDragging);
-    document.addEventListener('touchmove', drag);
-    document.addEventListener('touchend', stopDragging);
-});
 
         
     </script>
