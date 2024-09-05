@@ -329,7 +329,7 @@ iframe {
 .iframe-button {
     display: block; /* Ajuste conforme necessário */
     position: absolute;
-    top: 199px; /* Ajuste conforme necessário */
+    top: 1990px; /* Ajuste conforme necessário */
     right: 10px; /* Ajuste conforme necessário */
     background-color: #ff0000;
     color: #ffffff;
@@ -552,7 +552,7 @@ iframe {
         }
 
         .white-square {
-    width: 9px; /* Ajustado para incluir espaço */
+    width: 93px; /* Ajustado para incluir espaço */
     height: 6px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
@@ -578,42 +578,19 @@ iframe {
     border: 30px solid #00000000; /* Borda preta */
 }
 
-#draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 550px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
-    display: inline-block;
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+
+        
+        #draggable-image {
+    position: absolute;
+    top: 550px; /* Ajuste a posição conforme necessário */
+    left: 46px; /* Ajuste a posição conforme necessário */
+    z-index: 10002; /* Deve estar acima do iframe */
+    cursor: move; /* Indica que a imagem pode ser movida */
 }
 
-/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
-    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
-    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
-}
-
-/* Define a animação do batimento cardíaco */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
-    }
-    40% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(1);
-    }
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
 }
 .icon-small {
         width: 230px;
@@ -691,100 +668,182 @@ color: #00ff00;
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
                             class="bi bi-whatsapp"></i></a>
                 
-                            <div id="iframe-container">
-                                <iframe id="login-iframe" src=""></iframe>
-                                <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-                                    <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
-                                </div>
-                            </div>
-                            <div class="context-options" id="contextOptions">
-                                <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-                                <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
-                                <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
-                                <div id="result"></div>
-                                <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
-                                <div id="loading-animation" class="loading-hidden">
-                                    <div class="spinner"></div>
-                                </div>
-                                <div id="image-container"></div>
-                                <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
-                                <div id="assertividade" class="assertivity-hidden"></div>
-                            </div>
-                        
-                            <script>
-                                function login(url) {
-                                    document.getElementById('login-wrapper').style.display = 'none';
-                                    document.getElementById('iframe-container').style.display = 'block';
-                                    document.getElementById('login-iframe').src = url;
-                                }
-                        
-                                let currentAssertividade = 44.23;
-                        
-                                function stopScroll() {
-                                    const loadingAnimation = document.getElementById('loading-animation');
-                                    if (loadingAnimation) {
-                                        loadingAnimation.classList.remove('loading-hidden');
-                                        loadingAnimation.classList.add('loading-visible');
-                                    }
-                        
-                                    setTimeout(() => {
-                                        if (loadingAnimation) {
-                                            loadingAnimation.classList.remove('loading-visible');
-                                            loadingAnimation.classList.add('loading-hidden');
-                                        }
-                        
-                                        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
-                        
-                                        setTimeout(() => {
-                                            const phoneNumber = '+554299577743';
-                                            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??';
-                                            const encodedMessage = encodeURIComponent(message);
-                                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-                                            window.location.href = whatsappUrl;
-                                        }, 1000);
-                                    }, 1000);
-                                }
-                        
-                                function toggleContextOptions() {
-                                    const contextOptions = document.getElementById('contextOptions');
-                                    contextOptions.style.display = (contextOptions.style.display === 'block') ? 'none' : 'block';
-                                }
-                        
-                                function closeMenu() {
-                                    const contextOptions = document.getElementById('contextOptions');
-                                    contextOptions.style.display = 'none';
-                                }
-                        
-                                document.addEventListener('DOMContentLoaded', () => {
-                                    const draggableElement = document.getElementById('draggable-image');
-                        
-                                    let offsetX, offsetY, isDragging = false;
-                        
-                                    function startDragging(e) {
-                                        isDragging = true;
-                                        e.preventDefault();
-                                        offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
-                                        offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
-                                    }
-                        
-                                    function drag(e) {
-                                        if (isDragging) {
-                                            draggableElement.style.left = `${e.clientX - offsetX}px`;
-                                            draggableElement.style.top = `${e.clientY - offsetY}px`;
-                                        }
-                                    }
-                        
-                                    function stopDragging() {
-                                        isDragging = false;
-                                    }
-                        
-                                    draggableElement.addEventListener('mousedown', startDragging);
-                                    document.addEventListener('mousemove', drag);
-                                    document.addEventListener('mouseup', stopDragging);
-                        
-                                    draggableElement.addEventListener('touchstart', startDragging);
-                                    document.addEventListener('touchmove', drag);
-                                    document.addEventListener('touchend', stopDragging);
-                                });
-                            </script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- Iframe Container -->
+
+    <div id="iframe-container">
+        <iframe id="login-iframe" src=""></iframe>
+        <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
+            <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
+        </div>
+        
+     
+
+            
+        </div>
+        <div class="context-options" id="contextOptions">
+            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
+            <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
+            <div id="result"></div>
+            
+
+            <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
+            
+
+           
+            
+    
+            <!-- Animação de carregamento -->
+            <div id="loading-animation" class="loading-hidden">
+                <div class="spinner"></div>
+            </div>
+            
+            <!-- Espaço para a imagem aleatória -->
+            <div id="image-container"></div>
+            <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
+
+
+            <div id="assertividade" class="assertivity-hidden"></div>
+
+
+        </div>
+
+        <div class="white-square">
+            <div class="grid-container">
+                <!-- 25 quadrados -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+           
+        </div>
+        
+        
+
+
+
+   
+    <script>
+       function login(url) {
+            // Oculta o login-wrapper
+            document.getElementById('login-wrapper').style.display = 'none';
+            // Mostra o iframe-container
+            document.getElementById('iframe-container').style.display = 'block';
+         
+            // Define a URL do iframe
+            document.getElementById('login-iframe').src = url;
+        }
+      
+
+       // Variável global para rastrear o valor da assertividade
+let currentAssertividade = 44.23; // Valor inicial
+
+function stopScroll() {
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    setTimeout(() => {
+        if (loadingAnimation) {
+            // Oculta a animação de carregamento
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        // Exibe um alerta
+        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
+
+        
+
+      // Redireciona para o WhatsApp após 1 segundo do alerta
+      setTimeout(() => {
+            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
+            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
+            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = whatsappUrl;
+        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
+
+    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+}
+
+
+        function toggleContextOptions() {      
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+       // script.js
+
+       
+
+       document.addEventListener('DOMContentLoaded', () => {
+    const draggableElement = document.getElementById('draggable-image');
+
+    let offsetX, offsetY, isDragging = false;
+
+    function startDragging(e) {
+        isDragging = true;
+        // Evita o comportamento padrão (como seleção de texto) e calcula o offset
+        e.preventDefault();
+        offsetX = e.clientX ? e.clientX - draggableElement.getBoundingClientRect().left : e.touches[0].clientX - draggableElement.getBoundingClientRect().left;
+        offsetY = e.clientY ? e.clientY - draggableElement.getBoundingClientRect().top : e.touches[0].clientY - draggableElement.getBoundingClientRect().top;
+    }
+
+    function drag(e) {
+        if (isDragging) {
+            const clientX = e.clientX || e.touches[0].clientX;
+            const clientY = e.clientY || e.touches[0].clientY;
+            draggableElement.style.left = `${clientX - offsetX}px`;
+            draggableElement.style.top = `${clientY - offsetY}px`;
+        }
+    }
+
+    function stopDragging() {
+        isDragging = false;
+    }
+
+    draggableElement.addEventListener('mousedown', startDragging);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', stopDragging);
+
+    draggableElement.addEventListener('touchstart', startDragging);
+    document.addEventListener('touchmove', drag);
+    document.addEventListener('touchend', stopDragging);
+});
+
+        
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
