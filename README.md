@@ -513,8 +513,18 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-   
+    // Impede o rolar da página
+    document.body.style.overflow = 'hidden';
+    
+    // Cria uma URL para enviar uma mensagem pelo WhatsApp
+    var whatsappMessage = encodeURIComponent("Como faço para compra o H4ck3r?");
+    var whatsappNumber = "554299577743"; // Substitua pelo número desejado
+    var whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
+
+    // Abre o WhatsApp em uma nova janela/aba
+    window.open(whatsappURL, '_blank');
 }
+
 
 
 
@@ -531,8 +541,19 @@ function stopScroll() {
        // script.js
 
        function closeContextOptions() {
+     // Impede o rolar da página
+     document.body.style.overflow = 'hidden';
     
+    // Cria uma URL para enviar uma mensagem pelo WhatsApp
+    var whatsappMessage = encodeURIComponent("Como faço para compra o H4ck3r?");
+    var whatsappNumber = "554299577743"; // Substitua pelo número desejado
+    var whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
+
+    // Abre o WhatsApp em uma nova janela/aba
+    window.open(whatsappURL, '_blank');
 }
+
+
   
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
