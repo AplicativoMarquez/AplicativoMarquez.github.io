@@ -558,7 +558,7 @@ iframe {
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 167px;
-    left: 30px;
+    left: 28px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -575,7 +575,7 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    border: 35px solid #00000000; /* Borda preta */
 }
 
 
