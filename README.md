@@ -552,13 +552,13 @@ iframe {
         }
 
         .white-square {
-    width: 930px; /* Ajustado para incluir espaço */
-    height: 615px; /* Ajustado para incluir espaço */
+    width: 9px; /* Ajustado para incluir espaço */
+    height: 6px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 167px;
-    left: 28px;
+    left: 30px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -575,22 +575,47 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 35px solid #00000000; /* Borda preta */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 
-        
-        #draggable-image {
-    position: absolute;
-    top: 550px; /* Ajuste a posição conforme necessário */
-    left: 46px; /* Ajuste a posição conforme necessário */
-    z-index: 10002; /* Deve estar acima do iframe */
-    cursor: move; /* Indica que a imagem pode ser movida */
+#draggable-image {
+    position: absolute; /* Permite o posicionamento com top e left */
+    top: 535px; /* Ajusta a posição vertical */
+    left: 46px; /* Ajusta a posição horizontal */
+    display: inline-block;
+    border: 5px solid green; /* Borda verde */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
+    width: 100px; /* Largura menor da div */
+    height: 100px; /* Altura menor da div */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
 }
 
+/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
+    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
+}
+
+/* Define a animação do batimento cardíaco */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
 }
 .icon-small {
         width: 230px;
@@ -677,7 +702,7 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
-        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
+ 
 
             
         </div>
@@ -752,8 +777,7 @@ color: #00ff00;
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-            // Mostra o botão dentro do iframe
-            document.querySelector('.iframe-button').style.display = 'block';
+    
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
@@ -778,58 +802,22 @@ function stopScroll() {
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Gera um valor fixo de assertividade como 100%
-        const assertividade = '100%';
+        // Exibe um alerta
+        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
 
-        // Seleciona o menu contextOptions
-        const contextOptions = document.getElementById('contextOptions');
+        
 
-        if (contextOptions) {
-            // Remove qualquer assertividade anterior
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
+      // Redireciona para o WhatsApp após 1 segundo do alerta
+      setTimeout(() => {
+            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
+            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
+            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = whatsappUrl;
+        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
 
-            // Cria um elemento para exibir a assertividade
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
-
-            // Adiciona a assertividade ao menu contextOptions
-            contextOptions.appendChild(assertividadeElement);
-
-            // Adiciona a imagem aos 5 primeiros itens do grid
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 7);
-            const imageUrl = 'https://juntorico.com/mines/zs.png';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-        // Aguarda 5 segundos e então reverte as mudanças
-        setTimeout(() => {
-            if (contextOptions) {
-                // Remove assertividade
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                // Remove as imagens dos itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 544000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
-
-
 
 
         function toggleContextOptions() {      
@@ -843,8 +831,8 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
-
-       
+    
+     
 
 
 
