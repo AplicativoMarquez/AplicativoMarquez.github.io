@@ -527,8 +527,9 @@ function stopScroll() {
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Gera um valor percentual fixo acima de 90
-        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
+        // Gera um valor percentual aleatório entre 1% e 100%
+        const assertividadeValue = Math.random() * 99 + 1; // Valor entre 1 e 100
+        const assertividade = assertividadeValue.toFixed(2) + '%';
 
         // Seleciona o menu contextOptions
         const contextOptions = document.getElementById('contextOptions');
@@ -546,7 +547,13 @@ function stopScroll() {
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
+
+            // Define a cor com base no valor de assertividade
+            if (assertividadeValue > 90) {
+                assertividadeElement.style.color = 'green'; // Verde para acima de 90%
+            } else {
+                assertividadeElement.style.color = 'red'; // Vermelho para 90% ou abaixo
+            }
 
             // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
@@ -577,6 +584,7 @@ function stopScroll() {
         }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
+
 
 
 
