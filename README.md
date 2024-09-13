@@ -320,7 +320,7 @@ iframe {
     border: 1px solid #00000000; 
     position: absolute;
     top: 150px;
-    left: 970px;
+    left: 783px;
     z-index: 10000;
     overflow: hidden; 
     pointer-events: none;
