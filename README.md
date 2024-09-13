@@ -49,8 +49,8 @@
 .context-options {
     display: none; 
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 58%;
+    left: 45%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -314,13 +314,13 @@ iframe {
         }
 
  .white-square {
-    width: 370px; 
-    height: 657px; 
+    width: 620px; 
+    height: 649px; 
     background-color: #ffffff00; 
     border: 1px solid #00000000; 
     position: absolute;
-    top: 104px;
-    left: 32px;
+    top: 150px;
+    left: 970px;
     z-index: 10000;
     overflow: hidden; 
     pointer-events: none;
@@ -328,9 +328,9 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 23px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 66px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 83px); /* 5 linhas de 100px */
+    gap: 52px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -410,9 +410,8 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
-                       
                         <i class="fa fa-arrow-right"></i>
                     </button>
                    
@@ -496,7 +495,7 @@ color: #00ff00;
         
 
     <script>
-       function login(url) {
+         function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
@@ -527,9 +526,8 @@ function stopScroll() {
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Gera um valor percentual aleatório entre 1% e 100%
-        const assertividadeValue = Math.random() * 99 + 1; // Valor entre 1 e 100
-        const assertividade = assertividadeValue.toFixed(2) + '%';
+        // Gera um valor percentual fixo acima de 90
+        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
 
         // Seleciona o menu contextOptions
         const contextOptions = document.getElementById('contextOptions');
@@ -547,13 +545,7 @@ function stopScroll() {
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-
-            // Define a cor com base no valor de assertividade
-            if (assertividadeValue > 90) {
-                assertividadeElement.style.color = 'green'; // Verde para acima de 90%
-            } else {
-                assertividadeElement.style.color = 'red'; // Vermelho para 90% ou abaixo
-            }
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
 
             // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
@@ -584,7 +576,6 @@ function stopScroll() {
         }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
-
 
 
 
@@ -630,22 +621,14 @@ function stopScroll() {
                 contextOptions.removeChild(existingImage);
             }
 
-            // Garante que a assertividade seja entre 1% e 100%
-            const assertividade = (Math.random() * 99 + 1).toFixed(2); // Gera assertividade entre 1% e 100%
-            const assertividadeValue = parseFloat(assertividade); // Converte o valor para número
-
+            // Garante que a assertividade seja sempre acima de 90%
+            const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Gera assertividade entre 90% e 100%
             const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}%`;
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-
-            // Define a cor com base no valor da assertividade
-            if (assertividadeValue < 90) {
-                assertividadeElement.style.color = 'red'; // Vermelho se abaixo de 90%
-            } else {
-                assertividadeElement.style.color = 'green'; // Verde se 90% ou acima
-            }
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
 
             // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
@@ -689,7 +672,6 @@ function stopScroll() {
         }
     }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
 }
-
   
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
