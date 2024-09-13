@@ -320,7 +320,7 @@ iframe {
     border: 1px solid #00000000; 
     position: absolute;
     top: 150px;
-    left: 970px;
+    left: 783px;
     z-index: 10000;
     overflow: hidden; 
     pointer-events: none;
@@ -573,7 +573,7 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 9000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 
