@@ -507,10 +507,7 @@ color: #00ff00;
         }
       
 
-       // Variável global para rastrear o valor da assertividade
-let currentAssertividade = 44.23; // Valor inicial
-
-function stopScroll() {
+        function stopScroll() {
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -635,9 +632,9 @@ function stopScroll() {
 
             // Lista de URLs das imagens
             const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+                'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
             ];
 
             // Escolhe uma imagem aleatória da lista
@@ -672,6 +669,10 @@ function stopScroll() {
         }
     }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
 }
-  
+
+
+
+
+        
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
