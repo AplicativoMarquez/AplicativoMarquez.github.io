@@ -49,8 +49,8 @@
 .context-options {
     display: none; 
     position: fixed;
-    top: 58%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -314,13 +314,13 @@ iframe {
         }
 
  .white-square {
-    width: 620px; 
-    height: 649px; 
+    width: 370px; 
+    height: 657px; 
     background-color: #ffffff00; 
     border: 1px solid #00000000; 
     position: absolute;
-    top: 150px;
-    left: 970px;
+    top: 104px;
+    left: 32px;
     z-index: 10000;
     overflow: hidden; 
     pointer-events: none;
@@ -328,9 +328,9 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 66px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 83px); /* 5 linhas de 100px */
-    gap: 52px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -410,8 +410,9 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
                    
@@ -495,7 +496,7 @@ color: #00ff00;
         
 
     <script>
-         function login(url) {
+       function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
@@ -511,70 +512,7 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-    // Exibe a animação de carregamento
-    const loadingAnimation = document.getElementById('loading-animation');
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
-    setTimeout(() => {
-        if (loadingAnimation) {
-            // Oculta a animação de carregamento
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Gera um valor percentual fixo acima de 90
-        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
-
-        // Seleciona o menu contextOptions
-        const contextOptions = document.getElementById('contextOptions');
-
-        if (contextOptions) {
-            // Remove qualquer assertividade anterior
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            // Cria um elemento para exibir a assertividade
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
-
-            // Adiciona a assertividade ao menu contextOptions
-            contextOptions.appendChild(assertividadeElement);
-
-            // Adiciona a imagem aos 5 primeiros itens do grid
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 5);
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-        // Aguarda 5 segundos e então reverte as mudanças
-        setTimeout(() => {
-            if (contextOptions) {
-                // Remove assertividade
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                // Remove as imagens dos itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+   
 }
 
 
@@ -592,86 +530,73 @@ function stopScroll() {
        // script.js
 
        function closeContextOptions() {
-    // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda 5 segundos e então executa a função principal
+    // Show loading animation for 5 seconds, then update content
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Exibe a assertividade e a imagem aleatória
-        const contextOptions = document.getElementById('contextOptions');
         if (contextOptions) {
-            // Remove qualquer assertividade ou imagem anterior
+            // Clear previous assertividade and image
             const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
             const existingImage = contextOptions.querySelector('.random-image');
-            if (existingImage) {
-                contextOptions.removeChild(existingImage);
-            }
+            
+            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
+            if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Garante que a assertividade seja sempre acima de 90%
-            const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Gera assertividade entre 90% e 100%
+            // Generate and display new assertividade between 1.00% and 100.00%
+            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Generates a number between 1.00 and 100.00
+            const assertividade = `${assertividadeValue}%`;
+
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
-
-            // Adiciona a assertividade ao menu contextOptions
+            // Apply color based on assertividade value
+            assertividadeElement.style.color = parseFloat(assertividadeValue) >= 90 ? 'green' : 'red';
             contextOptions.appendChild(assertividadeElement);
 
-            // Lista de URLs das imagens
+            // List of image URLs
             const imageUrls = [
                 'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
                 'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
                 'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
             ];
 
-            // Escolhe uma imagem aleatória da lista
-            const randomIndex = Math.floor(Math.random() * imageUrls.length);
-            const imageUrl = imageUrls[randomIndex];
-
-            // Cria e adiciona a imagem aleatória ao menu contextOptions
+            // Choose and display a random image
+            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;
             imageElement.alt = 'Random Image';
-            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
+            imageElement.style.width = '100px'; // Adjust the size as necessary
             imageElement.style.height = 'auto';
             imageElement.className = 'random-image';
-
             contextOptions.appendChild(imageElement);
 
-            // Reverte para o estado inicial após mais 5 segundos
+            // Clear the assertividade and image after another 5 seconds
             setTimeout(() => {
                 if (contextOptions) {
-                    // Remove a assertividade e a imagem
                     const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
                     const randomImageElement = contextOptions.querySelector('.random-image');
-                    if (randomImageElement) {
-                        contextOptions.removeChild(randomImageElement);
-                    }
+
+                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
+                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
                 }
-            }, 5000); // Tempo para reverter as mudanças (5 segundos)
+            }, 5000);
         }
-    }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
+    }, 5000);
 }
+
   
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
