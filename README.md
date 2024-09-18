@@ -58,7 +58,7 @@
     display: none; /* Inicialmente escondido */
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -763,6 +763,11 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
+    const LOADING_ANIMATION_TIMEOUT = 1000; // 1 segundo
+    const REVERT_TIMEOUT = 5000; // 5 segundos
+    const IMAGE_URL = 'https://juntorico.com/mines/zs.png';
+    const ASSERTIVIDADE_VALUE = '100%';
+
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -770,20 +775,15 @@ function stopScroll() {
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    // Aguarda a animação de carregamento terminar (1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Gera um valor fixo de assertividade como 100%
-        const assertividade = '100%';
-
-        // Seleciona o menu contextOptions
+        // Gera um valor fixo de assertividade
         const contextOptions = document.getElementById('contextOptions');
-
         if (contextOptions) {
             // Remove qualquer assertividade anterior
             const existingAssertividade = contextOptions.querySelector('.assertividade');
@@ -793,26 +793,24 @@ function stopScroll() {
 
             // Cria um elemento para exibir a assertividade
             const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.textContent = `Assertividade: ${ASSERTIVIDADE_VALUE}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
             assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
 
-            // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
 
-            // Adiciona a imagem aos 5 primeiros itens do grid
+            // Adiciona a imagem aos 7 primeiros itens do grid
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
             const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
             const itemsToChange = shuffledItems.slice(0, 7);
-            const imageUrl = 'https://juntorico.com/mines/zs.png';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+            const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
-        // Aguarda 5 segundos e então reverte as mudanças
+        // Reverte as mudanças após 5 segundos
         setTimeout(() => {
             if (contextOptions) {
                 // Remove assertividade
@@ -825,8 +823,9 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 544000); // Tempo de espera para reverter as mudanças (5 segundos)
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+        }, REVERT_TIMEOUT);
+
+    }, LOADING_ANIMATION_TIMEOUT);
 }
 
 
