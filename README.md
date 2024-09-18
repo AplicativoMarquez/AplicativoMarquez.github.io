@@ -57,8 +57,8 @@
 .context-options {
     display: none; /* Inicialmente escondido */
     position: fixed;
-    top: 50%;
-    left: 55%;
+    top: 65%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
