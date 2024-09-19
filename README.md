@@ -57,7 +57,7 @@
 .context-options {
     display: none; /* Inicialmente escondido */
     position: fixed;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -552,8 +552,8 @@ iframe {
         }
 
         .white-square {
-    width: 9px; /* Ajustado para incluir espaço */
-    height: 6px; /* Ajustado para incluir espaço */
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
@@ -579,43 +579,18 @@ iframe {
 }
 
 
-#draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 535px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
-    display: inline-block;
-    border: 5px solid green; /* Borda verde */
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+        
+        #draggable-image {
+    position: absolute;
+    top: 550px; /* Ajuste a posição conforme necessário */
+    left: 46px; /* Ajuste a posição conforme necessário */
+    z-index: 10002; /* Deve estar acima do iframe */
+    cursor: move; /* Indica que a imagem pode ser movida */
 }
 
-/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
-    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
-    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
-}
-
-/* Define a animação do batimento cardíaco */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
-    }
-    40% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(1);
-    }
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
 }
 .icon-small {
         width: 230px;
@@ -702,7 +677,7 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
- 
+        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
 
             
         </div>
@@ -777,7 +752,8 @@ color: #00ff00;
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-    
+            // Mostra o botão dentro do iframe
+            document.querySelector('.iframe-button').style.display = 'block';
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
@@ -787,6 +763,11 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
+    const LOADING_ANIMATION_TIMEOUT = 1000; // 1 segundo
+    const REVERT_TIMEOUT = 5000; // 5 segundos
+    const IMAGE_URL = 'https://juntorico.com/mines/zs.png';
+    const ASSERTIVIDADE_VALUE = '100%';
+
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -794,30 +775,60 @@ function stopScroll() {
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    // Aguarda a animação de carregamento terminar (1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
+        // Gera um valor fixo de assertividade
+        const contextOptions = document.getElementById('contextOptions');
+        if (contextOptions) {
+            // Remove qualquer assertividade anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
 
-        
+            // Cria um elemento para exibir a assertividade
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${ASSERTIVIDADE_VALUE}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
 
-      // Redireciona para o WhatsApp após 1 segundo do alerta
-      setTimeout(() => {
-            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
-            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
-            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.location.href = whatsappUrl;
-        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
+            contextOptions.appendChild(assertividadeElement);
 
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+            // Adiciona a imagem aos 7 primeiros itens do grid
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 7);
+            const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
+        }
+
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, REVERT_TIMEOUT);
+
+    }, LOADING_ANIMATION_TIMEOUT);
 }
+
+
 
 
         function toggleContextOptions() {      
@@ -831,8 +842,8 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
-    
-     
+
+       
 
 
 
