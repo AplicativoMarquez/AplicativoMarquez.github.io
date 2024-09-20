@@ -341,17 +341,44 @@ iframe {
 
 }
         
-        #draggable-image {
-    position: absolute;
-    top: 50px; 
-    left: 240px; 
-    z-index: 10002; /* Deve estar acima do iframe */
-    cursor: move; /* Indica que a imagem pode ser movida */
+       
+#draggable-image {
+    position: absolute; /* Permite o posicionamento com top e left */
+    top: 535px; /* Ajusta a posição vertical */
+    left: 46px; /* Ajusta a posição horizontal */
+    display: inline-block;
+   
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
+    width: 100px; /* Largura menor da div */
+    height: 100px; /* Altura menor da div */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
 }
 
+/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 190px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
+    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
+}
+
+/* Define a animação do batimento cardíaco */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
 }
 .icon-small {
         width: 100px;
@@ -398,7 +425,7 @@ color: #00ff00;
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
@@ -441,7 +468,7 @@ color: #00ff00;
             
         </div>
         <div class="context-options" id="contextOptions">
-            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
+            <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
             <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
