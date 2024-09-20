@@ -7,17 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
-       
+     @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 
-  
-
-/* Estilo da animação de carregamento */
 .loading-hidden {
     display: none;
 }
@@ -49,13 +41,13 @@
     100% { transform: rotate(360deg); }
 }
 
-/* Estilo do container de imagem */
+
 #image-container img {
     max-width: 100%;
     height: auto;
 }
 .context-options {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -65,9 +57,8 @@
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
-    z-index: 10000; /* Garante que fique sobre outros elementos */
+    z-index: 10000;
 }
-
 
 
         .context-options img {
@@ -106,7 +97,7 @@
 
         .context-options .closeContextOptions:hover {
             background-color: rgba(255, 0, 0, 1);
-            /* Fundo vermelho mais opaco ao passar o mouse */
+          
         }
 
         .dev-by {
@@ -115,27 +106,6 @@
             color: #00ff3d;
             /* Texto branco */
             margin-top: 20px;
-        }
-
-        .time {
-            font-size: 14px;
-            /* Tamanho da fonte reduzido */
-            color: #ffffff;
-            position: fixed;
-            top: 10px;
-            /* Distância do topo */
-            right: 10px;
-            /* Distância da direita */
-            z-index: 10000;
-            /* Certifique-se de que o relógio fique acima de outros elementos */
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fundo semi-transparente para melhor visibilidade */
-            padding: 5px;
-            /* Padding reduzido */
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
 
         @keyframes fadeIn {
@@ -186,10 +156,7 @@
             /* Cor da borda do botão */
         }
 
-       
 
-
-        /* Seu CSS existente */
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
@@ -228,7 +195,7 @@
     top: 0;
     left: 0;
     z-index: 1; /* Garante que fique abaixo do iframe */
-    background-color: #000000; /* Adiciona o fundo preto */
+    background-color: #000000; 
 }
 
         .custom-container {
@@ -293,7 +260,6 @@
             width: 24px;
             /* Tamanho do emoji */
             margin-right: 8px;
-            /* Espaçamento entre o emoji e o texto */
         }
 
         .social-icons {
@@ -311,224 +277,20 @@
         }
 
         #iframe-container {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     width: 100%;
-    height: 100vh; /* Usa 100% da altura da viewport */
-    position: absolute; /* Para que ocupe toda a tela */
+    height: 100vh; 
+    position: absolute; 
     top: 0;
     left: 0;
-    z-index: 9999; /* Garante que fique sobre outros elementos */
+    z-index: 9999; 
 }
 
 iframe {
     width: 100%;
     height: 100%;
-    border: none; /* Remove a borda */
+    border: none; 
 }
-
-.iframe-button {
-    display: block; /* Ajuste conforme necessário */
-    position: absolute;
-    top: 1990px; /* Ajuste conforme necessário */
-    right: 10px; /* Ajuste conforme necessário */
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 10001; /* Garante que fique sobre o iframe */
-}
-
-        .iframe-button:hover {
-            color: #000;
-            background-color: #ff0000;
-        }
-
-        .iframe-button:hover:before {
-            left: 100%;
-        }
-
-        .iframe-button:active {
-            background-color: #ffffff;
-            border-color: #ffffff;
-            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
-        }
-
-        
-
-        .progress-bar {
-            width: 80%;
-            background-color: #1f1e1e;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .progress {
-            width: 0;
-            height: 20px;
-            background-color: #ff0000;
-            animation: progress 5s linear forwards;
-        }
-
-        @keyframes progress {
-            to {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .login-wrapper {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            .custom-container {
-                max-width: 100%;
-                width: 100%;
-                padding: 10px;
-            }
-        }
-
-        #blackMenu {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 5px;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 10002;
-        }
-
-        
-
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        .context-options .bot-title {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .context-option11 {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(25 0 255);
-            /* Preto transparente */
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
-
-        .context-options .context-option1 {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(25 0 255);
-            /* Preto transparente */
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
-
-        .context-options .context-option:last-child {
-            margin-bottom: 0;
-        }
-
-        .context-options .context-option:hover {
-            background-color: rgba(0, 0, 0, 0);
-            /* Fundo mais claro ao passar o mouse */
-        }
-
-        .context-options .closeContextOptions {
-            background: rgb(25 0 255);
-            /* Fundo vermelho */
-        }
-
-        .context-options .closeContextOptions:hover {
-            background-color: rgba(255, 0, 0, 1);
-            /* Fundo vermelho mais opaco ao passar o mouse */
-        }
-
-        .dev-by {
-            font-size: 14px;
-            text-align: center;
-            color: #00ff3d;
-            /* Texto branco */
-            margin-top: 20px;
-        }
-
-        .time {
-            font-size: 14px;
-            /* Tamanho da fonte reduzido */
-            color: #ffffff;
-            position: fixed;
-            top: 10px;
-            /* Distância do topo */
-            right: 10px;
-            /* Distância da direita */
-            z-index: 10000;
-            /* Certifique-se de que o relógio fique acima de outros elementos */
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fundo semi-transparente para melhor visibilidade */
-            padding: 5px;
-            /* Padding reduzido */
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: white;
-            }
-        }
-
-        
-
-
 
 
         .loading-animation {
@@ -551,74 +313,48 @@ iframe {
             }
         }
 
-        .white-square {
-    width: 9px; /* Ajustado para incluir espaço */
-    height: 6px; /* Ajustado para incluir espaço */
-    background-color: #ffffff00; /* Branco com transparência */
-    border: 1px solid #00000000; /* Borda preta */
+ .white-square {
+    width: 370px; 
+    height: 657px; 
+    background-color: #ffffff00; 
+    border: 1px solid #00000000; 
     position: absolute;
-    top: 167px;
-    left: 30px;
+    top: 104px;
+    left: 32px;
     z-index: 10000;
-    overflow: hidden; /* Garante que nada saia do quadrado */
+    overflow: hidden; 
     pointer-events: none;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
-    gap: 38px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
-    background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    background-color: #ffffff00; 
+    border: 6px solid #00000000; 
+
+}
+        
+        #draggable-image {
+    position: absolute;
+    top: 50px; 
+    left: 240px; 
+    z-index: 10002; /* Deve estar acima do iframe */
+    cursor: move; /* Indica que a imagem pode ser movida */
 }
 
-
-#draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 535px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
-    display: inline-block;
-    border: 5px solid green; /* Borda verde */
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
-}
-
-/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
-    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
-    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
-}
-
-/* Define a animação do batimento cardíaco */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
-    }
-    40% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(1);
-    }
+    width: 190px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
 }
 .icon-small {
-        width: 230px;
+        width: 100px;
         height: 100px;
         margin-right: 8px; /* Adiciona espaço entre a imagem e o texto */
     }
@@ -638,7 +374,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Evita barras de rolagem */
+    overflow: hidden; 
 }
 .bi-telegram::before {
 
@@ -652,8 +388,6 @@ color: #ff00f2;
 
 color: #00ff00;
 }
-
-
 
 
 
@@ -676,16 +410,13 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
-                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
-                       
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
+                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
                    
 
-
-              
-                <!-- Social Icons -->
                 <div class="social-icons">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
                             class="bi bi-instagram"></i></a>
@@ -694,7 +425,7 @@ color: #00ff00;
                             class="bi bi-whatsapp"></i></a>
                 
     </div>
-    <!-- Iframe Container -->
+ 
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
@@ -702,13 +433,13 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
- 
+        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
 
             
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -716,19 +447,16 @@ color: #00ff00;
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-           
-            
-    
-            <!-- Animação de carregamento -->
+            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
+               Hackear Double
+            </span>
+
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
             </div>
-            
-            <!-- Espaço para a imagem aleatória -->
+
             <div id="image-container"></div>
             <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
-
-
             <div id="assertividade" class="assertivity-hidden"></div>
 
 
@@ -736,7 +464,7 @@ color: #00ff00;
 
         <div class="white-square">
             <div class="grid-container">
-                <!-- 25 quadrados -->
+              
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
@@ -766,18 +494,15 @@ color: #00ff00;
            
         </div>
         
-        
 
-
-
-   
     <script>
        function login(url) {
             // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-    
+            // Mostra o botão dentro do iframe
+            document.querySelector('.iframe-button').style.display = 'block';
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
@@ -787,37 +512,9 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-    // Exibe a animação de carregamento
-    const loadingAnimation = document.getElementById('loading-animation');
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
-    setTimeout(() => {
-        if (loadingAnimation) {
-            // Oculta a animação de carregamento
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
-
-        
-
-      // Redireciona para o WhatsApp após 1 segundo do alerta
-      setTimeout(() => {
-            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
-            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
-            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.location.href = whatsappUrl;
-        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
-
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+   
 }
+
 
 
         function toggleContextOptions() {      
@@ -831,11 +528,75 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
-    
-     
 
+       function closeContextOptions() {
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
 
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
 
-        
+    // Show loading animation for 5 seconds, then update content
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        if (contextOptions) {
+            // Clear previous assertividade and image
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            const existingImage = contextOptions.querySelector('.random-image');
+            
+            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
+            if (existingImage) contextOptions.removeChild(existingImage);
+
+            // Generate and display new assertividade between 1.00% and 100.00%
+            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Generates a number between 1.00 and 100.00
+            const assertividade = `${assertividadeValue}%`;
+
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            // Apply color based on assertividade value
+            assertividadeElement.style.color = parseFloat(assertividadeValue) >= 90 ? 'green' : 'red';
+            contextOptions.appendChild(assertividadeElement);
+
+            // List of image URLs
+            const imageUrls = [
+                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+            ];
+
+            // Choose and display a random image
+            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.alt = 'Random Image';
+            imageElement.style.width = '100px'; // Adjust the size as necessary
+            imageElement.style.height = 'auto';
+            imageElement.className = 'random-image';
+            contextOptions.appendChild(imageElement);
+
+            // Clear the assertividade and image after another 5 seconds
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    const randomImageElement = contextOptions.querySelector('.random-image');
+
+                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
+                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
+                }
+            }, 5000);
+        }
+    }, 5000);
+}
+
+  
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
