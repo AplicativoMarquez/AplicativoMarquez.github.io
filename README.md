@@ -400,21 +400,24 @@ color: #00ff00;
             <div class="text-center px-4">
                 <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
-            <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center mb-4">Clique na plataforma que deseja</p>
+                <p class="text-center mb-4">Digite sua senha e Clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
-                    <div class="form-group"></div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
+                    </div>
                     <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
-                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
+                </form>
+            </div>
+            
                    
 
                 <div class="social-icons">
@@ -496,16 +499,24 @@ color: #00ff00;
         
 
     <script>
-       function login(url) {
-            // Oculta o login-wrapper
-            document.getElementById('login-wrapper').style.display = 'none';
-            // Mostra o iframe-container
-            document.getElementById('iframe-container').style.display = 'block';
-            // Mostra o botão dentro do iframe
-            document.querySelector('.iframe-button').style.display = 'block';
-            // Define a URL do iframe
-            document.getElementById('login-iframe').src = url;
-        }
+      function login(url) {
+    const passwordInput = document.getElementById('password');
+    const correctPassword = 'Aluno165'; // Senha correta
+
+    if (passwordInput.value === correctPassword) {
+        // Oculta o login-wrapper
+        document.getElementById('login-wrapper').style.display = 'none';
+        // Mostra o iframe-container
+        document.getElementById('iframe-container').style.display = 'block';
+        // Mostra o botão dentro do iframe
+        document.querySelector('.iframe-button').style.display = 'block';
+        // Define a URL do iframe
+        document.getElementById('login-iframe').src = url;
+    } else {
+        alert('Senha incorreta!'); // Alerta de senha incorreta
+    }
+}
+
       
 
        // Variável global para rastrear o valor da assertividade
