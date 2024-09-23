@@ -10,7 +10,8 @@
     <style>
      @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 
-.loading-hidden {
+
+     .loading-hidden {
     display: none;
 }
 
@@ -341,44 +342,17 @@ iframe {
 
 }
         
-       
-#draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 535px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
-    display: inline-block;
-   
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+        #draggable-image {
+    position: absolute;
+    top: 50px; 
+    left: 240px; 
+    z-index: 10002; /* Deve estar acima do iframe */
+    cursor: move; /* Indica que a imagem pode ser movida */
 }
 
-/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
-    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
-    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
-}
-
-/* Define a animação do batimento cardíaco */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
-    }
-    40% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(1);
-    }
+    width: 190px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
 }
 .icon-small {
         width: 100px;
@@ -415,7 +389,6 @@ color: #ff00f2;
 
 color: #00ff00;
 }
-
 
 
     </style>
@@ -550,8 +523,71 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-   
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        // Gera um valor percentual entre 1,00% e 100,00%
+        const assertividade = (Math.random() * 99 + 1).toFixed(2) + '%'; // Valor entre 1.00% e 100.00%
+        const assertividadeValue = parseFloat(assertividade); // Converte para número
+
+        // Define a cor com base na assertividade
+        const assertividadeColor = assertividadeValue > 90 ? 'green' : 'red';
+
+        if (contextOptions) {
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.cssText = `font-size: 18px; margin-bottom: 10px; color: ${assertividadeColor};`;
+            contextOptions.appendChild(assertividadeElement);
+
+            // Atualiza os itens do grid
+            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, 5);
+            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+
+            shuffledItems.forEach(item => {
+                item.innerHTML = ''; // Limpa o conteúdo atual
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+                imageElement.alt = 'Random Image';
+                imageElement.style.width = '100%';
+                imageElement.style.height = 'auto';
+                item.appendChild(imageElement);
+            });
+        }
+
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                gridItems.forEach(item => {
+                    item.innerHTML = ''; // Limpa as imagens
+                });
+            }
+        }, 5000);
+    }, 1000);
 }
+
 
 
 
@@ -568,71 +604,7 @@ function stopScroll() {
        // script.js
 
        function closeContextOptions() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Show loading animation for 5 seconds, then update content
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        if (contextOptions) {
-            // Clear previous assertividade and image
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            const existingImage = contextOptions.querySelector('.random-image');
-            
-            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
-            if (existingImage) contextOptions.removeChild(existingImage);
-
-            // Generate and display new assertividade between 1.00% and 100.00%
-            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Generates a number between 1.00 and 100.00
-            const assertividade = `${assertividadeValue}%`;
-
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            // Apply color based on assertividade value
-            assertividadeElement.style.color = parseFloat(assertividadeValue) >= 90 ? 'green' : 'red';
-            contextOptions.appendChild(assertividadeElement);
-
-            // List of image URLs
-            const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
-            ];
-
-            // Choose and display a random image
-            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = 'Random Image';
-            imageElement.style.width = '100px'; // Adjust the size as necessary
-            imageElement.style.height = 'auto';
-            imageElement.className = 'random-image';
-            contextOptions.appendChild(imageElement);
-
-            // Clear the assertividade and image after another 5 seconds
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    const randomImageElement = contextOptions.querySelector('.random-image');
-
-                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
-                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
-                }
-            }, 5000);
-        }
-    }, 5000);
+    
 }
 
   
