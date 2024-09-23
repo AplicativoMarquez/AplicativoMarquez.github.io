@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+        .markdown-body  {
+    display: none;
+}
 
         .loading-hidden {
             display: none;
@@ -379,17 +382,7 @@
         alert('Senha incorreta. Tente novamente.');
     }
 }
-function togglePassword() {
-    const passwordInput = document.getElementById('password');
-    const toggleButton = document.getElementById('togglePassword');
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleButton.innerHTML = '👁️‍🗨️'; // Ícone de ocultar
-    } else {
-        passwordInput.type = 'password';
-        toggleButton.innerHTML = '👁️'; // Ícone de mostrar
-    }
-}
+
 
         function stopScroll() {
     const loadingAnimation = document.getElementById('loading-animation');
