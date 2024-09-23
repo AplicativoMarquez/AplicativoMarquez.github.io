@@ -268,6 +268,21 @@
     border: 6px solid #00000000; 
 
 }
+.loading-hidden {
+    display: none; /* Esconde o spinner inicialmente */
+}
+
+.loading-visible {
+    display: flex; /* Mostra o spinner quando necessário */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
     </style>
 </head>
 
@@ -324,9 +339,8 @@
             </span>
 
             <div id="loading-animation" class="loading-hidden">
-               
+                <div class="spinner"></div>
             </div>
-
             <div id="image-container"></div>
             <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
             <div id="assertividade" class="assertivity-hidden"></div>
