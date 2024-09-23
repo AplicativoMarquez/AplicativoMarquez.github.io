@@ -9,13 +9,12 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
-        .markdown-body  {
-    display: none;
-}
-
-        .loading-hidden {
-            display: none;
+        .markdown-body img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: #ffffff00;
         }
+        
 
         .loading-visible {
             display: block;
