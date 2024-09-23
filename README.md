@@ -324,7 +324,7 @@
             </span>
 
             <div id="loading-animation" class="loading-hidden">
-                <div class="spinner"></div>
+               
             </div>
 
             <div id="image-container"></div>
