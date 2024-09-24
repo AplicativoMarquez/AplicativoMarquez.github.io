@@ -304,7 +304,7 @@
                         <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
                     </div>
                     
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                         <i class="fa fa-arrow-right"></i>
                     </button>
