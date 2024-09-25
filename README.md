@@ -298,29 +298,28 @@
                     <div class="form-group mb-4">
                         <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
                     </div>
-                    
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
                         </div>
                         <div class="col">
-                            <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
                                 <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
+                    
 
                             <div class="social-icons mt-3">
                                 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
                                 <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
                                 <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
                             </div>
-                        </div>
-                    </div>
+                        
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
