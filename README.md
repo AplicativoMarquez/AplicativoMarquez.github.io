@@ -167,19 +167,14 @@
             outline: none;
         }
 
-        .btn-primary2 {
-            background-color: #000;
-            border-color: #fff;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+       
 
         .btn-primary2:hover {
             background-color: #ff0000;
         }
-
+        .btn-primary3:hover {
+            background-color: #2bff00;
+        }
         .social-icons {
             margin-top: 20px;
         }
@@ -242,23 +237,23 @@
             display: none;
         }
         .white-square {
-    width: 370px; 
-    height: 657px; 
-    background-color: #ffffff00; 
-    border: 1px solid #00000000; 
+    width: 620px;
+    height: 649px;
+    background-color: #ffffff00;
+    border: 1px solid #00000000;
     position: absolute;
-    top: 104px;
-    left: 32px;
+    top: 155px;
+    left: 918px;
     z-index: 10000;
-    overflow: hidden; 
+    overflow: hidden;
     pointer-events: none;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
-    gap: 23px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 66px);
+    grid-template-rows: repeat(5, 83px);
+    gap: 52px;
     height: 100%;
     width: 100%;
 }
@@ -304,16 +299,25 @@
                         <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
                     </div>
                     
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
-                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
-                        <i class="fa fa-arrow-right"></i>
-                    </button>
-                </form>
-            </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                                <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                                <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
 
             <div class="social-icons mt-3">
                 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+                <a href="https://t.me/hackermarquesz" target="_blank"><i class="bi bi-telegram"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </div>
         </div>
@@ -396,9 +400,72 @@
     }
 }
 
+function stopScroll() {
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+    const gridItems = document.querySelectorAll('.grid-item');
 
-        function stopScroll() {
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        const assertividade = (Math.random() * 99 + 1).toFixed(2) + '%';
+        const assertividadeValue = parseFloat(assertividade);
+        const assertividadeColor = assertividadeValue > 90 ? 'green' : 'red';
+
+        if (contextOptions) {
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                existingAssertividade.remove();
+            }
+
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.cssText = `font-size: 18px; margin-bottom: 10px; color: ${assertividadeColor};`;
+            contextOptions.appendChild(assertividadeElement);
+
+            // Gera um número aleatório entre 2 e 7
+            const numDiamantes = Math.floor(Math.random() * 6) + 2; // Gera um valor entre 2 e 7
+
+            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, Math.min(numDiamantes, gridItems.length));
+            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+
+            shuffledItems.forEach(item => {
+                item.innerHTML = ''; // Limpa o conteúdo atual
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+                imageElement.alt = 'Random Diamond';
+                imageElement.style.width = '100%';
+                imageElement.style.height = 'auto';
+                item.appendChild(imageElement);
+            });
+        }
+
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    assertividadeElement.remove();
+                }
+
+                gridItems.forEach(item => {
+                    item.innerHTML = ''; // Limpa as imagens
+                });
+            }
+        }, 5000);
+    }, 1000);
 }
+
+
 
 
 
