@@ -125,26 +125,15 @@
             background-color: #000000;
         }
 
-        @keyframes oscillate {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.custom-container {
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(145deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.8));
-    border-radius: 10px;
-    box-shadow: 6px 6px 20px rgba(255, 0, 0, 0.5), -6px -6px 20px rgba(255, 0, 0, 0.548);
-    animation: oscillate 1s ease-in-out infinite;
-}
-
-.custom-container:hover {
-    animation: none; /* Para parar a oscilação ao passar o mouse */
-    transform: translateY(-10px);
-}
+        .custom-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
 
         .login-intro-img {
             max-width: 100%;
@@ -316,7 +305,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -328,6 +317,9 @@
                             </button>
                         </div>
                         
+                        </div>
+                    </div>
+                    
 
                             <div class="social-icons mt-3">
                                 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -417,6 +409,7 @@ function stopScroll() {
     const loadingAnimation = document.getElementById('loading-animation');
     const contextOptions = document.getElementById('contextOptions');
     const gridItems = document.querySelectorAll('.grid-item');
+    const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
 
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
@@ -429,30 +422,24 @@ function stopScroll() {
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        const assertividade = (Math.random() * 99 + 1).toFixed(2) + '%';
-        const assertividadeValue = parseFloat(assertividade);
-        const assertividadeColor = assertividadeValue > 90 ? 'green' : 'red';
+        const assertividadeValue = (Math.random() * 99 + 1).toFixed(2) + '%';
+        const assertividadeColor = parseFloat(assertividadeValue) > 90 ? 'green' : 'red';
 
         if (contextOptions) {
             const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                existingAssertividade.remove();
-            }
+            if (existingAssertividade) existingAssertividade.remove();
 
             const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.textContent = `Assertividade: ${assertividadeValue}`;
             assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.cssText = `font-size: 18px; margin-bottom: 10px; color: ${assertividadeColor};`;
+            assertividadeElement.style.color = assertividadeColor;
             contextOptions.appendChild(assertividadeElement);
 
-            // Gera um número aleatório entre 2 e 7
-            const numDiamantes = Math.floor(Math.random() * 6) + 2; // Gera um valor entre 2 e 7
-
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, Math.min(numDiamantes, gridItems.length));
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+            const numDiamantes = Math.floor(Math.random() * 6) + 2;
+            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, numDiamantes);
 
             shuffledItems.forEach(item => {
-                item.innerHTML = ''; // Limpa o conteúdo atual
+                item.innerHTML = '';
                 const imageElement = document.createElement('img');
                 imageElement.src = imageUrl;
                 imageElement.alt = 'Random Diamond';
@@ -462,17 +449,12 @@ function stopScroll() {
             });
         }
 
-        // Reverte as mudanças após 5 segundos
+        // Cleanup after 5 seconds
         setTimeout(() => {
             if (contextOptions) {
                 const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    assertividadeElement.remove();
-                }
-
-                gridItems.forEach(item => {
-                    item.innerHTML = ''; // Limpa as imagens
-                });
+                if (assertividadeElement) assertividadeElement.remove();
+                gridItems.forEach(item => item.innerHTML = '');
             }
         }, 5000);
     }, 1000);
