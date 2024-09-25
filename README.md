@@ -17,36 +17,41 @@
         
 
         .loading-visible {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Fundo totalmente preto */
+    color: #ff0000; /* Verde hacker */
+    font-family: 'Courier New', Courier, monospace; /* Fonte de terminal */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        .spinner {
-            border: 8px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 8px solid #3498db;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
+.spinner {
+    border: 8px solid #1a1a1a; /* Cor escura para o fundo */
+    border-radius: 50%;
+    border-top: 8px solid #ff0000; /* Verde hacker */
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgb(255, 0, 0); /* Efeito de brilho */
+}
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
+.loading-text {
+    margin-top: 15px;
+    font-size: 16px;
+    text-shadow: 0 0 5px #ff0000; /* Sombra de texto */
+}
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
         #image-container img {
             max-width: 100%;
@@ -276,7 +281,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background: rgba(0, 0, 0, 0.904); /* Fundo semi-transparente */
 }
 .large-icon {
     width: 111px;
@@ -346,6 +351,9 @@
 
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
+                <div class="loading-text">Hackeando... aguarde o sinal</div>
+            </div>
+            
             </div>
             <div id="image-container"></div>
             <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
