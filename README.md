@@ -243,20 +243,7 @@
         }
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 66px);
-    grid-template-rows: repeat(5, 83px);
-    gap: 52px;
-    height: 100%;
-    width: 100%;
-}
 
-.grid-item {
-    background-color: #ffffff00; 
-    border: 6px solid #00000000; 
-
-}
 .loading-hidden {
     display: none; /* Esconde o spinner inicialmente */
 }
