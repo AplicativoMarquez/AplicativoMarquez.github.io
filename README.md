@@ -241,18 +241,7 @@
         .black-background {
             display: none;
         }
-        .white-square {
-    width: 620px;
-    height: 649px;
-    background-color: #ffffff00;
-    border: 1px solid #00000000;
-    position: absolute;
-    top: 155px;
-    left: 918px;
-    z-index: 10000;
-    overflow: hidden;
-    pointer-events: none;
-}
+
 
 .grid-container {
     display: grid;
