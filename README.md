@@ -30,13 +30,14 @@
         }
 
         .spinner {
-            border: 8px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 8px solid #3498db;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
+    border: 8px solid #222;
+    border-radius: 50%;
+    border-top: 8px solid #ff0000;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
 
         @keyframes spin {
             0% {
@@ -305,7 +306,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -349,7 +350,10 @@
 
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
+                
             </div>
+            
+            
             <div id="image-container"></div>
             <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
             <div id="assertividade" class="assertivity-hidden"></div>
