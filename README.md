@@ -125,15 +125,26 @@
             background-color: #000000;
         }
 
-        .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
+        @keyframes oscillate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.custom-container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(145deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.8));
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(255, 0, 0, 0.5), -6px -6px 20px rgba(255, 0, 0, 0.548);
+    animation: oscillate 1s ease-in-out infinite;
+}
+
+.custom-container:hover {
+    animation: none; /* Para parar a oscilação ao passar o mouse */
+    transform: translateY(-10px);
+}
 
         .login-intro-img {
             max-width: 100%;
@@ -278,6 +289,11 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
 }
+.large-icon {
+    width: 111px;
+    height: 53px;
+}
+
     </style>
 </head>
 
@@ -306,10 +322,12 @@
                             </button>
                         </div>
                         <div class="col">
-                            <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
-                                <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                                <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
+                        </div>
+                        
                         </div>
                     </div>
                     
