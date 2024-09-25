@@ -318,9 +318,8 @@
                             </button>
                         </div>
                         
-                        </div>
-                    </div>
-                    
+                     
+                   
 
                             <div class="social-icons mt-3">
                                 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
