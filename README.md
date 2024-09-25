@@ -17,41 +17,36 @@
         
 
         .loading-visible {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000; /* Fundo totalmente preto */
-    color: #ff0000; /* Verde hacker */
-    font-family: 'Courier New', Courier, monospace; /* Fonte de terminal */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.spinner {
-    border: 8px solid #1a1a1a; /* Cor escura para o fundo */
-    border-radius: 50%;
-    border-top: 8px solid #ff0000; /* Verde hacker */
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    box-shadow: 0 0 20px rgb(255, 0, 0); /* Efeito de brilho */
-}
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-.loading-text {
-    margin-top: 15px;
-    font-size: 16px;
-    text-shadow: 0 0 5px #ff0000; /* Sombra de texto */
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
         #image-container img {
             max-width: 100%;
@@ -118,14 +113,17 @@
         }
 
         .login-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #000000;
-}
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: #000000;
+        }
 
         .custom-container {
             text-align: center;
@@ -208,7 +206,19 @@
             border: none;
         }
 
-      
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 23px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: #ffffff00;
+            border: 6px solid #00000000;
+        }
 
         #draggable-image {
             position: absolute;
@@ -226,9 +236,33 @@
         .black-background {
             display: none;
         }
+        .white-square {
+    width: 620px;
+    height: 649px;
+    background-color: #ffffff00;
+    border: 1px solid #00000000;
+    position: absolute;
+    top: 155px;
+    left: 918px;
+    z-index: 10000;
+    overflow: hidden;
+    pointer-events: none;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 66px);
+    grid-template-rows: repeat(5, 83px);
+    gap: 52px;
+    height: 100%;
+    width: 100%;
+}
 
+.grid-item {
+    background-color: #ffffff00; 
+    border: 6px solid #00000000; 
 
+}
 .loading-hidden {
     display: none; /* Esconde o spinner inicialmente */
 }
@@ -242,7 +276,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.904); /* Fundo semi-transparente */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
 }
 .large-icon {
     width: 111px;
@@ -271,7 +305,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -283,6 +317,9 @@
                             </button>
                         </div>
                         
+                        </div>
+                    </div>
+                    
 
                             <div class="social-icons mt-3">
                                 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -312,9 +349,6 @@
 
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
-                <div class="loading-text">Hackeando... aguarde o sinal</div>
-            </div>
-            
             </div>
             <div id="image-container"></div>
             <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
@@ -323,6 +357,37 @@
 
         </div>
 
+        <div class="white-square">
+            <div class="grid-container">
+              
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+           
+        </div>
 
     <div class="black-background"></div>
     <script>
