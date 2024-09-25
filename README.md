@@ -118,17 +118,14 @@
         }
 
         .login-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background-color: #000000;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+
 
         .custom-container {
             text-align: center;
