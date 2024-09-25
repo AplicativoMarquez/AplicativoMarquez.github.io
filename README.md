@@ -208,19 +208,7 @@
             border: none;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 50px);
-            grid-template-rows: repeat(5, 50px);
-            gap: 23px;
-            height: 100%;
-            width: 100%;
-        }
-
-        .grid-item {
-            background-color: #ffffff00;
-            border: 6px solid #00000000;
-        }
+      
 
         #draggable-image {
             position: absolute;
@@ -335,37 +323,6 @@
 
         </div>
 
-        <div class="white-square">
-            <div class="grid-container">
-              
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                
-           
-        </div>
 
     <div class="black-background"></div>
     <script>
