@@ -304,7 +304,7 @@
                         <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
                     </div>
                     
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                         <i class="fa fa-arrow-right"></i>
                     </button>
@@ -398,69 +398,6 @@
 
 
         function stopScroll() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-    const gridItems = document.querySelectorAll('.grid-item');
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Gera um valor percentual entre 1,00% e 100,00%
-        const assertividade = (Math.random() * 99 + 1).toFixed(2) + '%'; // Valor entre 1.00% e 100.00%
-        const assertividadeValue = parseFloat(assertividade); // Converte para número
-
-        // Define a cor com base na assertividade
-        const assertividadeColor = assertividadeValue > 90 ? 'green' : 'red';
-
-        if (contextOptions) {
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.cssText = `font-size: 18px; margin-bottom: 10px; color: ${assertividadeColor};`;
-            contextOptions.appendChild(assertividadeElement);
-
-            // Atualiza os itens do grid
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, 5);
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-
-            shuffledItems.forEach(item => {
-                item.innerHTML = ''; // Limpa o conteúdo atual
-                const imageElement = document.createElement('img');
-                imageElement.src = imageUrl;
-                imageElement.alt = 'Random Image';
-                imageElement.style.width = '100%';
-                imageElement.style.height = 'auto';
-                item.appendChild(imageElement);
-            });
-        }
-
-        // Reverte as mudanças após 5 segundos
-        setTimeout(() => {
-            if (contextOptions) {
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                gridItems.forEach(item => {
-                    item.innerHTML = ''; // Limpa as imagens
-                });
-            }
-        }, 5000);
-    }, 1000);
 }
 
 
