@@ -318,7 +318,8 @@
                             </button>
                         </div>
                         
-                
+                        </div>
+                    </div>
                     
 
                             <div class="social-icons mt-3">
