@@ -1,4 +1,4 @@
-<html lang="en">
+[<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -552,3 +552,4 @@ function stopScroll() {
 </body>
 
 </html>
+](https://blaze1.space/pt/games/mines)
