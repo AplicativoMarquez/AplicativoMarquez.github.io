@@ -306,7 +306,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
