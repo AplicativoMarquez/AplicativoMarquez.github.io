@@ -519,7 +519,7 @@ function stopScroll() {
             // List of image URLs
             const imageUrls = [
                 'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+               
                 'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
             ];
 
