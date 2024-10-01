@@ -106,12 +106,11 @@
 
         html,
         body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
+            margin: 0; /* Remove margens do body */
+            padding: 0; /* Remove preenchimento do body */
+            overflow: hidden; /* Impede rolagem da página */
         }
+
 
         .login-wrapper {
             display: flex;
