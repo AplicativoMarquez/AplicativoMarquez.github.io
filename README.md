@@ -192,21 +192,20 @@
         }
 
         #iframe-container {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-        }
+        display: none; /* Inicialmente oculto */
+        width: 100vw; /* 100% da largura da tela */
+        height: 100vh; /* 100% da altura da tela */
+        position: fixed; /* Fixa o contêiner na tela */
+        top: 0;
+        left: 0;
+        z-index: 9999; /* Garante que fique acima de outros elementos */
+    }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
+    iframe {
+        width: 100%; /* Largura total do contêiner */
+        height: 100%; /* Altura total do contêiner */
+        border: none; /* Remove a borda */
+    }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(5, 50px);
