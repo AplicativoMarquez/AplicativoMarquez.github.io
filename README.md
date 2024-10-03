@@ -1,4 +1,4 @@
-[<html lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -54,49 +54,40 @@
             height: auto;
         }
 
-        .context-options {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(0, 0, 0);
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'M PLUS 1 Code', sans-serif;
-            color: #ffffff;
-            z-index: 10000;
-        }
+        .feedback-hidden {
+    display: none;
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', monospace;
+    margin-top: 10px;
+}
 
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
+#hack-feedback {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    color: #00ff3d;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: none; /* Hide until hack starts */
+}
 
-        .context-options .bot-title {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
+.context-option {
+    cursor: pointer;
+    display: block;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #ff0000;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
 
-        .context-options .context-option {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(255, 0, 0);
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
-
-        .context-options .closeContextOptions:hover {
-            background-color: rgba(255, 0, 0, 1);
-        }
-
+.context-option:hover {
+    background-color: #ff4545;
+}
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -148,47 +139,160 @@
         .register-form p {
             color: rgba(255, 255, 255, 0.5);
         }
-
         .form-group {
-            position: relative;
-        }
+    position: relative;
+    margin-bottom: 30px;
+}
 
-        .form-control {
-            background-color: #ffffff;
-            border: 1px solid #444;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 5px;
-            transition: border-color 0.3s;
-        }
+.form-control {
+    background-color: #000; /* Black background */
+    border: 2px solid #ffffff; /* Neon green border */
+    color: #ffffff; /* Neon green text */
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0); /* Green glow */
+}
 
-        .form-control:focus {
-            border-color: #ff0000;
-            outline: none;
-        }
+.form-control:focus {
+    border-color: #ffffff; /* Red border on focus */
+    box-shadow: 0 0 15px rgb(0, 0, 0); /* Red glow on focus */
+    outline: none;
+    background-color: #000; /* Ensure background remains black */
+}
 
-       
+.form-control::placeholder {
+    color: rgb(247, 247, 247); /* Slightly transparent neon green for the placeholder */
+}
 
-        .btn-primary2:hover {
-            background-color: #ff0000;
-        }
-        .btn-primary3:hover {
-            background-color: #2bff00;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
 
-        .social-icons a {
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
+.btn-primary2 {
+    background-color: #000000;
+    border: 2px solid #00ff37;
+    color: #fff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 13, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
 
-        .social-icons a:hover {
-            color: #ff0000;
-        }
+.btn-primary1 {
+    background-color: #000000;
+    border: 2px solid #ff0000;
+    color: #fff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.btn-primary1::before {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: rgba(255, 0, 0, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+.btn-primary2::before {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: rgba(0, 255, 42, 0.541);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.btn-primary1:hover::before {
+    top: 0;
+}
+.btn-primary2:hover::before {
+    top: 0;
+}
+
+.btn-primary1:hover {
+    background-color: #ff000000;
+    color: #000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+.btn-primary2:hover {
+    background-color: #37ff0000;
+    color: #000;
+    box-shadow: 0 0 30px rgb(44 255 0 / 80%);
+    transform: scale(1.05);
+}
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%), 0 0 20px rgb(255 253 253 / 32%);
+}
+.social-icons a:hover {
+    color: #ff0000; /* Bright red on hover for contrast */
+    transform: scale(1.2); /* Slight enlargement for emphasis */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); /* Strong red glow on hover */
+}
+
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff; /* Neon green underline */
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.social-icons a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: #ff0000; /* Red underline on hover */
+}
+
+.social-icons a:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.4s ease;
+}
+
+.social-icons a:hover::before {
+    transform: translateX(-50%) scale(1);
+}
+
+
 
         #iframe-container {
         display: none; /* Inicialmente oculto */
@@ -215,7 +319,7 @@
         }
 
         .grid-item {
-            background-color: #ffffff00;
+            background-color: #00000000;
             border: 6px solid #00000000;
         }
 
@@ -304,7 +408,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -332,17 +436,22 @@
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             
+            <!-- Typing effect for a more interactive hacker theme -->
+            <span class="bot-title"><i class="fas fa-user-secret"></i> <span id="hacker-typing"></span></span>
+        
             <div id="result"></div>
+        
+            <!-- Interactive options with feedback simulation -->
+            <span class="context-option" onclick="hackMines();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
-
-            <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
-            
-
-            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hackear Double
+            <span class="context-option closeContextOptions" onclick="hackDouble();">
+                Hackear Double
             </span>
+            
+            <!-- Progress bar and message simulation for realism -->
+            <div id="hack-feedback" class="feedback-hidden"></div>
+        </div>
 
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
@@ -375,65 +484,57 @@
     }
 }
 
-function stopScroll() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-    const gridItems = document.querySelectorAll('.grid-item');
-    const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
+function typeEffect(element, text, speed) {
+    let i = 0;
+    function typing() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
     }
+    typing();
+}
+const hackerTyping = document.getElementById("hacker-typing");
+typeEffect(hackerTyping, "Hacker Marquesz", 100);
 
+// Simulate "Hackear Mines" with feedback messages
+function hackMines() {
+    const feedback = document.getElementById("hack-feedback");
+    feedback.innerHTML = `<p>Iniciando hack no Mines...</p>`;
+    feedback.classList.remove("feedback-hidden");
+    
     setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        const assertividadeValue = (Math.random() * 99 + 1).toFixed(2) + '%';
-        const assertividadeColor = parseFloat(assertividadeValue) > 90 ? 'green' : 'red';
-
-        if (contextOptions) {
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) existingAssertividade.remove();
-
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividadeValue}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.color = assertividadeColor;
-            contextOptions.appendChild(assertividadeElement);
-
-            const numDiamantes = Math.floor(Math.random() * 6) + 2;
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, numDiamantes);
-
-            shuffledItems.forEach(item => {
-                item.innerHTML = '';
-                const imageElement = document.createElement('img');
-                imageElement.src = imageUrl;
-                imageElement.alt = 'Random Diamond';
-                imageElement.style.width = '100%';
-                imageElement.style.height = 'auto';
-                item.appendChild(imageElement);
-            });
-        }
-
-        // Cleanup after 5 seconds
-        setTimeout(() => {
-            if (contextOptions) {
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) assertividadeElement.remove();
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 5000);
+        feedback.innerHTML += `<p>Acessando banco de dados...</p>`;
     }, 1000);
+    
+    setTimeout(() => {
+        feedback.innerHTML += `<p>Extraindo informações...</p>`;
+    }, 2000);
+    
+    setTimeout(() => {
+        feedback.innerHTML += `<p><span style="color: green;">Hack bem-sucedido!</span> Informações obtidas.</p>`;
+    }, 3000);
 }
 
-
-
-
-
+// Simulate "Hackear Double" with feedback messages
+function hackDouble() {
+    const feedback = document.getElementById("hack-feedback");
+    feedback.innerHTML = `<p>Iniciando hack no Double...</p>`;
+    feedback.classList.remove("feedback-hidden");
+    
+    setTimeout(() => {
+        feedback.innerHTML += `<p>Conectando ao servidor...</p>`;
+    }, 1000);
+    
+    setTimeout(() => {
+        feedback.innerHTML += `<p>Interceptando dados em tempo real...</p>`;
+    }, 2000);
+    
+    setTimeout(() => {
+        feedback.innerHTML += `<p><span style="color: red;">Falha ao hackear!</span> Tentativa bloqueada.</p>`;
+    }, 3000);
+}
 
         function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
@@ -447,77 +548,9 @@ function stopScroll() {
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
 
-       function closeContextOptions() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Show loading animation for 5 seconds, then update content
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        if (contextOptions) {
-            // Clear previous assertividade and image
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            const existingImage = contextOptions.querySelector('.random-image');
-            
-            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
-            if (existingImage) contextOptions.removeChild(existingImage);
-
-            // Generate and display new assertividade between 1.00% and 100.00%
-            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Generates a number between 1.00 and 100.00
-            const assertividade = `${assertividadeValue}%`;
-
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            // Apply color based on assertividade value
-            assertividadeElement.style.color = parseFloat(assertividadeValue) >= 90 ? 'green' : 'red';
-            contextOptions.appendChild(assertividadeElement);
-
-            // List of image URLs
-            const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-               
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
-            ];
-
-            // Choose and display a random image
-            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = 'Random Image';
-            imageElement.style.width = '100px'; // Adjust the size as necessary
-            imageElement.style.height = 'auto';
-            imageElement.className = 'random-image';
-            contextOptions.appendChild(imageElement);
-
-            // Clear the assertividade and image after another 5 seconds
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    const randomImageElement = contextOptions.querySelector('.random-image');
-
-                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
-                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
-                }
-            }, 5000);
-        }
-    }, 5000);
-}
 
 
     </script>
 </body>
 
-</html>
-](https://blaze1.space/pt/games/mines)
+
