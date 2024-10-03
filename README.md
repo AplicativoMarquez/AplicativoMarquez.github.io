@@ -380,8 +380,8 @@
     background-color: #ffffff00;
     border: 1px solid #00000000;
     position: absolute;
-    top: 155px;
-    left: 918px;
+    top: -145px;
+    left: 110px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
