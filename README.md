@@ -449,7 +449,7 @@
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/mines')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           <i class="fa fa-arrow-right"></i>
                         </button>
