@@ -73,21 +73,48 @@
     display: none; /* Hide until hack starts */
 }
 
-.context-option {
-    cursor: pointer;
-    display: block;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    background-color: #ff0000;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
+.context-options {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            color: #ffffff;
+            z-index: 10000;
+        }
 
-.context-option:hover {
-    background-color: #ff4545;
-}
+        .context-options img {
+            width: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .context-options .bot-title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .context-options .context-option {
+            display: block;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            text-align: center;
+        }
+
+        .context-options .closeContextOptions:hover {
+            background-color: rgba(255, 0, 0, 1);
+        }
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -332,7 +359,7 @@
         }
 
         #draggable-image img {
-            width: 190px;
+            width: 130px;
             height: auto;
         }
 
@@ -413,58 +440,44 @@
                                 <i class="fa fa-arrow-right"></i>
                             </button>
                         </div>
-                        <div class="col">
-                            <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
-                                <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
-                                <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </div>
+                <div class="col">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                         <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
+                          <i class="fa fa-arrow-right"></i>
+                        </button>
+                  </div>
                       
                     
-
-                            <div class="social-icons mt-3">
-                                <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
-                                <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                                <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                            </div>
+<div class="social-icons mt-3">
+<a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
+<a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+<a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
+ </div>
                         
 
-    <div id="iframe-container">
-        <iframe id="login-iframe" src=""></iframe>
-        <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-            <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Hacker">
-        </div>
-        <div class="context-options" id="contextOptions">
-            <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
-            
-            <!-- Typing effect for a more interactive hacker theme -->
-            <span class="bot-title"><i class="fas fa-user-secret"></i> <span id="hacker-typing"></span></span>
-        
-            <div id="result"></div>
-        
-            <!-- Interactive options with feedback simulation -->
-            <span class="context-option" onclick="hackMines();"><i class="fas fa-pause"></i> Hackear Mines</span>
-            
-            <span class="context-option closeContextOptions" onclick="hackDouble();">
-                Hackear Double
-            </span>
-            
-            <!-- Progress bar and message simulation for realism -->
-            <div id="hack-feedback" class="feedback-hidden"></div>
-        </div>
+<div id="iframe-container">
+<iframe id="login-iframe" src=""></iframe>
 
-            <div id="loading-animation" class="loading-hidden">
-                <div class="spinner"></div>
-                
-            </div>
-            
-            
-            <div id="image-container"></div>
-            <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
-            <div id="assertividade" class="assertivity-hidden"></div>
+<div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
+<img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
-
-        </div>
+<div class="context-options" id="contextOptions">
+<img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
+<span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
+<div id="result"></div>
+<span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
+<span class="context-option closeContextOptions" onclick="closeContextOptions()"> Hackear Double</span>
+<div id="loading-animation" class="loading-hidden">
+<div class="spinner"></div>
+                                        
+</div>
+                                    
+                                    
+<div id="image-container"></div>
+<span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
+<div id="assertividade" class="assertivity-hidden"></div>
+                        
+</div>
 
         
 
@@ -484,56 +497,8 @@
     }
 }
 
-function typeEffect(element, text, speed) {
-    let i = 0;
-    function typing() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typing, speed);
-        }
-    }
-    typing();
-}
-const hackerTyping = document.getElementById("hacker-typing");
-typeEffect(hackerTyping, "Hacker Marquesz", 100);
-
-// Simulate "Hackear Mines" with feedback messages
-function hackMines() {
-    const feedback = document.getElementById("hack-feedback");
-    feedback.innerHTML = `<p>Iniciando hack no Mines...</p>`;
-    feedback.classList.remove("feedback-hidden");
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p>Acessando banco de dados...</p>`;
-    }, 1000);
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p>Extraindo informações...</p>`;
-    }, 2000);
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p><span style="color: green;">Hack bem-sucedido!</span> Informações obtidas.</p>`;
-    }, 3000);
-}
-
-// Simulate "Hackear Double" with feedback messages
-function hackDouble() {
-    const feedback = document.getElementById("hack-feedback");
-    feedback.innerHTML = `<p>Iniciando hack no Double...</p>`;
-    feedback.classList.remove("feedback-hidden");
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p>Conectando ao servidor...</p>`;
-    }, 1000);
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p>Interceptando dados em tempo real...</p>`;
-    }, 2000);
-    
-    setTimeout(() => {
-        feedback.innerHTML += `<p><span style="color: red;">Falha ao hackear!</span> Tentativa bloqueada.</p>`;
-    }, 3000);
+function stopScroll() {
+  
 }
 
         function toggleContextOptions() {      
@@ -548,6 +513,72 @@ function hackDouble() {
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
 
+       function closeContextOptions() {
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Exibe a animação de carregamento por 5 segundos e depois atualiza o conteúdo
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        if (contextOptions) {
+            // Remove assertividade e imagem anteriores
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            const existingImage = contextOptions.querySelector('.random-image');
+            
+            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
+            if (existingImage) contextOptions.removeChild(existingImage);
+
+            // Gera e exibe nova assertividade entre 1,00% e 100,00%
+            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Gera um número entre 1.00 e 100.00
+            const assertividade = `${assertividadeValue}%`;
+
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = assertividadeValue >= 90 ? 'green' : 'red'; // Verde se >= 90%, vermelho caso contrário
+            contextOptions.appendChild(assertividadeElement);
+
+            // Lista de URLs de imagens
+            const imageUrls = [
+                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+            ];
+
+            // Escolhe e exibe uma imagem aleatória
+            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.alt = 'Random Image';
+            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
+            imageElement.style.height = 'auto';
+            imageElement.className = 'random-image';
+            contextOptions.appendChild(imageElement);
+
+            // Limpa a assertividade e a imagem após mais 5 segundos
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    const randomImageElement = contextOptions.querySelector('.random-image');
+
+                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
+                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
+                }
+            }, 5000);
+        }
+    }, 5000);
+}
 
 
     </script>
