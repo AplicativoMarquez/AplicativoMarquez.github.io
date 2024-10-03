@@ -94,27 +94,35 @@
         }
 
         .context-options .bot-title {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
 
-        .context-options .context-option {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(255, 0, 0);
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
+.context-options .context-option {
+    display: block;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 0, 0); /* Fundo verde translúcido */
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+    
+}
 
-        .context-options .closeContextOptions:hover {
-            background-color: rgba(255, 0, 0, 1);
-        }
+.context-options .context-option:hover {
+    background-color: rgb(27 0 255 / 56%);
+    transform: scale(1.05);
+}
+
+.context-options .closeContextOptions:hover {
+    background-color: rgb(255 0 0 / 80%);
+    
+}
         .dev-by {
             font-size: 14px;
             text-align: center;
