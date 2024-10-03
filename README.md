@@ -472,7 +472,7 @@
     <script>
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO175') {
+    if (password === 'ALUNO188') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -551,6 +551,4 @@ function hackDouble() {
 
 
     </script>
-</body>
-
 
