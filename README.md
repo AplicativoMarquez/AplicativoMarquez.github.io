@@ -575,8 +575,8 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Gera e exibe nova assertividade entre 1,00% e 100,00%
-            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Gera um número entre 1.00 e 100.00
+            // Gera e exibe nova assertividade entre 1,00% e 60,00%
+            const assertividadeValue = (Math.random() * 59 + 1).toFixed(2); // Gera um número entre 1.00 e 60.00
             const assertividade = `${assertividadeValue}%`;
 
             const assertividadeElement = document.createElement('div');
@@ -584,7 +584,7 @@ function stopScroll() {
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = assertividadeValue >= 90 ? 'green' : 'red'; // Verde se >= 90%, vermelho caso contrário
+            assertividadeElement.style.color = 'red'; // Vermelho para indicar baixa assertividade
             contextOptions.appendChild(assertividadeElement);
 
             // Lista de URLs de imagens
@@ -617,6 +617,7 @@ function stopScroll() {
         }
     }, 5000);
 }
+
 
 
 
