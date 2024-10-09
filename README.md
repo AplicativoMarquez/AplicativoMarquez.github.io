@@ -476,11 +476,11 @@
 <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
 <div class="context-options" id="contextOptions">
-<img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
+<img id="myImage" src="https://i.ibb.co/3cMJLrk/Imagem-do-Whats-App-de-2024-10-09-s-13-11-45-ec8822e1-fotor-20241009131246.png" alt="Imagem Atual">
 <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
 <div id="result"></div>
-<span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
-<span class="context-option closeContextOptions" onclick="closeContextOptions()"> Hackear Double</span>
+<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i></i> Hackear Mines</span>
+<span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Mines</span>
 <div id="loading-animation" class="loading-hidden">
 <div class="spinner"></div>
                                         
