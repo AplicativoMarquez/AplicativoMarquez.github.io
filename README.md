@@ -552,7 +552,6 @@
    
 </div>                         
 <div id="image-container"></div>
-<span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
 <div id="assertividade" class="assertivity-hidden"></div>
                         
 </div>
@@ -576,40 +575,48 @@
 }
 
 function stopScroll() {
-    
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
-
     setTimeout(() => {
         if (loadingAnimation) {
-            
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; 
-const contextOptions = document.getElementById('contextOptions');
+        // Gera uma assertividade aleatória entre 1,00% e 99,99%
+        const assertividade = (Math.random() * 99.99).toFixed(2) + '%'; 
+        const contextOptions = document.getElementById('contextOptions');
 
         if (contextOptions) {
-            
+            // Remove o elemento de assertividade existente, se houver
             const existingAssertividade = contextOptions.querySelector('.assertividade');
             if (existingAssertividade) {
                 contextOptions.removeChild(existingAssertividade);
             }
 
+            // Cria o elemento para exibir a assertividade
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; 
 
+            // Define a cor baseada no valor da assertividade
+            const assertividadeValue = parseFloat(assertividade);
+            if (assertividadeValue >= 90) {
+                assertividadeElement.style.color = 'green'; // Acima de 90% é verde
+            } else {
+                assertividadeElement.style.color = 'red'; // Abaixo de 90% é vermelho
+            }
+
+            // Adiciona o elemento de assertividade ao contexto
             contextOptions.appendChild(assertividadeElement);
 
+            // Limpa e reordena os grid-items
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); 
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
@@ -619,6 +626,7 @@ const contextOptions = document.getElementById('contextOptions');
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
+        // Remove a assertividade após 5 segundos
         setTimeout(() => {
             if (contextOptions) {
                 const assertividadeElement = contextOptions.querySelector('.assertividade');
@@ -632,6 +640,7 @@ const contextOptions = document.getElementById('contextOptions');
     }, 1000); 
 }
 
+
         function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
@@ -644,7 +653,7 @@ const contextOptions = document.getElementById('contextOptions');
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        
 
-       function closeContextOptions() {
+        function closeContextOptions() {
     const loadingAnimation = document.getElementById('loading-animation');
     const contextOptions = document.getElementById('contextOptions');
 
@@ -667,23 +676,16 @@ const contextOptions = document.getElementById('contextOptions');
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            const assertividadeValue = (Math.random() * 10 + 90).toFixed(2); 
+            // Gera um valor de assertividade entre 1,00% e 99,99%
+            const assertividadeValue = (Math.random() * 99.99).toFixed(2); 
             const assertividade = `${assertividadeValue}%`;
 
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; 
-            contextOptions.appendChild(assertividadeElement);
+            // Cria e exibe a imagem
             const imageUrls = [
-        
-                'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
-                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
-                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
+                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
             ];
-
             const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;
@@ -693,6 +695,23 @@ const contextOptions = document.getElementById('contextOptions');
             imageElement.className = 'random-image';
             contextOptions.appendChild(imageElement);
 
+            // Cria e exibe o valor de assertividade abaixo da imagem
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginTop = '10px'; // Para ficar abaixo da imagem
+
+            // Define a cor da assertividade
+            if (parseFloat(assertividadeValue) >= 90) {
+                assertividadeElement.style.color = 'green'; // Verde para valores acima de 90%
+            } else {
+                assertividadeElement.style.color = 'red'; // Vermelho para valores abaixo de 90%
+            }
+
+            contextOptions.appendChild(assertividadeElement);
+
+            // Remove a imagem e a assertividade após 5 segundos
             setTimeout(() => {
                 if (contextOptions) {
                     const assertividadeElement = contextOptions.querySelector('.assertividade');
@@ -705,6 +724,7 @@ const contextOptions = document.getElementById('contextOptions');
         }
     }, 5000);
 }
+
 
     </script>
 
