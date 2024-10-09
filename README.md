@@ -100,7 +100,6 @@
     text-align: center;
     margin-bottom: 20px;
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 .context-options .context-option {
@@ -108,7 +107,7 @@
     display: block;
     padding: 12px 20px;
     margin-bottom: 5px;
-    background-color: rgb(255, 0, 0); 
+    background-color: rgb(25, 0, 255); 
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
@@ -470,7 +469,6 @@
                 <img class="login-intro-img" src="https://i.ibb.co/3cMJLrk/Imagem-do-Whats-App-de-2024-10-09-s-13-11-45-ec8822e1-fotor-20241009131246.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center">BEM-VINDO ALUNOS</h6>
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
@@ -638,7 +636,7 @@ function stopScroll() {
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '15px';
-            assertividadeElement.style.marginTop = '6px'; // Para ficar abaixo da imagem
+            assertividadeElement.style.marginTop = '4px'; // Para ficar abaixo da imagem
 
             // Define a cor da assertividade
             if (parseFloat(assertividadeValue) >= 90) {
