@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
+ 
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
         .markdown-body img {
             max-width: 100%;
@@ -15,7 +18,6 @@
             background-color: #ffffff00;
         }
         
-
         .loading-visible {
             display: block;
             position: fixed;
@@ -70,7 +72,7 @@
     padding: 10px;
     border-radius: 5px;
     width: 100%;
-    display: none; /* Hide until hack starts */
+    display: none; 
 }
 
 .context-options {
@@ -105,7 +107,7 @@
     display: block;
     padding: 12px 20px;
     margin-bottom: 10px;
-    background-color: rgb(255, 0, 0); /* Fundo verde translúcido */
+    background-color: rgb(255, 0, 0); 
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
@@ -132,11 +134,10 @@
 
         html,
         body {
-            margin: 0; /* Remove margens do body */
-            padding: 0; /* Remove preenchimento do body */
-            overflow: hidden; /* Impede rolagem da página */
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
         }
-
 
         .login-wrapper {
             display: flex;
@@ -164,7 +165,7 @@
         .login-intro-img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 7px;
         }
 
         .register-form h6 {
@@ -180,25 +181,25 @@
 }
 
 .form-control {
-    background-color: #000; /* Black background */
-    border: 2px solid #ffffff; /* Neon green border */
-    color: #ffffff; /* Neon green text */
+    background-color: #000; 
+    border: 2px solid #ffffff; 
+    color: #ffffff; 
     padding: 15px 20px;
     border-radius: 5px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     font-size: 16px;
-    box-shadow: 0 0 10px rgba(0, 255, 68, 0); /* Green glow */
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0); 
 }
 
 .form-control:focus {
-    border-color: #ffffff; /* Red border on focus */
-    box-shadow: 0 0 15px rgb(0, 0, 0); /* Red glow on focus */
+    border-color: #ffffff; 
+    box-shadow: 0 0 15px rgb(0, 0, 0); 
     outline: none;
-    background-color: #000; /* Ensure background remains black */
+    background-color: #000; 
 }
 
 .form-control::placeholder {
-    color: rgb(247, 247, 247); /* Slightly transparent neon green for the placeholder */
+    color: rgb(247, 247, 247); 
 }
 
 
@@ -227,7 +228,6 @@
     position: relative;
     overflow: hidden;
 }
-
 
 
 .btn-primary1::before {
@@ -286,9 +286,9 @@
     text-shadow: 0 0 10px rgb(0 0 0 / 70%), 0 0 20px rgb(255 253 253 / 32%);
 }
 .social-icons a:hover {
-    color: #ff0000; /* Bright red on hover for contrast */
-    transform: scale(1.2); /* Slight enlargement for emphasis */
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); /* Strong red glow on hover */
+    color: #ff0000; 
+    transform: scale(1.2); 
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); 
 }
 
 .social-icons a::after {
@@ -296,7 +296,7 @@
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #ffffff; /* Neon green underline */
+    background-color: #ffffff; 
     bottom: -5px;
     left: 0;
     transform: scaleX(0);
@@ -307,7 +307,7 @@
 .social-icons a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
-    background-color: #ff0000; /* Red underline on hover */
+    background-color: #ff0000; 
 }
 
 .social-icons a:hover::before {
@@ -327,22 +327,20 @@
     transform: translateX(-50%) scale(1);
 }
 
-
-
         #iframe-container {
-        display: none; /* Inicialmente oculto */
-        width: 100vw; /* 100% da largura da tela */
-        height: 100vh; /* 100% da altura da tela */
-        position: fixed; /* Fixa o contêiner na tela */
+        display: none; 
+        width: 100vw; 
+        height: 100vh; 
+        position: fixed; 
         top: 0;
         left: 0;
-        z-index: 9999; /* Garante que fique acima de outros elementos */
+        z-index: 9999; 
     }
 
     iframe {
-        width: 100%; /* Largura total do contêiner */
-        height: 100%; /* Altura total do contêiner */
-        border: none; /* Remove a borda */
+        width: 100%; 
+        height: 100%; 
+        border: none; 
     }
         .grid-container {
             display: grid;
@@ -402,11 +400,11 @@
 
 }
 .loading-hidden {
-    display: none; /* Esconde o spinner inicialmente */
+    display: none; 
 }
 
 .loading-visible {
-    display: flex; /* Mostra o spinner quando necessário */
+    display: flex; 
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -414,12 +412,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background: rgba(0, 0, 0, 0.5); 
 }
 .large-icon {
     width: 111px;
     height: 53px;
 }
+
 
     </style>
 </head>
@@ -428,6 +427,13 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
+                <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
+                    <span style="font-weight: bold;">655 alunos</span> / 
+                    <span style="color: #ff4d4d; font-weight: bold;">Limite: 1000</span>
+                </p>
+                
+                    
                 <img class="login-intro-img" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
@@ -458,7 +464,7 @@
                     
 <div class="social-icons mt-3">
 <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
-<a href="https://t.me/hackermarquesz" target="_blank"><i class="bi bi-telegram"></i></a>
+<a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
 <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
  </div>
                         
@@ -523,7 +529,7 @@
     <script>
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO120') {
+    if (password === 'ALUNO188') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -536,7 +542,70 @@
 }
 
 function stopScroll() {
-   
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    setTimeout(() => {
+        if (loadingAnimation) {
+            // Oculta a animação de carregamento
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        // Gera um valor percentual fixo acima de 90
+        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
+
+        // Seleciona o menu contextOptions
+        const contextOptions = document.getElementById('contextOptions');
+
+        if (contextOptions) {
+            // Remove qualquer assertividade anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+            // Cria um elemento para exibir a assertividade
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
+
+            // Adiciona a assertividade ao menu contextOptions
+            contextOptions.appendChild(assertividadeElement);
+
+            // Adiciona a imagem aos 5 primeiros itens do grid
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 5);
+            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
+        }
+
+        // Aguarda 5 segundos e então reverte as mudanças
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
+    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 
         function toggleContextOptions() {      
@@ -575,8 +644,8 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Gera e exibe nova assertividade entre 1,00% e 60,00%
-            const assertividadeValue = (Math.random() * 59 + 1).toFixed(2); // Gera um número entre 1.00 e 60.00
+            // Gera e exibe nova assertividade entre 90,00% e 100,00%
+            const assertividadeValue = (Math.random() * 10 + 90).toFixed(2); // Gera um número entre 90.00 e 100.00
             const assertividade = `${assertividadeValue}%`;
 
             const assertividadeElement = document.createElement('div');
@@ -584,14 +653,15 @@ function stopScroll() {
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'red'; // Vermelho para indicar baixa assertividade
+            assertividadeElement.style.color = 'green'; // Sempre verde pois será maior que 90%
             contextOptions.appendChild(assertividadeElement);
 
             // Lista de URLs de imagens
             const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+        
+           'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
             ];
 
             // Escolhe e exibe uma imagem aleatória
@@ -617,8 +687,6 @@ function stopScroll() {
         }
     }, 5000);
 }
-
-
 
 
     </script>
