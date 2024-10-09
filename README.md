@@ -575,69 +575,7 @@
 }
 
 function stopScroll() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Gera uma assertividade aleatória entre 1,00% e 99,99%
-        const assertividade = (Math.random() * 99.99).toFixed(2) + '%'; 
-        const contextOptions = document.getElementById('contextOptions');
-
-        if (contextOptions) {
-            // Remove o elemento de assertividade existente, se houver
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            // Cria o elemento para exibir a assertividade
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-
-            // Define a cor baseada no valor da assertividade
-            const assertividadeValue = parseFloat(assertividade);
-            if (assertividadeValue >= 90) {
-                assertividadeElement.style.color = 'green'; // Acima de 90% é verde
-            } else {
-                assertividadeElement.style.color = 'red'; // Abaixo de 90% é vermelho
-            }
-
-            // Adiciona o elemento de assertividade ao contexto
-            contextOptions.appendChild(assertividadeElement);
-
-            // Limpa e reordena os grid-items
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); 
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 5);
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-        // Remove a assertividade após 5 segundos
-        setTimeout(() => {
-            if (contextOptions) {
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 5000); 
-    }, 1000); 
+    
 }
 
 
@@ -690,7 +628,7 @@ function stopScroll() {
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;
             imageElement.alt = 'Random Image';
-            imageElement.style.width = '100px';
+            imageElement.style.width = '88px';
             imageElement.style.height = 'auto';
             imageElement.className = 'random-image';
             contextOptions.appendChild(imageElement);
@@ -699,8 +637,8 @@ function stopScroll() {
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginTop = '10px'; // Para ficar abaixo da imagem
+            assertividadeElement.style.fontSize = '14px';
+            assertividadeElement.style.marginTop = '8px'; // Para ficar abaixo da imagem
 
             // Define a cor da assertividade
             if (parseFloat(assertividadeValue) >= 90) {
@@ -720,7 +658,7 @@ function stopScroll() {
                     if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                     if (randomImageElement) contextOptions.removeChild(randomImageElement);
                 }
-            }, 5000);
+            }, 59000);
         }
     }, 5000);
 }
