@@ -96,7 +96,7 @@
         }
 
         .context-options .bot-title {
-    font-size: 22px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 20px;
     color: #ffffff;
@@ -106,7 +106,7 @@
 .context-options .context-option {
     display: block;
     padding: 12px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: rgb(255, 0, 0); 
     border-radius: 5px;
     color: #ffffff;
