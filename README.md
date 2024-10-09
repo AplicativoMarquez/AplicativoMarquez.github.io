@@ -327,15 +327,15 @@
     transform: translateX(-50%) scale(1);
 }
 
-        #iframe-container {
-        display: none; 
-        width: 100vw; 
-        height: 100vh; 
-        position: fixed; 
-        top: 0;
-        left: 0;
-        z-index: 9999; 
-    }
+#iframe-container {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -12px;
+    z-index: 9999;
+}
 
     iframe {
         width: 100vw; 
