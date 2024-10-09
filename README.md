@@ -628,7 +628,7 @@ function stopScroll() {
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;
             imageElement.alt = 'Random Image';
-            imageElement.style.width = '88px';
+            imageElement.style.width = '75px';
             imageElement.style.height = 'auto';
             imageElement.className = 'random-image';
             contextOptions.appendChild(imageElement);
@@ -637,8 +637,8 @@ function stopScroll() {
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '14px';
-            assertividadeElement.style.marginTop = '8px'; // Para ficar abaixo da imagem
+            assertividadeElement.style.fontSize = '15px';
+            assertividadeElement.style.marginTop = '6px'; // Para ficar abaixo da imagem
 
             // Define a cor da assertividade
             if (parseFloat(assertividadeValue) >= 90) {
@@ -658,9 +658,9 @@ function stopScroll() {
                     if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                     if (randomImageElement) contextOptions.removeChild(randomImageElement);
                 }
-            }, 59000);
+            }, 5000);
         }
-    }, 5000);
+    }, 6000);
 }
 
 
