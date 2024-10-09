@@ -104,7 +104,7 @@
 }
 
 .context-options .context-option {
-    font-size: 10px;
+    font-size: 14px;
     display: block;
     padding: 12px 20px;
     margin-bottom: 5px;
