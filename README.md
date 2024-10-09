@@ -560,7 +560,7 @@
     <script>
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO1988') {
+    if (password === 'ALUNO198') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
