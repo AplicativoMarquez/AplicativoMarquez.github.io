@@ -496,7 +496,7 @@
                     
                   <div class="social-icons mt-3">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="https://t.me/HackDaBlaze10" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
+                    <a href="https://t.me/hackermarquesz" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
