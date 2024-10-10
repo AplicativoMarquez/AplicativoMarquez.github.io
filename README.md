@@ -406,15 +406,15 @@
         }
         
  .white-square {
-    width: 370px; 
-    height: 657px; 
-    background-color: #ffffff00; 
-    border: 1px solid #00000000; 
+    width: 370px;
+    height: 657px;
+    background-color: #ffffff00;
+    border: 1px solid #00000000;
     position: absolute;
-    top: 104px;
-    left: 32px;
+    top: -201px;
+    left: -98px;
     z-index: 10000;
-    overflow: hidden; 
+    overflow: hidden;
     pointer-events: none;
 }
 
@@ -636,7 +636,7 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 6000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 46000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 3000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 
