@@ -636,7 +636,7 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 46000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 460000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 3000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 
