@@ -173,7 +173,7 @@
         }
 
         .register-form p {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgb(255, 255, 255);
         }
         .form-group {
     position: relative;
@@ -182,7 +182,7 @@
 
 .form-control {
     background-color: #000; 
-    border: 2px solid #ffffff; 
+    border: 2px solid #686868; 
     color: #ffffff; 
     padding: 15px 20px;
     border-radius: 5px;
@@ -211,7 +211,7 @@
     font-size: 18px;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 255, 13, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 13, 0.507), 0 0 20px rgba(0, 255, 34, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -462,12 +462,12 @@
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">900 alunos</span> / 
-                    <span style="color: #ff4d4d; font-weight: bold;">Limite: 1000</span>
+                    <span style="font-weight: bold;">912 alunos</span> / 
+                    <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
                 </p>
                 
                     
-                <img class="login-intro-img" src="https://i.ibb.co/3cMJLrk/Imagem-do-Whats-App-de-2024-10-09-s-13-11-45-ec8822e1-fotor-20241009131246.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
