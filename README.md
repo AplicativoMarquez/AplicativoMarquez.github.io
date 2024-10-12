@@ -152,6 +152,22 @@
             background-color: #000000;
         }
 
+        video-background {
+            position: fixed; /* Permite que o vídeo fique fixo na tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Coloque o vídeo atrás do container */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz com que o vídeo cubra todo o container */
+        }
+
         .custom-container {
             text-align: center;
             max-width: 400px;
@@ -159,8 +175,24 @@
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+            position: relative; /* Mantenha o container no fluxo do documento */
+            z-index: 1; /* Coloque o container acima do vídeo */
         }
+
+        .login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Mantenha o wrapper acima do vídeo */
+            background-color: #00000000;
+        }
+
 
         .login-intro-img {
             max-width: 100%;
@@ -457,6 +489,14 @@
 </head>
 
 <body>
+    
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2020/08/21/47802-451812879_large.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
@@ -465,8 +505,6 @@
                     <span style="font-weight: bold;">912 alunos</span> / 
                     <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
                 </p>
-                
-                    
                 <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
