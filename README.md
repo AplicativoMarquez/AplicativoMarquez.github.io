@@ -17,7 +17,7 @@
             box-sizing: content-box;
             background-color: #ffffff00;
         }
-    
+        
         .loading-visible {
             display: block;
             position: fixed;
@@ -614,9 +614,10 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Gera um valor de assertividade entre 80,00% e 99,99%
-            const assertividadeValue = (Math.random() * 19.99 + 80).toFixed(2); 
-            const assertividade = `${assertividadeValue}%`;
+            // Gera um valor de assertividade entre 1,00% e 60,00%
+const assertividadeValue = (Math.random() * 59 + 1).toFixed(2); 
+const assertividade = `${assertividadeValue}%`;
+
 
             // Cria e exibe a imagem
             const imageUrls = [
