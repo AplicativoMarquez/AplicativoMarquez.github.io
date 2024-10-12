@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
- 
+
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
             background-color: #ffffff00;
         }
+    
         
         .loading-visible {
             display: block;
@@ -113,7 +114,7 @@
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s;
-    
+
 }
 
 .context-options .context-option:hover {
@@ -123,7 +124,7 @@
 
 .context-options .closeContextOptions:hover {
     background-color: rgb(255 0 0 / 80%);
-    
+
 }
         .dev-by {
             font-size: 14px;
@@ -152,22 +153,6 @@
             background-color: #000000;
         }
 
-        video-background {
-            position: fixed; /* Permite que o vídeo fique fixo na tela */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0; /* Coloque o vídeo atrás do container */
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Faz com que o vídeo cubra todo o container */
-        }
-
         .custom-container {
             text-align: center;
             max-width: 400px;
@@ -175,24 +160,8 @@
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-            position: relative; /* Mantenha o container no fluxo do documento */
-            z-index: 1; /* Coloque o container acima do vídeo */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
-
-        .login-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1; /* Mantenha o wrapper acima do vídeo */
-            background-color: #00000000;
-        }
-
 
         .login-intro-img {
             max-width: 100%;
@@ -306,7 +275,7 @@
 }
 .social-icons a.instagram {
     color: #C13584; /* Cor personalizada para Instagram */
-    
+
 }
 
 .social-icons a.instagram:hover {
@@ -316,7 +285,7 @@
 
 .social-icons a.telegram {
     color: #0088cc; /* Cor personalizada para Telegram */
-   
+
 }
 
 .social-icons a.telegram:hover {
@@ -326,7 +295,7 @@
 
 .social-icons a.whatsapp {
     color: #25D366; /* Cor personalizada para WhatsApp */
-    
+
 }
 
 .social-icons a.whatsapp:hover {
@@ -346,7 +315,7 @@
     margin: 0 15px;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
-    
+
 }
 .social-icons a:hover {
     color: #ff0000; 
@@ -489,14 +458,6 @@
 </head>
 
 <body>
-    
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="https://cdn.pixabay.com/video/2020/08/21/47802-451812879_large.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-        </video>
-    </div>
-    
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
@@ -505,6 +466,8 @@
                     <span style="font-weight: bold;">912 alunos</span> / 
                     <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
                 </p>
+                
+                    
                 <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
@@ -586,7 +549,7 @@
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         
-   
+
 </div>                         
 <div id="image-container"></div>
 <div id="assertividade" class="assertivity-hidden"></div>
@@ -612,8 +575,8 @@
 }
 
 function stopScroll() {
-   
-    
+
+
 }
 
 
@@ -652,10 +615,12 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
+            // Gera um valor de assertividade entre 80,00% e 99,99%
+            const assertividadeValue = (Math.random() * 19.99 + 80).toFixed(2); 
+            const assertividade = `${assertividadeValue}%`;
             // Gera um valor de assertividade entre 1,00% e 60,00%
 const assertividadeValue = (Math.random() * 59 + 1).toFixed(2); 
 const assertividade = `${assertividadeValue}%`;
-
 
             // Cria e exibe a imagem
             const imageUrls = [
@@ -705,4 +670,3 @@ const assertividade = `${assertividadeValue}%`;
 
 
     </script>
-
