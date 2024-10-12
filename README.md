@@ -17,7 +17,7 @@
             box-sizing: content-box;
             background-color: #ffffff00;
         }
-        
+    
         .loading-visible {
             display: block;
             position: fixed;
